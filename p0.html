@@ -16,6 +16,8 @@
       <a href="process-design.html">プロセス設計</a>
       <a href="platform.html">プラットフォーム</a>
       <a href="p2.html">学校組織開発</a>
+      <a href="p3.html">カリキュラム共創</a>
+      <a href="p4.html">授業実践伴走</a>
       <a href="p5.html">探究カリキュラム</a>
     </nav>
   </div>
@@ -35,11 +37,25 @@
 
   <p>20世紀の教育は、産業社会が求める均質な労働者を育成するシステムだった。</p>
 
-  <div class="diagram">【20世紀型教育】
-
-  正解を暗記する → 試験で再生する → 卒業する
-    → 「言われたことを正確にできる」人になる
-    → 均質な労働者として組織に配属される</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 700 120" width="100%" style="max-width:700px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs><marker id="ah1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <text x="350" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">20世紀型教育</text>
+      <rect x="10" y="32" width="130" height="40" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="75" y="57" text-anchor="middle" font-size="12" fill="#1a365d">正解を暗記する</text>
+      <line x1="140" y1="52" x2="175" y2="52" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah1)"/>
+      <rect x="180" y="32" width="130" height="40" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="245" y="57" text-anchor="middle" font-size="12" fill="#1a365d">試験で再生する</text>
+      <line x1="310" y1="52" x2="345" y2="52" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah1)"/>
+      <rect x="350" y="32" width="100" height="40" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="400" y="57" text-anchor="middle" font-size="12" fill="#1a365d">卒業する</text>
+      <line x1="450" y1="52" x2="485" y2="52" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah1)"/>
+      <rect x="490" y="32" width="200" height="40" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+      <text x="590" y="50" text-anchor="middle" font-size="11" fill="#c62828">均質な労働者として</text>
+      <text x="590" y="66" text-anchor="middle" font-size="11" fill="#c62828">組織に配属される</text>
+      <text x="350" y="105" text-anchor="middle" font-size="12" fill="#999">→ この人材がいまAIに代替されつつある</text>
+    </svg>
+  </div>
 
   <p>このシステムが育てた人間——正解を暗記し、指示通りに動き、決められた手順を正確にこなす人間——は、<strong>いまAIに代替されつつある</strong>。</p>
 
@@ -47,21 +63,56 @@
 
   <h3>1.2 2040年の組織構造——ホワイトカラー中間層の縮小</h3>
 
-  <div class="diagram">【現在の組織構造】
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 780 340" width="100%" style="max-width:780px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs>
+        <marker id="ah2u" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker>
+        <marker id="ah2d" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto"><polygon points="8 0, 0 3, 8 6" fill="#1a365d"/></marker>
+      </defs>
+      <!-- 現在 -->
+      <text x="175" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">現在の組織構造</text>
+      <rect x="80" y="30" width="190" height="36" rx="6" fill="#1a365d" stroke="none"/>
+      <text x="175" y="53" text-anchor="middle" font-size="12" fill="#fff">経営陣</text>
+      <line x1="130" y1="66" x2="130" y2="88" stroke="#1a365d" stroke-width="1.2" marker-end="url(#ah2d)"/>
+      <text x="138" y="82" font-size="9" fill="#666">要約・報告 ↑</text>
+      <line x1="220" y1="88" x2="220" y2="66" stroke="#1a365d" stroke-width="1.2" marker-end="url(#ah2d)"/>
+      <text x="228" y="82" font-size="9" fill="#666">↓ 指示</text>
+      <rect x="40" y="92" width="270" height="36" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+      <text x="175" y="115" text-anchor="middle" font-size="11" fill="#c62828">ホワイトカラー中間層（管理職・本部）</text>
+      <line x1="130" y1="128" x2="130" y2="150" stroke="#1a365d" stroke-width="1.2"/>
+      <line x1="220" y1="150" x2="220" y2="128" stroke="#1a365d" stroke-width="1.2"/>
+      <rect x="80" y="154" width="190" height="36" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="175" y="177" text-anchor="middle" font-size="12" fill="#2e7d32">現場（エッセンシャルワーカー）</text>
 
-  経営陣
-    ↑ 要約・報告                ↓ かみ砕き・指示
-  ホワイトカラー中間層（管理職・本部スタッフ）
-    ↑ データ収集               ↓ マネジメント
-  現場（エッセンシャルワーカー）
+      <!-- 矢印 -->
+      <text x="420" y="110" text-anchor="middle" font-size="28" fill="#e65100">→</text>
 
+      <!-- 2040年 -->
+      <text x="610" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">2040年の組織構造</text>
+      <rect x="480" y="40" width="120" height="44" rx="6" fill="#1a365d"/>
+      <text x="540" y="58" text-anchor="middle" font-size="12" fill="#fff">経営陣</text>
+      <text x="540" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">データを直接扱う</text>
+      <rect x="490" y="110" width="220" height="44" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="600" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">統合データ基盤</text>
+      <text x="600" y="146" text-anchor="middle" font-size="10" fill="#e65100">AI ＋ MCP</text>
+      <rect x="620" y="40" width="120" height="44" rx="6" fill="#2e7d32"/>
+      <text x="680" y="58" text-anchor="middle" font-size="12" fill="#fff">現場</text>
+      <text x="680" y="74" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">仮説と検証を繰り返す</text>
+      <!-- 接続線 -->
+      <line x1="540" y1="84" x2="540" y2="110" stroke="#e65100" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="680" y1="84" x2="680" y2="110" stroke="#e65100" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="540" y1="84" x2="680" y2="84" stroke="#e65100" stroke-width="1" stroke-dasharray="4,3"/>
 
-【2040年の組織構造（AX後）】
+      <!-- 注釈 -->
+      <rect x="460" y="180" width="280" height="32" rx="4" fill="none" stroke="#c62828" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="600" y="200" text-anchor="middle" font-size="11" fill="#c62828">中間層の「要約・翻訳」機能 → AIへ</text>
 
-  経営陣 ←──→ 統合データ基盤（AI＋MCP） ←──→ 現場
-         データを直接扱いながら            統合されたデータを直接扱い
-         組織運営を考える                  仮説と検証を繰り返しながら
-                                          はたらく</div>
+      <!-- 凡例 -->
+      <rect x="40" y="220" width="700" height="60" rx="8" fill="#f7f9fc" stroke="#e2e8f0"/>
+      <text x="60" y="245" font-size="11" fill="#1a365d" font-weight="bold">残る人間の力:</text>
+      <text x="60" y="265" font-size="11" fill="#4a5568">問いを立て、仮説を構成し、検証結果から次の行動を判断する力 ＝ 「意味を生成する」機能</text>
+    </svg>
+  </div>
 
   <p>ホワイトカラーの「要約して報告する」「指示をかみ砕いて現場に伝える」機能をAIが担うようになる。残るのは<strong>「意味を生成する」機能</strong>——問いを立て、仮説を構成し、検証結果から次の行動を判断する力。</p>
 
@@ -147,22 +198,59 @@
 
   <h3>3.1 7つのコンピテンシー</h3>
 
-  <div class="diagram">                ┌──────────────────────────┐
-                │  7. 意味の自己生成         │  ← 中核（すべてを駆動する）
-                │  なぜこの問いを追うのか     │
-                └─────────────┬────────────┘
-                              │
-              ┌───────────────┼───────────────┐
-              │               │               │
-    ┌─────────▼──────┐ ┌─────▼──────┐ ┌─────▼──────────┐
-    │ 2. 越境学習     │ │ 5. 仮説駆動 │ │ 6. 合意形成     │
-    │ 何を学ぶべきか  │ │ 何を試すか  │ │ 誰と創るか     │
-    └─────────┬──────┘ └─────┬──────┘ └─────┬──────────┘
-              │               │               │
-    ┌─────────▼──────┐ ┌─────▼──────┐ ┌─────▼──────────┐
-    │ 1. 仕組み化     │ │ 3. パターン │ │ 4. 知の形式     │
-    │  と再投資      │ │  発見      │ │  知化と接続     │
-    └────────────────┘ └────────────┘ └────────────────┘</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 640 300" width="100%" style="max-width:640px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- 中核層 (7) -->
+      <rect x="180" y="10" width="280" height="56" rx="8" fill="#e65100" stroke="none"/>
+      <text x="320" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">7. 意味の自己生成</text>
+      <text x="320" y="50" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">なぜこの問いを追うのか</text>
+      <text x="490" y="42" font-size="10" fill="#e65100" font-weight="bold">← 中核</text>
+
+      <!-- 接続線 中核→実行 -->
+      <line x1="240" y1="66" x2="110" y2="100" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="320" y1="66" x2="320" y2="100" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="400" y1="66" x2="530" y2="100" stroke="#1a365d" stroke-width="1.5"/>
+
+      <!-- 実行層 (2, 5, 6) -->
+      <rect x="20" y="100" width="180" height="56" rx="6" fill="#2b6cb0" stroke="none"/>
+      <text x="110" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">2. 越境学習</text>
+      <text x="110" y="140" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">何を学ぶべきか</text>
+
+      <rect x="230" y="100" width="180" height="56" rx="6" fill="#2b6cb0" stroke="none"/>
+      <text x="320" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">5. 仮説駆動</text>
+      <text x="320" y="140" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">何を試すか</text>
+
+      <rect x="440" y="100" width="180" height="56" rx="6" fill="#2b6cb0" stroke="none"/>
+      <text x="530" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">6. 合意形成と共創</text>
+      <text x="530" y="140" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">誰と創るか</text>
+
+      <!-- 接続線 実行→基盤 -->
+      <line x1="110" y1="156" x2="110" y2="190" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="320" y1="156" x2="320" y2="190" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="530" y1="156" x2="530" y2="190" stroke="#1a365d" stroke-width="1.5"/>
+
+      <!-- 基盤層 (1, 3, 4) -->
+      <rect x="20" y="190" width="180" height="56" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="110" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">1. 仕組み化と再投資</text>
+      <text x="110" y="230" text-anchor="middle" font-size="10" fill="#4a5568">AIで効率化→価値の再投資</text>
+
+      <rect x="230" y="190" width="180" height="56" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="320" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">3. パターン発見</text>
+      <text x="320" y="230" text-anchor="middle" font-size="10" fill="#4a5568">同型性を見出す</text>
+
+      <rect x="440" y="190" width="180" height="56" rx="6" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="530" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">4. 知の形式知化</text>
+      <text x="530" y="230" text-anchor="middle" font-size="10" fill="#4a5568">知恵をネットワーク化</text>
+
+      <!-- 層ラベル -->
+      <text x="610" y="212" font-size="9" fill="#1a365d">基盤層</text>
+      <text x="610" y="215" font-size="8" fill="#999">AIが支援</text>
+      <text x="610" y="122" font-size="9" fill="#2b6cb0">実行層</text>
+      <text x="610" y="135" font-size="8" fill="#999">AI×人間</text>
+      <text x="610" y="35" font-size="9" fill="#e65100">中核層</text>
+      <text x="610" y="48" font-size="8" fill="#999">人間固有</text>
+    </svg>
+  </div>
 
   <table>
     <tr><th>#</th><th>コンピテンシー</th><th>内容</th><th>なぜAI PROOFか</th></tr>
@@ -245,13 +333,38 @@
 
   <p>AIがこの構造を変える。</p>
 
-  <div class="diagram">多様な声を集める（QRコード→フォーム）
-  ↓ AIが統合・構造化
-多様性が「見える」（KJ法でクラスター化）
-  ↓ コンセンサス型で評価（1/2/3）
-反対意見がバージョンアップを駆動する
-  ↓ 改訂版に再評価
-全員が「自分の声が反映された」と感じる合意</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 460 380" width="100%" style="max-width:460px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs><marker id="ah4" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <!-- Step 1 -->
+      <rect x="60" y="10" width="340" height="44" rx="8" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
+      <text x="230" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">多様な声を集める</text>
+      <text x="230" y="44" text-anchor="middle" font-size="10" fill="#4a5568">QRコード → フォーム</text>
+      <line x1="230" y1="54" x2="230" y2="74" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah4)"/>
+      <!-- Step 2 -->
+      <rect x="60" y="78" width="340" height="44" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <text x="230" y="96" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">AIが統合・構造化</text>
+      <text x="230" y="112" text-anchor="middle" font-size="10" fill="#4a5568">KJ法でクラスター化 → 多様性が「見える」</text>
+      <line x1="230" y1="122" x2="230" y2="142" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah4)"/>
+      <!-- Step 3 -->
+      <rect x="60" y="146" width="340" height="44" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="230" y="164" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">コンセンサス型で評価</text>
+      <text x="230" y="180" text-anchor="middle" font-size="10" fill="#4a5568">1＝賛成 / 2＝懸念あり / 3＝ブロック</text>
+      <line x1="230" y1="190" x2="230" y2="210" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah4)"/>
+      <!-- Step 4 -->
+      <rect x="60" y="214" width="340" height="44" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+      <text x="230" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">反対意見がバージョンアップを駆動</text>
+      <text x="230" y="248" text-anchor="middle" font-size="10" fill="#4a5568">ブロックの声を取り込んだ改訂版を生成</text>
+      <line x1="230" y1="258" x2="230" y2="278" stroke="#1a365d" stroke-width="1.5" marker-end="url(#ah4)"/>
+      <!-- Step 5 -->
+      <rect x="60" y="282" width="340" height="44" rx="8" fill="#1a365d" stroke="none"/>
+      <text x="230" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">全員が「自分の声が反映された」と感じる合意</text>
+      <text x="230" y="316" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.7)">意思決定の質が最大化</text>
+      <!-- フィードバック矢印 -->
+      <path d="M400,304 Q430,304 430,168 Q430,146 410,146" fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="438" y="220" font-size="9" fill="#999" transform="rotate(90,438,220)">再評価</text>
+    </svg>
+  </div>
 
   <p><strong>「多くの声が集まるほど、意思決定の質が高まる」——これを生徒も教員も身体で実感すること</strong>が、AI時代の民主主義教育の核心である。</p>
 
