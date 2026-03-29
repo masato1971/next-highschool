@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P1: 教員向け研修プログラム — NEXTハイスクール構想</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title"><a href="index.html">NEXTハイスクール構想</a></div>
+    <nav>
+      <a href="p0.html">世界観</a>
+      <a href="process-design.html">プロセス設計</a>
+      <a href="platform.html">プラットフォーム</a>
+      <a href="p2.html">学校組織開発</a>
+      <a href="p5.html">探究カリキュラム</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-title">
+    <h1>P1: 教員向け研修プログラム</h1>
+    <div class="page-subtitle">WS＋3回研修＋事例検討会で、授業と職員会議のAI活用土台を作る</div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">概要</div>
+    <p>NEXTハイスクール構想の最初のフェーズ。教員がAI共創型の授業と学校経営を実践するための土台を作る。2040年問題の共有ワークショップ（1回）＋AI反転授業研修（3回）＋事例検討会（継続）の構成。</p>
+  </div>
+
+  <hr>
+
+  <!-- 全体構成 -->
+  <h2>全体構成</h2>
+
+  <div class="diagram"><pre>
+WS: 2040年問題の共有              AI反転授業研修（3回）                    実践・定着
+┌─────────────────────┐     ┌────────────────────────────────┐     ┌──────────────────────┐
+│ AIアプリで → AI統合・ │ ──→ │ 第1回      → 第2回      → 第3回 │ ──→ │ 教員のAI活用  事例   │
+│ 意見収集    可視化    │     │ AIアプリを   意見をAIで   AI反転 │     │ 授業実践  ←→ 検討会 │
+│                      │     │ 作る        統合する     授業を  │     │            （月1回） │
+│                      │     │                         設計する │     │                      │
+└─────────────────────┘     └────────────────────────────────┘     └──────────────────────┘
+      土台                   授業＋職員会議のAI活用土台完成              改善サイクル
+</pre></div>
+
+  <table>
+    <tr><th>フェーズ</th><th>内容</th><th>形式</th><th>所要時間</th></tr>
+    <tr><td><strong>WS</strong></td><td>2040年問題の共有ワークショップ</td><td>対面またはオンライン</td><td>2時間</td></tr>
+    <tr><td><strong>第1回</strong></td><td>AIアプリを作る</td><td>オンライン</td><td>2時間</td></tr>
+    <tr><td><strong>第2回</strong></td><td>多様な意見をAIで統合する</td><td>オンライン</td><td>2時間</td></tr>
+    <tr><td><strong>第3回</strong></td><td>AI反転授業を設計する</td><td>オンライン</td><td>2時間</td></tr>
+    <tr><td><strong>継続</strong></td><td>事例検討会</td><td>オンライン（月1回）</td><td>1時間</td></tr>
+  </table>
+
+  <p><strong>成果</strong>: WSと3回の研修を通じて、以下の2つの土台が完成する。</p>
+  <ol>
+    <li><strong>授業のAI活用</strong> — 教員が自分の授業にAI壁打ち・AI統合を組み込める</li>
+    <li><strong>職員会議のAI活用</strong> — コンセンサス型意思決定を職員会議に導入できる</li>
+  </ol>
+
+  <hr>
+
+  <!-- WS -->
+  <h2>WS: 2040年問題の共有ワークショップ（2時間）</h2>
+
+  <div class="callout important">
+    <div class="callout-title">このWSの目的</div>
+    <p>「なぜAIを使うのか」の共通認識を教員全体で作る。2040年の社会像を自分ごととして考え、そこから逆算して「自分の授業をどう変えるか」の問いを持って帰る。</p>
+  </div>
+
+  <h3>事前準備</h3>
+  <table>
+    <tr><th>対象</th><th>やること</th><th>ツール</th></tr>
+    <tr><td>参加教員</td><td>NEXTハイスクール構想の概要動画（15分程度）を視聴</td><td>動画配信</td></tr>
+    <tr><td>参加教員</td><td>AI壁打ちアプリで「2040年に高校教育はどう変わるべきか」について自分の考えを深掘り</td><td>AI壁打ちアプリ（Claude等）</td></tr>
+    <tr><td>参加教員</td><td>壁打ちで深掘りした考えをテキストで提出</td><td>Googleフォーム</td></tr>
+    <tr><td>田原・北田</td><td>提出されたテキストをClaude Codeで事前に構造化・分析</td><td>Claude Code</td></tr>
+  </table>
+
+  <h3>当日のフロー</h3>
+  <table>
+    <tr><th>時間</th><th>内容</th><th>方法</th><th>ファシリテーター</th></tr>
+    <tr><td><strong>0:00–0:10</strong></td><td>チェックイン</td><td>1人30秒で「今の気持ち」を共有</td><td>田原</td></tr>
+    <tr><td><strong>0:10–0:30</strong></td><td>講義: 2040年の社会像</td><td>ホワイトカラー中間層の縮小、アドバンスド・エッセンシャルワーカー、文理融合型人材の需要。統合整理のセクション1をベースに</td><td>田原</td></tr>
+    <tr><td><strong>0:30–0:45</strong></td><td>グループ対話（3–4人）</td><td>「2040年の社会で、自分が教えている教科は何のために存在するか？」</td><td>北田（NVC対話設計）</td></tr>
+    <tr><td><strong>0:45–0:55</strong></td><td>意見入力</td><td>スマホ/PCからGoogleフォームに入力:「2040年に向けて、自分の授業で最も変えるべきことは何か？」</td><td>—</td></tr>
+    <tr><td><strong>0:55–1:15</strong></td><td>AI統合・可視化（ライブ）</td><td>Claude Codeで全意見をリアルタイムKJ法統合。スクリーンに投影しながらクラスターが浮かび上がる過程を全員で見る</td><td>北田（AIナレッジファシリテーター）</td></tr>
+    <tr><td><strong>1:15–1:35</strong></td><td>コンセンサス評価</td><td>統合結果から生成された「学校変革の3つの方向性」叩き台に対し、1（賛成）/ 2（懸念あり）/ 3（ブロック）で評価。AIエージェント（生徒・保護者・慎重派教員）の声も追加 → バージョンアップ</td><td>田原</td></tr>
+    <tr><td><strong>1:35–1:50</strong></td><td>全体共有</td><td>バージョンアップされた方向性を全員で確認。「自分の発言が反映されている」体験</td><td>田原</td></tr>
+    <tr><td><strong>1:50–2:00</strong></td><td>チェックアウト</td><td>1人30秒で「持ち帰ること」を共有</td><td>田原</td></tr>
+  </table>
+
+  <h3>このWSで教員が体験すること</h3>
+  <table>
+    <tr><th>体験</th><th>意味</th></tr>
+    <tr><td><strong>AI壁打ちで自分の考えを深掘りする</strong></td><td>事前課題で「AIと対話する」体験。これが反転授業の事前学習と同じ構造</td></tr>
+    <tr><td><strong>全員の意見がAIで統合される</strong></td><td>「声の大きい人の意見が通る」のではなく、全員の声が構造化される体験</td></tr>
+    <tr><td><strong>コンセンサス評価でバージョンアップする</strong></td><td>批判が「提案を良くする力」になる体験。職員会議への導入イメージ</td></tr>
+    <tr><td><strong>AIエージェントが不在の声を代弁する</strong></td><td>生徒・保護者・慎重派の視点が自動的に入る仕組み</td></tr>
+  </table>
+
+  <div class="callout tip">
+    <div class="callout-title">WSの裏の目的</div>
+    <p>このWS自体が、第1回〜第3回の研修で学ぶことの<strong>実体験版</strong>。教員は「教えられる」のではなく「体験する」ことで、研修への動機が生まれる。長崎県教育委員会の馬場さんが「本当の意味での民主主義が実現していく夢を抱かせる話だった」と評した体験を、学校の教員全体に広げる。</p>
+  </div>
+
+  <hr>
+
+  <!-- 第1回 -->
+  <h2>第1回: AIアプリを作る（オンライン2時間）</h2>
+
+  <div class="callout important">
+    <div class="callout-title">この回の目的</div>
+    <p>教員が自分の授業で使える「AI壁打ちアプリ」を実際に作る。「AIを使える」から「AIアプリを作れる」への跳躍。</p>
+  </div>
+
+  <h3>事前準備</h3>
+  <table>
+    <tr><th>対象</th><th>やること</th></tr>
+    <tr><td>参加教員</td><td>WSで体験したAI壁打ちを、自分の授業テーマで1回やってみる</td></tr>
+  </table>
+
+  <h3>当日のフロー</h3>
+  <table>
+    <tr><th>時間</th><th>内容</th><th>方法</th></tr>
+    <tr><td><strong>0:00–0:10</strong></td><td>チェックイン＋事前課題の振り返り</td><td>ラウンド</td></tr>
+    <tr><td><strong>0:10–0:30</strong></td><td>講義: AI壁打ちアプリの設計思想</td><td>「答えを返すAI」（鏡）vs「問い返すAI」（回折格子）。回折格子型AIが生徒の思考に差異のパターンを生む</td></tr>
+    <tr><td><strong>0:30–1:10</strong></td><td>ハンズオン: 自分の授業用AI壁打ちアプリを作る</td><td>Claude Codeまたはノーコードツールで、自分の教科に最適化した壁打ちプロンプトを設計。例: 「数学の証明を考えさせるAI」「英語エッセイの構成を問い返すAI」「理科実験の仮説を掘り下げるAI」</td></tr>
+    <tr><td><strong>1:10–1:30</strong></td><td>ペアで試用</td><td>作ったアプリを隣の教員に使ってもらい、フィードバック</td></tr>
+    <tr><td><strong>1:30–1:50</strong></td><td>改善＋共有</td><td>フィードバックを反映して改善。3–4名が全体に共有</td></tr>
+    <tr><td><strong>1:50–2:00</strong></td><td>チェックアウト＋次回までの課題</td><td>次回までに自分の授業で1回使ってみる</td></tr>
+  </table>
+
+  <h3>教員が持ち帰るもの</h3>
+  <ul>
+    <li>自分の教科用の<strong>AI壁打ちアプリ</strong>（プロンプト）</li>
+    <li>生徒に使わせるための<strong>運用イメージ</strong></li>
+    <li>次回までに<strong>授業で1回使う</strong>という具体的なアクション</li>
+  </ul>
+
+  <hr>
+
+  <!-- 第2回 -->
+  <h2>第2回: 多様な意見をAIで統合する（オンライン2時間）</h2>
+
+  <div class="callout important">
+    <div class="callout-title">この回の目的</div>
+    <p>授業やHRで、生徒の意見をAIで統合し、全員が参画する合意形成を実施できるようになる。これが<strong>職員会議への導入</strong>の土台にもなる。</p>
+  </div>
+
+  <h3>事前準備</h3>
+  <table>
+    <tr><th>対象</th><th>やること</th></tr>
+    <tr><td>参加教員</td><td>第1回で作ったAI壁打ちアプリを授業で使った経験を振り返り、メモにまとめる</td></tr>
+  </table>
+
+  <h3>当日のフロー</h3>
+  <table>
+    <tr><th>時間</th><th>内容</th><th>方法</th></tr>
+    <tr><td><strong>0:00–0:15</strong></td><td>実践報告</td><td>第1回後に授業でAIを使った体験を3–4名が共有</td></tr>
+    <tr><td><strong>0:15–0:35</strong></td><td>講義: AI統合ファシリテーション</td><td>Googleフォーム→Claude Code→KJ法統合→コンセンサス評価のワークフロー。WSで体験した仕組みの「裏側」を解説</td></tr>
+    <tr><td><strong>0:35–1:15</strong></td><td>ハンズオン: 実際にやってみる</td><td>参加者同士で模擬授業。テーマを設定 → Googleフォームで意見収集 → Claude Codeで統合 → コンセンサス評価。<strong>教員自身が「AI統合ファシリテーター」を体験</strong></td></tr>
+    <tr><td><strong>1:15–1:35</strong></td><td>応用: 職員会議への導入を考える</td><td>「この仕組みを職員会議に使うとしたら、最初のテーマは何か？」をグループで議論</td></tr>
+    <tr><td><strong>1:35–1:50</strong></td><td>全体共有＋質疑</td><td>職員会議での活用アイデアを3–4グループが共有</td></tr>
+    <tr><td><strong>1:50–2:00</strong></td><td>チェックアウト＋次回までの課題</td><td>授業でAI統合を1回試すか、職員会議の1テーマで試す</td></tr>
+  </table>
+
+  <h3>教員が持ち帰るもの</h3>
+  <ul>
+    <li><strong>AI統合ファシリテーション</strong>のワークフロー（Googleフォーム→Claude Code→KJ法→コンセンサス）</li>
+    <li>授業での活用イメージ（生徒の意見を統合して探究の方向性を決める等）</li>
+    <li>職員会議への導入イメージ（最初の1テーマの候補）</li>
+  </ul>
+
+  <h3>ここで2つの土台が見える</h3>
+  <table>
+    <tr><th>土台</th><th>内容</th></tr>
+    <tr><td><strong>授業のAI活用</strong></td><td>第1回のAI壁打ち＋第2回のAI統合で、「個別最適」と「協働的な学び」の両方にAIを使える</td></tr>
+    <tr><td><strong>職員会議のAI活用</strong></td><td>第2回のAI統合＋コンセンサス評価を職員会議に応用すれば、「50人中50人が参画する」意思決定が可能に</td></tr>
+  </table>
+
+  <hr>
+
+  <!-- 第3回 -->
+  <h2>第3回: AI反転授業を設計する（オンライン2時間）</h2>
+
+  <div class="callout important">
+    <div class="callout-title">この回の目的</div>
+    <p>第1回（AI壁打ち）と第2回（AI統合）を組み合わせた「AI反転授業」を、自分の教科で実際に設計する。</p>
+  </div>
+
+  <h3>事前準備</h3>
+  <table>
+    <tr><th>対象</th><th>やること</th></tr>
+    <tr><td>参加教員</td><td>授業またはHRでAI統合を1回試した体験を振り返る</td></tr>
+  </table>
+
+  <h3>当日のフロー</h3>
+  <table>
+    <tr><th>時間</th><th>内容</th><th>方法</th></tr>
+    <tr><td><strong>0:00–0:15</strong></td><td>実践報告</td><td>第2回後のAI統合の実践体験を3–4名が共有。うまくいったこと・つまずいたこと</td></tr>
+    <tr><td><strong>0:15–0:35</strong></td><td>講義: AI反転授業の設計原理</td><td>従来の反転授業（動画→教室で演習）をAI時代にアップデート。事前：AI壁打ちで考えを深掘り → 教室：AI統合で全員の考えを可視化 → 対話で深化 → 振り返り</td></tr>
+    <tr><td><strong>0:35–1:20</strong></td><td>設計ワーク: 自分のAI反転授業を設計する</td><td>1人1枚の設計シートに「単元名・事前課題（AI壁打ちの問い）・教室活動（AI統合のテーマ）・評価方法」を記入。Claude Codeに設計案を壁打ちさせてブラッシュアップ</td></tr>
+    <tr><td><strong>1:20–1:40</strong></td><td>ペアレビュー＋改善</td><td>隣の教員と設計案を交換しフィードバック。異教科のペアが望ましい（越境の視点）</td></tr>
+    <tr><td><strong>1:40–1:55</strong></td><td>全体共有＋今後のスケジュール</td><td>設計案を3–4名が共有。事例検討会のスケジュールを決定</td></tr>
+    <tr><td><strong>1:55–2:00</strong></td><td>チェックアウト</td><td>「来週からやること」を1人一言</td></tr>
+  </table>
+
+  <h3>教員が持ち帰るもの</h3>
+  <ul>
+    <li>自分の教科の<strong>AI反転授業の設計案</strong>（1単元分）</li>
+    <li>設計のレビューを受けた<strong>改善版</strong></li>
+    <li><strong>事例検討会</strong>の日程と参加コミットメント</li>
+  </ul>
+
+  <hr>
+
+  <!-- 事例検討会 -->
+  <h2>事例検討会（月1回・オンライン1時間・継続）</h2>
+
+  <div class="callout important">
+    <div class="callout-title">事例検討会の目的</div>
+    <p>研修で学んだことを「実践→共有→改善」のサイクルで定着させる。教員同士がAI活用の成功事例と失敗事例を持ち寄り、学び合うコミュニティを形成する。</p>
+  </div>
+
+  <h3>フロー（月1回・1時間）</h3>
+  <table>
+    <tr><th>時間</th><th>内容</th><th>方法</th></tr>
+    <tr><td><strong>0:00–0:05</strong></td><td>チェックイン</td><td>1人一言</td></tr>
+    <tr><td><strong>0:05–0:25</strong></td><td>事例発表（2名）</td><td>各10分。「やったこと・生徒の反応・気づき・困っていること」。北田がリアルタイムでClaude Code構造化→GitHub公開</td></tr>
+    <tr><td><strong>0:25–0:45</strong></td><td>対話</td><td>発表を受けて全員で対話。「自分の教科ならこう応用できる」「こういう工夫はどうか」</td></tr>
+    <tr><td><strong>0:45–0:55</strong></td><td>AI統合</td><td>対話の内容をClaude Codeで統合。パターンを抽出し、「今月の学び」として可視化</td></tr>
+    <tr><td><strong>0:55–1:00</strong></td><td>チェックアウト</td><td>「来月試すこと」を1人一言</td></tr>
+  </table>
+
+  <h3>事例検討会が「文化」になる仕組み</h3>
+  <table>
+    <tr><th>仕組み</th><th>内容</th></tr>
+    <tr><td><strong>毎回GitHubに蓄積</strong></td><td>事例と対話の記録がURLで共有され、回を重ねるごとに「教員コミュニティの知恵」が蓄積される</td></tr>
+    <tr><td><strong>パターン抽出</strong></td><td>複数回の事例からAIが共通パターンを抽出。「こういう使い方がうまくいく」という型が見えてくる</td></tr>
+    <tr><td><strong>異教科の越境</strong></td><td>数学教員の事例が英語教員に転用される等、教科を越えた知恵の流通が自然に起きる</td></tr>
+    <tr><td><strong>新しい教員の参入</strong></td><td>3回の研修を受けていない教員も、事例検討会から参加可能。先輩教員の実践を見て学ぶ</td></tr>
+  </table>
+
+  <hr>
+
+  <!-- P1全体を通じた成果 -->
+  <h2>P1全体を通じた成果</h2>
+
+  <div class="diagram"><pre>
+WS: 2040年問題の共有                        完成する2つの土台
+┌────────────────────────┐            ┌───────────────────────────┐
+│ 「なぜAIを使うのか」の   │            │ 授業のAI活用              │
+│  共通認識ができる        │            │ 個別最適（壁打ち）＋      │
+└───────────┬────────────┘            │ 協働（AI統合）            │
+            ↓                         ├───────────────────────────┤
+AI反転授業研修 3回                     │ 職員会議のAI活用          │
+┌────────────────────────┐            │ コンセンサス型            │
+│ 第1回: AI壁打ちアプリを  │            │ 意思決定                  │
+│ 自分で作れるようになる   │     ──→    └───────────┬───────────────┘
+│ 第2回: 意見をAIで統合し  │                        ↓
+│ コンセンサスを取れる     │            定着・発展
+│ 第3回: AI反転授業を      │            ┌───────────────────────────┐
+│ 自分の教科で設計できる   │            │ 事例検討会（月1回）        │
+└────────────────────────┘            │ 実践→共有→改善のサイクル  │
+                                       │ GitHubに知恵が蓄積        │
+                                       └───────────────────────────┘
+</pre></div>
+
+  <table>
+    <tr><th>成果</th><th>内容</th></tr>
+    <tr><td><strong>授業の土台</strong></td><td>教員がAI壁打ちアプリを作り、生徒の意見をAIで統合し、AI反転授業を設計・実践できる</td></tr>
+    <tr><td><strong>職員会議の土台</strong></td><td>コンセンサス型意思決定を職員会議に導入し、「50人中50人が参画する」意思決定ができる</td></tr>
+    <tr><td><strong>持続の仕組み</strong></td><td>事例検討会が月1回で回り、実践知がGitHubに蓄積され、教員コミュニティが自走する</td></tr>
+  </table>
+
+  <hr>
+
+  <!-- チェンジメーカー育成カリキュラムとの接続 -->
+  <h2>チェンジメーカー育成カリキュラムとの接続</h2>
+
+  <p>P1で教員のAI活用の土台が完成すると、生徒のチェンジメーカー育成カリキュラム（出会う〜響くのサイクル）を支えるインフラが整う。</p>
+
+  <table>
+    <tr><th>P1の成果</th><th>カリキュラムでの活用</th></tr>
+    <tr><td>AI壁打ちアプリ</td><td>掘る・調べるで生徒が使う個別探究ツール</td></tr>
+    <tr><td>AI統合ファシリテーション</td><td>確かめるで生徒の仮説を全体で検討する手法</td></tr>
+    <tr><td>コンセンサス型意思決定</td><td>響くで社会的反響を受けた後の対話・合意形成</td></tr>
+    <tr><td>事例検討会</td><td>教員間の実践知共有が、生徒の探究支援の質を継続的に高める</td></tr>
+  </table>
+
+  <!-- Page Navigation -->
+  <nav class="page-nav">
+    <a href="process-design.html" class="prev">&larr; プロセスデザイン全体設計</a>
+    <a href="p2.html" class="next">学校組織開発ガイド &rarr;</a>
+  </nav>
+
+</main>
+
+<footer>
+  <p>NEXTハイスクール プラネタリー・ラーニング構想 &mdash; デジタルファシリテーション研究所</p>
+</footer>
+
+</body>
+</html>
