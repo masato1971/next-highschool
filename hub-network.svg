@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#fafafa" rx="8"/>
+
+  <!-- Connection lines (drawn first, behind everything) -->
+  <!-- Academic -->
+  <line x1="290" y1="220" x2="120" y2="130" stroke="#7e57c2" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="290" y1="250" x2="120" y2="170" stroke="#7e57c2" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Education -->
+  <line x1="290" y1="320" x2="100" y2="370" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="290" y1="350" x2="100" y2="410" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="290" y1="370" x2="100" y2="450" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Enterprise -->
+  <line x1="610" y1="220" x2="780" y2="130" stroke="#e65100" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="610" y1="250" x2="780" y2="170" stroke="#e65100" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Media -->
+  <line x1="610" y1="320" x2="780" y2="340" stroke="#c62828" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="610" y1="350" x2="780" y2="380" stroke="#c62828" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="610" y1="370" x2="780" y2="420" stroke="#c62828" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- International -->
+  <line x1="370" y1="410" x2="180" y2="530" stroke="#00695c" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="400" y1="410" x2="180" y2="570" stroke="#00695c" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Region -->
+  <line x1="530" y1="410" x2="700" y2="500" stroke="#bf360c" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="530" y1="410" x2="700" y2="540" stroke="#bf360c" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="530" y1="410" x2="700" y2="580" stroke="#bf360c" stroke-width="2" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Technology (bottom center) -->
+  <line x1="450" y1="410" x2="450" y2="480" stroke="#2b6cb0" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- ===== Central hub ===== -->
+  <rect x="270" y="180" width="360" height="240" rx="16" fill="#ffffff" stroke="#1a365d" stroke-width="3" filter="url(#shadow)"/>
+  <text x="450" y="210" text-anchor="middle" font-size="16" font-weight="700" fill="#1a365d">コアチーム（6名）</text>
+
+  <!-- Core members - top row -->
+  <rect x="300" y="230" width="90" height="34" rx="17" fill="#1a365d"/>
+  <text x="345" y="252" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">田原真人</text>
+
+  <rect x="405" y="230" width="90" height="34" rx="17" fill="#1a365d"/>
+  <text x="450" y="252" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">北田朋也</text>
+
+  <rect x="510" y="230" width="90" height="34" rx="17" fill="#1a365d"/>
+  <text x="555" y="252" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">野辺みなも</text>
+
+  <!-- Core members - bottom row -->
+  <rect x="300" y="280" width="90" height="34" rx="17" fill="#2b6cb0"/>
+  <text x="345" y="302" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">竹本記子</text>
+
+  <rect x="405" y="280" width="90" height="34" rx="17" fill="#2b6cb0"/>
+  <text x="450" y="302" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">伊原敦子</text>
+
+  <rect x="510" y="280" width="90" height="34" rx="17" fill="#2b6cb0"/>
+  <text x="555" y="302" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">梅田雄基</text>
+
+  <!-- Partners row -->
+  <text x="450" y="340" text-anchor="middle" font-size="11" fill="#4a5568">提携メンバー</text>
+
+  <rect x="290" y="352" width="72" height="26" rx="13" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+  <text x="326" y="370" text-anchor="middle" font-size="9" fill="#2b6cb0">イコール</text>
+
+  <rect x="370" y="352" width="60" height="26" rx="13" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+  <text x="400" y="370" text-anchor="middle" font-size="9" fill="#2b6cb0">MUSVI</text>
+
+  <rect x="438" y="352" width="80" height="26" rx="13" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+  <text x="478" y="370" text-anchor="middle" font-size="9" fill="#2b6cb0">スクラッチ</text>
+
+  <rect x="526" y="352" width="90" height="26" rx="13" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+  <text x="571" y="370" text-anchor="middle" font-size="9" fill="#2b6cb0">Co Design Co.</text>
+
+  <!-- ===== Left: Academic ===== -->
+  <rect x="20" y="100" width="180" height="90" rx="10" fill="#ede7f6" stroke="#7e57c2" stroke-width="1.5"/>
+  <text x="110" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#4527a0">学術・知識人</text>
+  <text x="110" y="145" text-anchor="middle" font-size="10" fill="#4a5568">知識人ネットワーク 30名+</text>
+  <text x="110" y="162" text-anchor="middle" font-size="10" fill="#4a5568">大学教授（慶應・東大・多摩大）</text>
+  <text x="110" y="179" text-anchor="middle" font-size="10" fill="#4a5568">元知事・弁護士・NPO代表</text>
+
+  <!-- ===== Left: Education ===== -->
+  <rect x="10" y="340" width="190" height="130" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="105" y="365" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">教育実践</text>
+  <text x="105" y="385" text-anchor="middle" font-size="10" fill="#4a5568">全国の探究学習実践者</text>
+  <text x="105" y="402" text-anchor="middle" font-size="10" fill="#4a5568">高校魅力化CD 313名</text>
+  <text x="105" y="419" text-anchor="middle" font-size="10" fill="#4a5568">かえつ有明・鴨沂・小国高</text>
+  <text x="105" y="436" text-anchor="middle" font-size="10" fill="#4a5568">プリマペンギーノ 40地域</text>
+  <text x="105" y="453" text-anchor="middle" font-size="10" fill="#4a5568">ふるさとイノベーション</text>
+
+  <!-- ===== Right: Enterprise ===== -->
+  <rect x="700" y="100" width="180" height="90" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="790" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#e65100">企業AX</text>
+  <text x="790" y="145" text-anchor="middle" font-size="10" fill="#4a5568">サツドラ（200店舗）</text>
+  <text x="790" y="162" text-anchor="middle" font-size="10" fill="#4a5568">ユニオンフォレスト・マスコール</text>
+  <text x="790" y="179" text-anchor="middle" font-size="10" fill="#4a5568">今井運送（200台）</text>
+
+  <!-- ===== Right: Media ===== -->
+  <rect x="700" y="310" width="180" height="130" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="790" y="335" text-anchor="middle" font-size="13" font-weight="700" fill="#c62828">メディア・発信</text>
+  <text x="790" y="357" text-anchor="middle" font-size="10" fill="#4a5568">雑誌『イコール』11号</text>
+  <text x="790" y="374" text-anchor="middle" font-size="10" fill="#4a5568">イコールZINEコミュニティ</text>
+  <text x="790" y="391" text-anchor="middle" font-size="10" fill="#4a5568">TAKiBiBAシェア書店 5拠点</text>
+  <text x="790" y="408" text-anchor="middle" font-size="10" fill="#4a5568">桐原書店『森のコミュニティ』</text>
+  <text x="790" y="425" text-anchor="middle" font-size="10" fill="#4a5568">執筆者ネットワーク 30名+</text>
+
+  <!-- ===== Bottom-left: International ===== -->
+  <rect x="60" y="505" width="180" height="80" rx="10" fill="#e0f7fa" stroke="#00695c" stroke-width="1.5"/>
+  <text x="150" y="530" text-anchor="middle" font-size="13" font-weight="700" fill="#00695c">国際</text>
+  <text x="150" y="550" text-anchor="middle" font-size="10" fill="#4a5568">OECD教育ネットワーク</text>
+  <text x="150" y="567" text-anchor="middle" font-size="10" fill="#4a5568">国際ファシリテーション協会</text>
+  <text x="150" y="584" text-anchor="middle" font-size="10" fill="#4a5568">NVC国際実践者コミュニティ</text>
+
+  <!-- ===== Bottom-right: Region ===== -->
+  <rect x="640" y="475" width="200" height="130" rx="10" fill="#fff3e0" stroke="#bf360c" stroke-width="1.5"/>
+  <text x="740" y="500" text-anchor="middle" font-size="13" font-weight="700" fill="#bf360c">地域</text>
+  <text x="740" y="520" text-anchor="middle" font-size="10" fill="#4a5568">TAKiBiBA（かすみがうら）</text>
+  <text x="740" y="537" text-anchor="middle" font-size="10" fill="#4a5568">隠岐の島ジオパーク</text>
+  <text x="740" y="554" text-anchor="middle" font-size="10" fill="#4a5568">京都・出町桝形商店街</text>
+  <text x="740" y="571" text-anchor="middle" font-size="10" fill="#4a5568">長崎県離島ネットワーク</text>
+  <text x="740" y="588" text-anchor="middle" font-size="10" fill="#4a5568">KUBERU（フォルケホイスコーレ型）</text>
+
+  <!-- ===== Bottom-center: Technology ===== -->
+  <rect x="330" y="485" width="240" height="100" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+  <text x="450" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#2b6cb0">テクノロジー</text>
+  <text x="450" y="532" text-anchor="middle" font-size="10" fill="#4a5568">MUSVIの窓（遠隔協働）</text>
+  <text x="450" y="549" text-anchor="middle" font-size="10" fill="#4a5568">Claude Code ＋ Obsidian</text>
+  <text x="450" y="566" text-anchor="middle" font-size="10" fill="#4a5568">MCP（業務ソフト連携）</text>
+  <text x="450" y="583" text-anchor="middle" font-size="10" fill="#4a5568">GitHub（知の資産化）</text>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#1a365d">プラネタリー・ラーニング ネットワーク構造</text>
+  <text x="450" y="64" text-anchor="middle" font-size="12" fill="#4a5568">少数のコアチーム × 多様な提携メンバー × 背後のネットワーク</text>
+
+</svg>

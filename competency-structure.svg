@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif">
+  <defs>
+    <linearGradient id="g7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e65100"/>
+      <stop offset="100%" stop-color="#bf360c"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b6cb0"/>
+      <stop offset="100%" stop-color="#1a365d"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a5568"/>
+      <stop offset="100%" stop-color="#2d3748"/>
+    </linearGradient>
+    <filter id="s" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="520" fill="#fafafa" rx="8"/>
+
+  <!-- Title -->
+  <text x="410" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a365d">AI PROOFコンピテンシーの構造</text>
+  <text x="410" y="58" text-anchor="middle" font-size="11" fill="#4a5568">7つの力は3つの層をなす。上層ほど人間に固有であり、AIに代替されにくい。</text>
+
+  <!-- Layer labels (right side) -->
+  <text x="790" y="140" text-anchor="end" font-size="10" font-weight="700" fill="#e65100">第3層: 中核</text>
+  <text x="790" y="155" text-anchor="end" font-size="9" fill="#4a5568">人間に固有</text>
+
+  <text x="790" y="270" text-anchor="end" font-size="10" font-weight="700" fill="#2b6cb0">第2層: 実行</text>
+  <text x="790" y="285" text-anchor="end" font-size="9" fill="#4a5568">AI と人間の共創</text>
+
+  <text x="790" y="400" text-anchor="end" font-size="10" font-weight="700" fill="#4a5568">第1層: 基盤</text>
+  <text x="790" y="415" text-anchor="end" font-size="9" fill="#4a5568">AI が大幅に支援</text>
+
+  <!-- ===== Layer 3: Core (top) ===== -->
+  <rect x="210" y="85" width="400" height="95" rx="14" fill="url(#g7)" filter="url(#s)"/>
+  <text x="410" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">7. 意味の自己生成</text>
+  <text x="410" y="138" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.9)">Self-Generating Meaning</text>
+  <text x="410" y="162" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">「なぜこの問いを追うのか」を自分で見つけ、持ち続ける力</text>
+
+  <!-- Arrows from Layer 3 to Layer 2 -->
+  <line x1="310" y1="180" x2="170" y2="225" stroke="#e65100" stroke-width="2" opacity="0.5"/>
+  <line x1="410" y1="180" x2="410" y2="225" stroke="#e65100" stroke-width="2" opacity="0.5"/>
+  <line x1="510" y1="180" x2="650" y2="225" stroke="#e65100" stroke-width="2" opacity="0.5"/>
+
+  <!-- ===== Layer 2: Execution (middle) ===== -->
+  <rect x="40" y="225" width="220" height="80" rx="12" fill="url(#g2)" filter="url(#s)"/>
+  <text x="150" y="255" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">2. 越境学習</text>
+  <text x="150" y="275" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Cross-Border Learning</text>
+  <text x="150" y="295" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">何を学ぶべきかを自分で決める</text>
+
+  <rect x="300" y="225" width="220" height="80" rx="12" fill="url(#g2)" filter="url(#s)"/>
+  <text x="410" y="255" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">5. 仮説駆動と事業開発</text>
+  <text x="410" y="275" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Hypothesis-Driven Creation</text>
+  <text x="410" y="295" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">何を試すかを決め、動く</text>
+
+  <rect x="560" y="225" width="220" height="80" rx="12" fill="url(#g2)" filter="url(#s)"/>
+  <text x="670" y="255" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">6. 合意形成と共創</text>
+  <text x="670" y="275" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Consensus &amp; Co-Creation</text>
+  <text x="670" y="295" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">誰と創るかを設計する</text>
+
+  <!-- Arrows from Layer 2 to Layer 1 -->
+  <line x1="150" y1="305" x2="150" y2="355" stroke="#2b6cb0" stroke-width="2" opacity="0.4"/>
+  <line x1="410" y1="305" x2="410" y2="355" stroke="#2b6cb0" stroke-width="2" opacity="0.4"/>
+  <line x1="670" y1="305" x2="670" y2="355" stroke="#2b6cb0" stroke-width="2" opacity="0.4"/>
+
+  <!-- ===== Layer 1: Foundation (bottom) ===== -->
+  <rect x="40" y="355" width="220" height="80" rx="12" fill="url(#g1)" filter="url(#s)"/>
+  <text x="150" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">1. 仕組み化と再投資</text>
+  <text x="150" y="405" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Systematize &amp; Reinvest</text>
+  <text x="150" y="425" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">AIで仕組み化し、時間を創る</text>
+
+  <rect x="300" y="355" width="220" height="80" rx="12" fill="url(#g1)" filter="url(#s)"/>
+  <text x="410" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">3. パターン発見</text>
+  <text x="410" y="405" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Pattern Discovery</text>
+  <text x="410" y="425" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">データから構造を見出す</text>
+
+  <rect x="560" y="355" width="220" height="80" rx="12" fill="url(#g1)" filter="url(#s)"/>
+  <text x="670" y="385" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">4. 知の形式知化と接続</text>
+  <text x="670" y="405" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.85)">Knowledge Externalization</text>
+  <text x="670" y="425" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.7)">暗黙知を言語化し接続する</text>
+
+  <!-- Bottom bar -->
+  <rect x="40" y="460" width="740" height="36" rx="6" fill="#e2e8f0"/>
+  <text x="410" y="483" text-anchor="middle" font-size="11" font-weight="600" fill="#4a5568">ツールとデータの操作能力（Claude Code＋Obsidian＋MCP）</text>
+
+  <!-- AI gradient label (left side) -->
+  <rect x="6" y="85" width="18" height="350" rx="9" fill="url(#g7)" opacity="0.15"/>
+  <text x="15" y="260" text-anchor="middle" font-size="10" font-weight="700" fill="#e65100" transform="rotate(-90 15 260)">AI に代替されにくい →</text>
+
+</svg>

@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Code＋Obsidian 環境解説 — NEXTハイスクール構想</title>
+  <title>Claude Code＋Obsidian 環境解説 — プラネタリー・ラーニング構想</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <div class="site-title"><a href="index.html">NEXTハイスクール構想</a></div>
+    <div class="site-title"><a href="index.html">プラネタリー・ラーニング構想</a></div>
     <nav>
       <a href="p0.html">世界観</a>
       <a href="process-design.html">プロセス設計</a>
+      <a href="competency.html">コンピテンシー</a>
       <a href="platform.html">プラットフォーム</a>
       <a href="p2.html">学校組織開発</a>
       <a href="p3.html">カリキュラム共創</a>
       <a href="p4.html">授業実践伴走</a>
       <a href="p5.html">探究カリキュラム</a>
+      <a href="about.html">About Us</a>
     </nav>
   </div>
 </header>
@@ -34,6 +36,88 @@
     <div class="callout-title">本ノートの目的</div>
     <p>NEXTハイスクール構想で導入するAI活用プラットフォーム「Claude Code＋Obsidian」について、教育委員会・学校管理職・教員に向けて解説する。「なぜこの組み合わせなのか」「何ができるのか」「どう段階的に導入するのか」を示す。</p>
     <p>プロセス全体の中での位置づけは <a href="process-design.html">プロセスデザイン全体設計</a> を参照。</p>
+  </div>
+
+  <!-- Section 0: Why this combination -->
+  <h2>なぜ Claude Code＋Obsidian なのか</h2>
+
+  <p>私たちがこの組み合わせを選んだのは、流行りのツールだからではありません。<strong>世界中のエンジニアや教育者が、独立に同じ結論に到達した</strong>からです。</p>
+
+  <h3>2つのマークダウンが出会った</h3>
+
+  <p>Obsidianは2020年に生まれたノートアプリです。特別なデータベースではなく、ただのテキストファイル（マークダウン）を使います。ファイルはすべて自分のPCに保存されます。<code>[[内部リンク]]</code>でノート同士をつなげると、自分だけの知識のネットワークができます。</p>
+
+  <p>Claude Codeは2025年にAnthropicが開発したAIです。ChatGPTと違い、<strong>あなたのPCのフォルダの中で動きます</strong>。フォルダ内のファイルを読んで、文脈を理解した上で応答します。「CLAUDE.md」という設定ファイルを置いておくと、AIは毎回そこから始められます。</p>
+
+  <p>この2つが出会ったとき、自然な結論が生まれました。</p>
+
+  <div class="callout">
+    <div class="callout-title">核心</div>
+    <p>Obsidianは「人間の思考」をテキストファイルとして外に出す。<br>
+    Claude Codeは「AIの記憶」をテキストファイルとして持つ。<br>
+    <strong>2つが同じフォルダの中にあると、人間の思考とAIの理解が自然につながる。</strong></p>
+  </div>
+
+  <h3>世界が同時にたどり着いた</h3>
+
+  <p>この組み合わせは、誰か一人が発明したものではありません。2025年の春から夏にかけて、世界中のエンジニアや知識労働者が独立に気づきました——「Claude CodeをObsidianのフォルダの中で動かせば、AIが自分の知識ネットワーク全体を読めるのではないか」と。</p>
+
+  <table>
+    <tr><th>時期</th><th>何が起きたか</th></tr>
+    <tr><td><strong>2025年春</strong></td><td>エンジニアたちが、ObsidianのフォルダでClaude Codeを使い始める</td></tr>
+    <tr><td><strong>2025年夏</strong></td><td>企業の技術ブログで「業務日誌をObsidianに書き、Claude Codeで横断分析する」事例が公開される</td></tr>
+    <tr><td><strong>2025年後半</strong></td><td>「AIを使ったノート整理」という新しい概念が広がる</td></tr>
+    <tr><td><strong>2026年1月</strong></td><td><strong>Obsidian CEOのSteph Ango自身が、Claude CodeにObsidianの書き方を教える公式ファイルを公開</strong>。Obsidianの開発者が「AIがノートの中で働くこと」を正式に認めた</td></tr>
+    <tr><td><strong>2026年3月</strong></td><td>「Obsidian × Claude Code」が一つのジャンルとして確立</td></tr>
+  </table>
+
+  <p>つまり、<strong>Obsidianの開発者自身が「AIとノートの融合」を公式にサポートしている</strong>ということです。私たちが独自に選んだ組み合わせではなく、世界的なトレンドの上に乗っています。</p>
+
+  <h3>教師のノートが、学校の財産になる</h3>
+
+  <p>教師の頭の中には膨大な知恵があります。「この単元はこう教えるとうまくいく」「この生徒はこういう声かけが効く」——しかし、その知恵のほとんどは個人の頭の中に閉じ込められ、異動すれば失われます。</p>
+
+  <p>Obsidianに書いたノートは<strong>残ります</strong>。つながります。育ちます。</p>
+
+  <ul>
+    <li>Slackのメッセージは流れて消えます</li>
+    <li>メールは埋もれて見つかりません</li>
+    <li>Wordファイルは引き出しの奥で眠ります</li>
+    <li><strong>Obsidianのノートは、<code>[[内部リンク]]</code>でつながり、AIが読み、新しい気づきを返してくれます</strong></li>
+  </ul>
+
+  <p>教師がObsidianに授業の気づきを書き続けると、それは「この学校の教え方の知恵」として蓄積されます。<strong>人が変わっても、知恵は残る。</strong>これが「使うほどに賢くなる学校」の仕組みです。</p>
+
+  <h3>なぜ他のツールではだめなのか</h3>
+
+  <table>
+    <tr><th>ツール</th><th>問題</th><th>Claude Code＋Obsidianの場合</th></tr>
+    <tr>
+      <td><strong>ChatGPT</strong></td>
+      <td>対話は使い捨て。昨日の話を今日のAIは覚えていない</td>
+      <td>Vaultにすべて蓄積。AIは「この人がこれまで何を考えてきたか」を知っている</td>
+    </tr>
+    <tr>
+      <td><strong>Google Docs</strong></td>
+      <td>ファイルがバラバラ。ファイル間のつながりがない</td>
+      <td><code>[[内部リンク]]</code>でノート同士がつながり、知識のネットワークになる</td>
+    </tr>
+    <tr>
+      <td><strong>Notion</strong></td>
+      <td>データはNotionのサーバーに。サービスが終了すればアクセスできなくなる</td>
+      <td>ファイルは自分のPCにある。USBにコピーできる。卒業時に持ち出せる</td>
+    </tr>
+    <tr>
+      <td><strong>特定のEdTechツール</strong></td>
+      <td>ベンダーロックイン。契約が終われば使えなくなる</td>
+      <td>マークダウンはただのテキスト。20年後でもメモ帳で開ける</td>
+    </tr>
+  </table>
+
+  <div class="callout important">
+    <div class="callout-title">Obsidian CEOの言葉</div>
+    <p>「アプリケーションは消えるが、ファイルは残る」——Steph Ango<br><br>
+    生徒が3年間で書いた探究ノート、取材メモ、仮説と検証の記録——<strong>これらは特定のアプリに閉じ込められるべきではありません</strong>。マークダウンファイルとして自分のPCに残り、卒業後も持ち出せ、10年後にも読み返せる。これが私たちがこの組み合わせを選んだ最も根本的な理由です。</p>
   </div>
 
   <!-- Section 1 -->
@@ -580,7 +664,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 </main>
 
 <footer>
-  <p>NEXTハイスクール プラネタリー・ラーニング構想 &mdash; デジタルファシリテーション研究所</p>
+  <p>プラネタリー・ラーニング構想 &mdash; デジタルファシリテーション研究所</p>
 </footer>
 
 </body>
