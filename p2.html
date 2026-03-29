@@ -157,8 +157,8 @@
 
   <h3>3.2 環境セットアップ</h3>
   <p>P1（教員研修）の第3回で、コアチームが自分のVaultを作る。</p>
-  <div class="diagram">
-<pre>各教員のPC
+  <div style="margin:24px auto; max-width:520px;">
+    <pre style="background:#f7fafc; border:2px solid #e2e8f0; border-radius:10px; padding:20px 24px; font-family:'Consolas','Monaco','Courier New',monospace; font-size:13px; line-height:1.8; color:#1a365d; overflow-x:auto;"><code>各教員のPC
 ├── Obsidian（インストール）
 ├── Claude Code（インストール）
 ├── 個人Vault/
@@ -166,7 +166,7 @@
 │   ├── 授業設計/           ← 授業のアイデア・振り返り
 │   ├── 組織開発/           ← 職員会議の記録・レポート
 │   └── 研修記録/           ← 事例研究会の気づき
-└── Git（版管理）</pre>
+└── Git（版管理）</code></pre>
   </div>
 
   <div class="callout tip">
@@ -213,23 +213,32 @@
   <p><strong>全教員が使うのはAIアプリ（またはGoogleフォーム）だけ。</strong> この段階ではClaude Code＋Obsidianの導入は不要。コアチームがAIによる統合を裏で担う。</p>
 
   <h4>収集の方法</h4>
-  <div class="diagram">
-<pre>全教員（50名）
-  │
-  │ QRコード → AIアプリ or Googleフォーム
-  │ スマホでもPCでも回答可能
-  │ 自由記述（5-10分で回答可能）
-  │
-  ↓
-コアチーム（Claude Code＋Obsidian）
-  │
-  │ 回答を一括取得
-  │ Claude Codeで統合・構造化
-  │ KJ法で意見をクラスター化
-  │ レポートをVaultに蓄積
-  │
-  ↓
-統合レポート → 全教員に共有</pre>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 460 520" width="100%" style="max-width:460px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs><marker id="vc1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <!-- 全教員 -->
+      <rect x="80" y="10" width="300" height="44" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="230" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">全教員（50名）</text>
+      <!-- 矢印1 -->
+      <line x1="230" y1="54" x2="230" y2="140" stroke="#1a365d" stroke-width="2" marker-end="url(#vc1)"/>
+      <!-- 説明テキスト -->
+      <text x="250" y="76" font-size="10" fill="#4a5568">QRコード → AIアプリ or Googleフォーム</text>
+      <text x="250" y="92" font-size="10" fill="#4a5568">スマホでもPCでも回答可能</text>
+      <text x="250" y="108" font-size="10" fill="#4a5568">自由記述（5-10分で回答可能）</text>
+      <!-- コアチーム -->
+      <rect x="50" y="144" width="360" height="44" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="230" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">コアチーム（Claude Code＋Obsidian）</text>
+      <!-- 矢印2 -->
+      <line x1="230" y1="188" x2="230" y2="310" stroke="#1a365d" stroke-width="2" marker-end="url(#vc1)"/>
+      <!-- 説明テキスト2 -->
+      <text x="250" y="216" font-size="10" fill="#4a5568">回答を一括取得</text>
+      <text x="250" y="236" font-size="10" fill="#4a5568">Claude Codeで統合・構造化</text>
+      <text x="250" y="256" font-size="10" fill="#4a5568">KJ法で意見をクラスター化</text>
+      <text x="250" y="276" font-size="10" fill="#4a5568">レポートをVaultに蓄積</text>
+      <!-- 統合レポート -->
+      <rect x="60" y="314" width="340" height="44" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="230" y="342" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">統合レポート → 全教員に共有</text>
+    </svg>
   </div>
 
   <h4>質問の設計</h4>
@@ -254,47 +263,44 @@
   <p>コアチームがClaude Codeで統合レポートを作成する。</p>
 
   <h4>レポートの構造</h4>
-  <div class="diagram">
-<pre>教員の声 統合レポート vol.1「学校の課題」
-日付: 2026年○月○日
-回答者: 50名中42名（回答率84%）
-
-─────────────────────────────────
-
-1. KJ法による意見クラスター
-
-クラスター1: 時間と余裕の不足（18名が言及）
-  - 授業準備の時間が足りない
-  - 事務作業に追われている
-  - 生徒と向き合う時間がない
-  - 「やりたいことはあるが、時間がない」
-
-クラスター2: 教科間の分断（12名が言及）
-  - 他教科の先生と話す機会がない
-  - 探究学習と教科学習がつながらない
-  - 自分の教科の中に閉じている
-
-クラスター3: 評価の悩み（9名が言及）
-  - 探究学習の評価基準が分からない
-  - 点数化できない力をどう評価するか
-  - 生徒の「成長」を可視化したい
-
-クラスター4: AIへの期待と不安（8名が言及）
-  - AIを使いこなせる自信がない
-  - でも可能性は感じている
-  - 生徒の方がAIに詳しくなるのが怖い
-
-─────────────────────────────────
-
-2. 全体を貫くテーマ
-「やりたいことはある。でも時間がない、
- つながりがない、やり方が分からない」
-→ 意欲の問題ではなく、構造の問題
-
-─────────────────────────────────
-
-3. 次のアクション候補
-（この部分は職員会議でのコンセンサス評価にかける）</pre>
+  <div style="margin:24px auto; max-width:640px; background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); border-left:5px solid #2b6cb0; border-radius:0 10px 10px 0; padding:24px 28px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+    <div style="font-size:15px; font-weight:bold; color:#1a365d; margin-bottom:4px;">教員の声 統合レポート vol.1「学校の課題」</div>
+    <div style="font-size:12px; color:#718096; margin-bottom:16px;">日付: 2026年○月○日 ｜ 回答者: 50名中42名（回答率84%）</div>
+    <hr style="border:none; border-top:1px solid #cbd5e0; margin:0 0 16px 0;">
+    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:10px;">1. KJ法による意見クラスター</div>
+    <div style="margin-bottom:12px; padding:10px 14px; background:#fff3e0; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#e65100;">クラスター1: 時間と余裕の不足（18名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+        <li>授業準備の時間が足りない</li><li>事務作業に追われている</li><li>生徒と向き合う時間がない</li><li>「やりたいことはあるが、時間がない」</li>
+      </ul>
+    </div>
+    <div style="margin-bottom:12px; padding:10px 14px; background:#e3f2fd; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#1a365d;">クラスター2: 教科間の分断（12名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+        <li>他教科の先生と話す機会がない</li><li>探究学習と教科学習がつながらない</li><li>自分の教科の中に閉じている</li>
+      </ul>
+    </div>
+    <div style="margin-bottom:12px; padding:10px 14px; background:#e8f5e9; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#2e7d32;">クラスター3: 評価の悩み（9名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+        <li>探究学習の評価基準が分からない</li><li>点数化できない力をどう評価するか</li><li>生徒の「成長」を可視化したい</li>
+      </ul>
+    </div>
+    <div style="margin-bottom:14px; padding:10px 14px; background:#fce4ec; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#c62828;">クラスター4: AIへの期待と不安（8名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+        <li>AIを使いこなせる自信がない</li><li>でも可能性は感じている</li><li>生徒の方がAIに詳しくなるのが怖い</li>
+      </ul>
+    </div>
+    <hr style="border:none; border-top:1px solid #cbd5e0; margin:0 0 14px 0;">
+    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:6px;">2. 全体を貫くテーマ</div>
+    <div style="padding:10px 14px; background:#fff; border-radius:6px; font-size:13px; color:#1a365d; line-height:1.7; border:1px solid #e2e8f0;">
+      「やりたいことはある。でも時間がない、つながりがない、やり方が分からない」<br>
+      <span style="color:#e65100; font-weight:bold;">→ 意欲の問題ではなく、構造の問題</span>
+    </div>
+    <hr style="border:none; border-top:1px solid #cbd5e0; margin:14px 0;">
+    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:4px;">3. 次のアクション候補</div>
+    <div style="font-size:12px; color:#718096; font-style:italic;">（この部分は職員会議でのコンセンサス評価にかける）</div>
   </div>
 
   <h3>4.4 レポートの共有と対話</h3>
@@ -445,21 +451,34 @@
 
   <h3>6.2 展開のプロセス</h3>
 
-  <div class="diagram">
-<pre>コアチームの実践共有
-  事例研究会で「Vaultでこんなことができた」を具体的に見せる
-    ↓
-希望者へのペアセットアップ
-  コアチームの教員が1対1でセットアップ支援「一緒にやりましょう」
-    ↓
-個人のAI活用の高度化
-  各教員が自分の教科・業務でVaultを使い始める「自分の仕事」に使う
-    ↓
-相互共有の開始
-  事例研究会で各教員の実践を共有 → 互いの知恵が流れ始める
-    ↓
-集合知の形成
-  個人のVaultの知恵が学校全体の知識基盤になっていく</pre>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 500 520" width="100%" style="max-width:500px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs><marker id="ex1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <!-- Step 1 -->
+      <rect x="30" y="10" width="440" height="60" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="250" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">コアチームの実践共有</text>
+      <text x="250" y="52" text-anchor="middle" font-size="10" fill="#4a5568">事例研究会で「Vaultでこんなことができた」を具体的に見せる</text>
+      <line x1="250" y1="70" x2="250" y2="94" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <!-- Step 2 -->
+      <rect x="30" y="98" width="440" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="250" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">希望者へのペアセットアップ</text>
+      <text x="250" y="140" text-anchor="middle" font-size="10" fill="#4a5568">コアチームの教員が1対1でセットアップ支援「一緒にやりましょう」</text>
+      <line x1="250" y1="158" x2="250" y2="182" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <!-- Step 3 -->
+      <rect x="30" y="186" width="440" height="60" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="250" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">個人のAI活用の高度化</text>
+      <text x="250" y="228" text-anchor="middle" font-size="10" fill="#4a5568">各教員が自分の教科・業務でVaultを使い始める「自分の仕事」に使う</text>
+      <line x1="250" y1="246" x2="250" y2="270" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <!-- Step 4 -->
+      <rect x="30" y="274" width="440" height="60" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="250" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">相互共有の開始</text>
+      <text x="250" y="316" text-anchor="middle" font-size="10" fill="#4a5568">事例研究会で各教員の実践を共有 → 互いの知恵が流れ始める</text>
+      <line x1="250" y1="334" x2="250" y2="358" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <!-- Step 5 -->
+      <rect x="30" y="362" width="440" height="60" rx="10" fill="#1a365d" stroke="#1a365d" stroke-width="2"/>
+      <text x="250" y="384" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">集合知の形成</text>
+      <text x="250" y="404" text-anchor="middle" font-size="10" fill="#e2e8f0">個人のVaultの知恵が学校全体の知識基盤になっていく</text>
+    </svg>
   </div>
 
   <h3>6.3 個人の宇宙×集合知のバランス</h3>
@@ -472,22 +491,38 @@
 
   <p>これを学校に翻訳する:</p>
 
-  <div class="diagram">
-<pre>個人のVault（自分の宇宙）
-  │ 授業設計、教科の知恵、生徒の観察…
-  │ これは自分だけの空間。他人に見せる必要はない
-  │
-  ↓ エッセンスを抽出して共有
-  │ 事例研究会で「こういうことが分かった」を発表
-  │ AIが発表を統合→共有レポートに
-  │
-共有の知恵（集合知）
-  │ 教科を超えた気づき
-  │ 「物理でもそうなんだ」「うちの教科でも試してみよう」
-  │
-  ↓ 他教科の知恵が自分のVaultに入ってくる
-  │
-個人のVaultが豊かになる → さらに良い実践 → また共有…</pre>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 480 460" width="100%" style="max-width:480px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs>
+        <marker id="cy1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e7d32"/></marker>
+        <marker id="cy2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2b6cb0"/></marker>
+      </defs>
+      <!-- 個人のVault（上） -->
+      <rect x="60" y="10" width="360" height="70" rx="12" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="240" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">個人のVault（自分の宇宙）</text>
+      <text x="240" y="52" text-anchor="middle" font-size="10" fill="#4a5568">授業設計、教科の知恵、生徒の観察…</text>
+      <text x="240" y="68" text-anchor="middle" font-size="9" fill="#718096">自分だけの空間。他人に見せる必要はない</text>
+      <!-- 下矢印 -->
+      <line x1="240" y1="80" x2="240" y2="148" stroke="#2e7d32" stroke-width="2" marker-end="url(#cy1)"/>
+      <text x="258" y="100" font-size="10" font-weight="bold" fill="#2e7d32">エッセンスを抽出して共有</text>
+      <text x="258" y="116" font-size="9" fill="#4a5568">事例研究会で「こういうことが分かった」を発表</text>
+      <text x="258" y="132" font-size="9" fill="#4a5568">AIが発表を統合→共有レポートに</text>
+      <!-- 共有の知恵 -->
+      <rect x="60" y="152" width="360" height="70" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="240" y="176" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">共有の知恵（集合知）</text>
+      <text x="240" y="194" text-anchor="middle" font-size="10" fill="#4a5568">教科を超えた気づき</text>
+      <text x="240" y="210" text-anchor="middle" font-size="9" fill="#718096">「物理でもそうなんだ」「うちの教科でも試してみよう」</text>
+      <!-- 下矢印 -->
+      <line x1="240" y1="222" x2="240" y2="290" stroke="#2b6cb0" stroke-width="2" marker-end="url(#cy2)"/>
+      <text x="258" y="250" font-size="10" font-weight="bold" fill="#2b6cb0">他教科の知恵が自分のVaultに入ってくる</text>
+      <!-- 個人のVault（下） -->
+      <rect x="60" y="294" width="360" height="56" rx="12" fill="#1a365d" stroke="#1a365d" stroke-width="2"/>
+      <text x="240" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">個人のVaultが豊かになる</text>
+      <text x="240" y="338" text-anchor="middle" font-size="10" fill="#e2e8f0">さらに良い実践 → また共有…</text>
+      <!-- 循環矢印 -->
+      <path d="M420,322 Q460,322 460,110 Q460,30 430,30" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#cy1)"/>
+      <text x="470" y="180" font-size="10" fill="#e65100" font-weight="bold" transform="rotate(90,470,180)">循環</text>
+    </svg>
   </div>
 
   <p><strong>核心: 「混ぜすぎない」こと。</strong> 全員が同じVaultを使うのではなく、個人のVaultが独立していて、共有はエッセンスだけ。バイヤーの棚づくりが個人の美的感覚に依存するように、教員の授業設計も個人の創造性に依存する。集合知はその創造性を触発するもの。</p>

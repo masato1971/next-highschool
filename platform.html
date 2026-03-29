@@ -41,27 +41,97 @@
 
   <h3>1.1 従来のAI活用の問題</h3>
 
-  <div class="diagram">【従来のAI活用（ChatGPT等）】
-
-  質問 → AIが回答 → 読んで終わり → 消える
-  質問 → AIが回答 → 読んで終わり → 消える
-  質問 → AIが回答 → 読んで終わり → 消える
-
-  → 毎回ゼロから。対話の蓄積がない。
-  → 「先週考えたこと」をAIは知らない。
-  → 思考が使い捨てになる。</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 700 320" width="100%" style="max-width:700px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- Title -->
+      <rect x="10" y="10" width="680" height="40" rx="8" fill="#1a365d"/>
+      <text x="350" y="36" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">従来のAI活用（ChatGPT等）</text>
+      <!-- Row 1 -->
+      <rect x="30" y="70" width="80" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="70" y="91" text-anchor="middle" fill="#1a365d" font-size="12" font-weight="bold">質問</text>
+      <line x1="110" y1="86" x2="150" y2="86" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="150" y="70" width="110" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="205" y="91" text-anchor="middle" fill="#1a365d" font-size="12">AIが回答</text>
+      <line x1="260" y1="86" x2="300" y2="86" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="300" y="70" width="130" height="32" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <text x="365" y="91" text-anchor="middle" fill="#e65100" font-size="12">読んで終わり</text>
+      <line x1="430" y1="86" x2="470" y2="86" stroke="#e65100" stroke-width="2" marker-end="url(#arrowOrange1)"/>
+      <rect x="470" y="70" width="90" height="32" rx="6" fill="#ffccbc" stroke="#e65100" stroke-width="1.5"/>
+      <text x="515" y="91" text-anchor="middle" fill="#e65100" font-size="13" font-weight="bold">消える</text>
+      <!-- Row 2 -->
+      <rect x="30" y="115" width="80" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="70" y="136" text-anchor="middle" fill="#1a365d" font-size="12" font-weight="bold">質問</text>
+      <line x1="110" y1="131" x2="150" y2="131" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="150" y="115" width="110" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="205" y="136" text-anchor="middle" fill="#1a365d" font-size="12">AIが回答</text>
+      <line x1="260" y1="131" x2="300" y2="131" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="300" y="115" width="130" height="32" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <text x="365" y="136" text-anchor="middle" fill="#e65100" font-size="12">読んで終わり</text>
+      <line x1="430" y1="131" x2="470" y2="131" stroke="#e65100" stroke-width="2" marker-end="url(#arrowOrange1)"/>
+      <rect x="470" y="115" width="90" height="32" rx="6" fill="#ffccbc" stroke="#e65100" stroke-width="1.5"/>
+      <text x="515" y="136" text-anchor="middle" fill="#e65100" font-size="13" font-weight="bold">消える</text>
+      <!-- Row 3 -->
+      <rect x="30" y="160" width="80" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="70" y="181" text-anchor="middle" fill="#1a365d" font-size="12" font-weight="bold">質問</text>
+      <line x1="110" y1="176" x2="150" y2="176" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="150" y="160" width="110" height="32" rx="6" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="205" y="181" text-anchor="middle" fill="#1a365d" font-size="12">AIが回答</text>
+      <line x1="260" y1="176" x2="300" y2="176" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue1)"/>
+      <rect x="300" y="160" width="130" height="32" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <text x="365" y="181" text-anchor="middle" fill="#e65100" font-size="12">読んで終わり</text>
+      <line x1="430" y1="176" x2="470" y2="176" stroke="#e65100" stroke-width="2" marker-end="url(#arrowOrange1)"/>
+      <rect x="470" y="160" width="90" height="32" rx="6" fill="#ffccbc" stroke="#e65100" stroke-width="1.5"/>
+      <text x="515" y="181" text-anchor="middle" fill="#e65100" font-size="13" font-weight="bold">消える</text>
+      <!-- Problem statements -->
+      <rect x="30" y="215" width="640" height="90" rx="8" fill="#fbe9e7" stroke="#e65100" stroke-width="1.5"/>
+      <text x="350" y="242" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">毎回ゼロから。対話の蓄積がない。</text>
+      <text x="350" y="266" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">「先週考えたこと」をAIは知らない。</text>
+      <text x="350" y="290" text-anchor="middle" fill="#e65100" font-size="14" font-weight="bold">思考が使い捨てになる。</text>
+      <!-- Arrow markers -->
+      <defs>
+        <marker id="arrowBlue1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2b6cb0"/></marker>
+        <marker id="arrowOrange1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e65100"/></marker>
+      </defs>
+    </svg>
+  </div>
 
   <h3>1.2 Claude Code＋Obsidianの世界</h3>
 
-  <div class="diagram">【Claude Code＋Obsidian】
-
-  思考 → Vaultに記録 → AIが文脈を理解 → 深掘り → Vaultに追記
-    ↑                                                    │
-    └──────── 次の対話で「前回の続き」から始まる ──────────┘
-
-  → 思考が積み上がる。
-  → AIは「この人が何を考えてきたか」を知っている。
-  → 1ヶ月前のノートと今日のノートがつながる。</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 720 330" width="100%" style="max-width:720px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- Title -->
+      <rect x="10" y="10" width="700" height="40" rx="8" fill="#2e7d32"/>
+      <text x="360" y="36" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Claude Code＋Obsidian</text>
+      <!-- Flow boxes -->
+      <rect x="30" y="75" width="100" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="80" y="100" text-anchor="middle" fill="#1a365d" font-size="13" font-weight="bold">思考</text>
+      <line x1="130" y1="95" x2="165" y2="95" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen2)"/>
+      <rect x="165" y="75" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="225" y="100" text-anchor="middle" fill="#1a365d" font-size="13">Vaultに記録</text>
+      <line x1="285" y1="95" x2="320" y2="95" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen2)"/>
+      <rect x="320" y="75" width="140" height="40" rx="8" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="390" y="100" text-anchor="middle" fill="#1a365d" font-size="13">AIが文脈を理解</text>
+      <line x1="460" y1="95" x2="495" y2="95" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowBlue2)"/>
+      <rect x="495" y="75" width="80" height="40" rx="8" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="535" y="100" text-anchor="middle" fill="#1a365d" font-size="13">深掘り</text>
+      <line x1="575" y1="95" x2="610" y2="95" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowGreen2)"/>
+      <rect x="610" y="75" width="90" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="655" y="100" text-anchor="middle" fill="#1a365d" font-size="12">Vaultに追記</text>
+      <!-- Cycle arrow: from Vaultに追記 back to 思考 -->
+      <path d="M655,115 L655,145 Q655,160 640,160 L95,160 Q80,160 80,145 L80,120" fill="none" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowGreen2)"/>
+      <rect x="230" y="147" width="270" height="26" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
+      <text x="365" y="165" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="bold">次の対話で「前回の続き」から始まる</text>
+      <!-- Benefits -->
+      <rect x="30" y="200" width="670" height="110" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+      <text x="360" y="230" text-anchor="middle" fill="#2e7d32" font-size="14" font-weight="bold">思考が積み上がる。</text>
+      <text x="360" y="256" text-anchor="middle" fill="#2e7d32" font-size="14" font-weight="bold">AIは「この人が何を考えてきたか」を知っている。</text>
+      <text x="360" y="282" text-anchor="middle" fill="#2e7d32" font-size="14" font-weight="bold">1ヶ月前のノートと今日のノートがつながる。</text>
+      <defs>
+        <marker id="arrowGreen2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2e7d32"/></marker>
+        <marker id="arrowBlue2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2b6cb0"/></marker>
+      </defs>
+    </svg>
+  </div>
 
   <p><strong>核心: AIとの対話が「使い捨て」から「蓄積」に変わる。</strong> これが教員の授業設計にも、生徒の探究学習にも、学校の組織運営にも共通する価値。</p>
 
@@ -70,17 +140,19 @@
 
   <h3>2.1 Obsidian &mdash; 思考の倉庫</h3>
 
-  <div class="diagram">┌─────────────────────────────────────┐
-│  Obsidian Vault（自分の思考の倉庫）  │
-│                                     │
-│  授業設計メモ.md                     │
-│  生徒Aの探究テーマ.md               │
-│  研修での気づき.md                   │
-│  先行事例調査.md                     │
-│                                     │
-│  すべてがマークダウンファイル         │
-│  [[内部リンク]]でつながる            │
-└─────────────────────────────────────┘</div>
+  <div style="max-width:480px; margin:24px auto; background:#e8f5e9; border:2px solid #2e7d32; border-radius:10px; padding:20px 28px; font-family:sans-serif;">
+    <div style="font-weight:bold; color:#1a365d; font-size:1.1em; margin-bottom:12px;">Obsidian Vault（自分の思考の倉庫）</div>
+    <div style="color:#1a365d; line-height:1.8;">
+      <code>授業設計メモ.md</code><br>
+      <code>生徒Aの探究テーマ.md</code><br>
+      <code>研修での気づき.md</code><br>
+      <code>先行事例調査.md</code>
+    </div>
+    <div style="margin-top:14px; color:#2e7d32; font-size:0.95em; border-top:1px solid #a5d6a7; padding-top:10px;">
+      すべてがマークダウンファイル<br>
+      <code>[[内部リンク]]</code> でつながる
+    </div>
+  </div>
 
   <table>
     <tr><th>特徴</th><th>意味</th></tr>
@@ -95,20 +167,24 @@
 
   <h3>2.2 Claude Code &mdash; 思考のパートナー</h3>
 
-  <div class="diagram">┌─────────────────────────────────────┐
-│  Claude Code                        │
-│                                     │
-│  ターミナル（黒い画面）で動くAI       │
-│                                     │
-│  教員: 「明日の化学の授業を            │
-│         探究テーマと接続したい」       │
-│                                     │
-│  Claude: Vaultの中の                  │
-│          ・生徒の探究テーマ一覧        │
-│          ・教科書の進度               │
-│          ・前回の授業の振り返り        │
-│          を読んだ上で提案する          │
-└─────────────────────────────────────┘</div>
+  <div style="max-width:520px; margin:24px auto; background:#1a365d; border-radius:10px; padding:20px 28px; font-family:monospace; color:#e2e8f0;">
+    <div style="font-weight:bold; font-size:1.1em; color:#90cdf4; margin-bottom:6px; font-family:sans-serif;">Claude Code</div>
+    <div style="font-size:0.9em; color:#a0aec0; margin-bottom:14px; font-family:sans-serif;">ターミナル（黒い画面）で動くAI</div>
+    <div style="margin-bottom:12px;">
+      <span style="color:#68d391; font-weight:bold;">教員:</span>
+      <span style="color:#e2e8f0;">「明日の化学の授業を探究テーマと接続したい」</span>
+    </div>
+    <div>
+      <span style="color:#90cdf4; font-weight:bold;">Claude:</span>
+      <span style="color:#e2e8f0;">Vaultの中の</span>
+      <ul style="margin:6px 0 0 20px; padding:0; color:#e2e8f0; line-height:1.7;">
+        <li>生徒の探究テーマ一覧</li>
+        <li>教科書の進度</li>
+        <li>前回の授業の振り返り</li>
+      </ul>
+      <span style="color:#e2e8f0;">を読んだ上で提案する</span>
+    </div>
+  </div>
 
   <table>
     <tr><th>特徴</th><th>意味</th></tr>
@@ -122,17 +198,34 @@
 
   <h3>2.3 Git &mdash; 思考の履歴</h3>
 
-  <div class="diagram">┌─────────────────────────────────────┐
-│  Git（版管理）                       │
-│                                     │
-│  3月1日  → 授業設計v1               │
-│  3月5日  → 授業後の振り返りを追記     │
-│  3月10日 → 生徒のフィードバックで修正 │
-│  3月15日 → v2として大幅改訂          │
-│                                     │
-│  → いつ、何を、なぜ変えたかが        │
-│    すべて記録される                  │
-└─────────────────────────────────────┘</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 600 300" width="100%" style="max-width:600px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- Title -->
+      <rect x="10" y="10" width="580" height="38" rx="8" fill="#1a365d"/>
+      <text x="300" y="35" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Git（版管理）</text>
+      <!-- Timeline line -->
+      <line x1="80" y1="80" x2="80" y2="230" stroke="#2b6cb0" stroke-width="3"/>
+      <!-- Node 1 -->
+      <circle cx="80" cy="85" r="8" fill="#2b6cb0"/>
+      <text x="100" y="82" fill="#1a365d" font-size="13" font-weight="bold">3月1日</text>
+      <text x="100" y="98" fill="#1a365d" font-size="12">授業設計v1</text>
+      <!-- Node 2 -->
+      <circle cx="80" cy="130" r="8" fill="#2b6cb0"/>
+      <text x="100" y="127" fill="#1a365d" font-size="13" font-weight="bold">3月5日</text>
+      <text x="100" y="143" fill="#1a365d" font-size="12">授業後の振り返りを追記</text>
+      <!-- Node 3 -->
+      <circle cx="80" cy="175" r="8" fill="#2b6cb0"/>
+      <text x="100" y="172" fill="#1a365d" font-size="13" font-weight="bold">3月10日</text>
+      <text x="100" y="188" fill="#1a365d" font-size="12">生徒のフィードバックで修正</text>
+      <!-- Node 4 -->
+      <circle cx="80" cy="220" r="8" fill="#e65100"/>
+      <text x="100" y="217" fill="#1a365d" font-size="13" font-weight="bold">3月15日</text>
+      <text x="100" y="233" fill="#e65100" font-size="12" font-weight="bold">v2として大幅改訂</text>
+      <!-- Summary -->
+      <rect x="30" y="252" width="540" height="36" rx="8" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1.5"/>
+      <text x="300" y="275" text-anchor="middle" fill="#1a365d" font-size="13" font-weight="bold">いつ、何を、なぜ変えたかがすべて記録される</text>
+    </svg>
+  </div>
 
   <table>
     <tr><th>特徴</th><th>意味</th></tr>
@@ -399,28 +492,45 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 
   <h3>7.4 各Stageで起きること</h3>
 
-  <div class="diagram">Stage 1: コアチームの教員が「自分の仕事」にVaultを使う
-  │
-  │ 「これは便利だ」「授業設計が楽になった」という声
-  │ 事例研究会で具体的な使い方を共有
-  │
-  ↓
-Stage 2: 全教員がVaultを使い始める
-  │
-  │ 職員会議の記録、カリキュラム設計、教科間の接続——
-  │ 学校全体の知識基盤がVaultの中に形成される
-  │ 「生徒にも使わせたい」という声が出てくる
-  │
-  ↓
-Stage 3: 生徒が個人Vaultを持つ
-  │
-  │ 探究の全プロセスが蓄積
-  │ AIが「この生徒の文脈」を理解した支援
-  │ 3年間の思考の軌跡がポートフォリオに
-  │ 教員がVaultを手がかりにキャリア面談
-  │
-  ↓
-学校全体が「思考を積み上げる文化」になる</div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 680 620" width="100%" style="max-width:680px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- Stage 1 -->
+      <rect x="40" y="10" width="600" height="50" rx="10" fill="#1a365d"/>
+      <text x="340" y="42" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Stage 1: コアチームの教員が「自分の仕事」にVaultを使う</text>
+      <rect x="80" y="70" width="520" height="55" rx="8" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+      <text x="340" y="92" text-anchor="middle" fill="#1a365d" font-size="12">「これは便利だ」「授業設計が楽になった」という声</text>
+      <text x="340" y="112" text-anchor="middle" fill="#1a365d" font-size="12">事例研究会で具体的な使い方を共有</text>
+      <!-- Arrow 1 -->
+      <line x1="340" y1="125" x2="340" y2="155" stroke="#2b6cb0" stroke-width="3" marker-end="url(#arrowBig3)"/>
+      <!-- Stage 2 -->
+      <rect x="40" y="155" width="600" height="50" rx="10" fill="#2b6cb0"/>
+      <text x="340" y="187" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Stage 2: 全教員がVaultを使い始める</text>
+      <rect x="80" y="215" width="520" height="75" rx="8" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="1"/>
+      <text x="340" y="237" text-anchor="middle" fill="#1a365d" font-size="12">職員会議の記録、カリキュラム設計、教科間の接続</text>
+      <text x="340" y="257" text-anchor="middle" fill="#1a365d" font-size="12">学校全体の知識基盤がVaultの中に形成される</text>
+      <text x="340" y="277" text-anchor="middle" fill="#2e7d32" font-size="12" font-weight="bold">「生徒にも使わせたい」という声が出てくる</text>
+      <!-- Arrow 2 -->
+      <line x1="340" y1="290" x2="340" y2="320" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowBigG3)"/>
+      <!-- Stage 3 -->
+      <rect x="40" y="320" width="600" height="50" rx="10" fill="#2e7d32"/>
+      <text x="340" y="352" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">Stage 3: 生徒が個人Vaultを持つ</text>
+      <rect x="80" y="380" width="520" height="95" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+      <text x="340" y="402" text-anchor="middle" fill="#1a365d" font-size="12">探究の全プロセスが蓄積</text>
+      <text x="340" y="422" text-anchor="middle" fill="#1a365d" font-size="12">AIが「この生徒の文脈」を理解した支援</text>
+      <text x="340" y="442" text-anchor="middle" fill="#1a365d" font-size="12">3年間の思考の軌跡がポートフォリオに</text>
+      <text x="340" y="462" text-anchor="middle" fill="#1a365d" font-size="12">教員がVaultを手がかりにキャリア面談</text>
+      <!-- Arrow 3 -->
+      <line x1="340" y1="475" x2="340" y2="510" stroke="#e65100" stroke-width="3" marker-end="url(#arrowBigO3)"/>
+      <!-- Final -->
+      <rect x="80" y="510" width="520" height="50" rx="12" fill="#fff3e0" stroke="#e65100" stroke-width="2.5"/>
+      <text x="340" y="541" text-anchor="middle" fill="#e65100" font-size="16" font-weight="bold">学校全体が「思考を積み上げる文化」になる</text>
+      <defs>
+        <marker id="arrowBig3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2b6cb0"/></marker>
+        <marker id="arrowBigG3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#2e7d32"/></marker>
+        <marker id="arrowBigO3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#e65100"/></marker>
+      </defs>
+    </svg>
+  </div>
 
   <!-- Section 8 -->
   <h2>8. 他のAIツールとの比較</h2>

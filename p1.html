@@ -40,16 +40,52 @@
   <!-- 全体構成 -->
   <h2>全体構成</h2>
 
-  <div class="diagram"><pre>
-WS: 2040年問題の共有              AI反転授業研修（3回）                    実践・定着
-┌─────────────────────┐     ┌────────────────────────────────┐     ┌──────────────────────┐
-│ AIアプリで → AI統合・ │ ──→ │ 第1回      → 第2回      → 第3回 │ ──→ │ 教員のAI活用  事例   │
-│ 意見収集    可視化    │     │ AIアプリを   意見をAIで   AI反転 │     │ 授業実践  ←→ 検討会 │
-│                      │     │ 作る        統合する     授業を  │     │            （月1回） │
-│                      │     │                         設計する │     │                      │
-└─────────────────────┘     └────────────────────────────────┘     └──────────────────────┘
-      土台                   授業＋職員会議のAI活用土台完成              改善サイクル
-</pre></div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 900 200" width="100%" style="max-width:900px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs>
+        <marker id="arrow1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#1a365d"/>
+        </marker>
+      </defs>
+      <!-- Phase 1: WS -->
+      <rect x="10" y="30" width="240" height="120" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="130" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">WS: 2040年問題の共有</text>
+      <text x="130" y="70" text-anchor="middle" font-size="12" fill="#1a365d">AIアプリで意見収集</text>
+      <text x="130" y="92" text-anchor="middle" font-size="12" fill="#1a365d">↓</text>
+      <text x="130" y="114" text-anchor="middle" font-size="12" fill="#1a365d">AI統合・可視化</text>
+      <text x="130" y="170" text-anchor="middle" font-size="11" fill="#2b6cb0" font-weight="bold">土台</text>
+      <!-- Arrow 1→2 -->
+      <line x1="255" y1="90" x2="305" y2="90" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow1)"/>
+      <!-- Phase 2: 研修3回 -->
+      <rect x="310" y="30" width="310" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="465" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">AI反転授業研修（3回）</text>
+      <text x="365" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">第1回</text>
+      <text x="365" y="82" text-anchor="middle" font-size="10" fill="#1a365d">AIアプリを</text>
+      <text x="365" y="96" text-anchor="middle" font-size="10" fill="#1a365d">作る</text>
+      <text x="407" y="80" text-anchor="middle" font-size="14" fill="#2e7d32">→</text>
+      <text x="465" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">第2回</text>
+      <text x="465" y="82" text-anchor="middle" font-size="10" fill="#1a365d">意見をAIで</text>
+      <text x="465" y="96" text-anchor="middle" font-size="10" fill="#1a365d">統合する</text>
+      <text x="510" y="80" text-anchor="middle" font-size="14" fill="#2e7d32">→</text>
+      <text x="565" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">第3回</text>
+      <text x="565" y="82" text-anchor="middle" font-size="10" fill="#1a365d">AI反転授業を</text>
+      <text x="565" y="96" text-anchor="middle" font-size="10" fill="#1a365d">設計する</text>
+      <text x="465" y="135" text-anchor="middle" font-size="10" fill="#1a365d">授業＋職員会議のAI活用土台完成</text>
+      <text x="465" y="170" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">AI活用土台完成</text>
+      <!-- Arrow 2→3 -->
+      <line x1="625" y1="90" x2="665" y2="90" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow1)"/>
+      <!-- Phase 3: 実践・定着 -->
+      <rect x="670" y="30" width="220" height="120" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="780" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">実践・定着</text>
+      <text x="740" y="70" text-anchor="middle" font-size="12" fill="#1a365d">教員のAI活用</text>
+      <text x="740" y="88" text-anchor="middle" font-size="12" fill="#1a365d">授業実践</text>
+      <text x="780" y="80" text-anchor="middle" font-size="14" fill="#e65100">⇄</text>
+      <text x="840" y="70" text-anchor="middle" font-size="12" fill="#1a365d">事例</text>
+      <text x="840" y="88" text-anchor="middle" font-size="12" fill="#1a365d">検討会</text>
+      <text x="840" y="106" text-anchor="middle" font-size="10" fill="#e65100">（月1回）</text>
+      <text x="780" y="170" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">改善サイクル</text>
+    </svg>
+  </div>
 
   <table>
     <tr><th>フェーズ</th><th>内容</th><th>形式</th><th>所要時間</th></tr>
@@ -255,25 +291,53 @@ WS: 2040年問題の共有              AI反転授業研修（3回）          
   <!-- P1全体を通じた成果 -->
   <h2>P1全体を通じた成果</h2>
 
-  <div class="diagram"><pre>
-WS: 2040年問題の共有                        完成する2つの土台
-┌────────────────────────┐            ┌───────────────────────────┐
-│ 「なぜAIを使うのか」の   │            │ 授業のAI活用              │
-│  共通認識ができる        │            │ 個別最適（壁打ち）＋      │
-└───────────┬────────────┘            │ 協働（AI統合）            │
-            ↓                         ├───────────────────────────┤
-AI反転授業研修 3回                     │ 職員会議のAI活用          │
-┌────────────────────────┐            │ コンセンサス型            │
-│ 第1回: AI壁打ちアプリを  │            │ 意思決定                  │
-│ 自分で作れるようになる   │     ──→    └───────────┬───────────────┘
-│ 第2回: 意見をAIで統合し  │                        ↓
-│ コンセンサスを取れる     │            定着・発展
-│ 第3回: AI反転授業を      │            ┌───────────────────────────┐
-│ 自分の教科で設計できる   │            │ 事例検討会（月1回）        │
-└────────────────────────┘            │ 実践→共有→改善のサイクル  │
-                                       │ GitHubに知恵が蓄積        │
-                                       └───────────────────────────┘
-</pre></div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 780 380" width="100%" style="max-width:780px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs>
+        <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#1a365d"/>
+        </marker>
+      </defs>
+      <!-- Left column: WS + 研修 -->
+      <!-- WS Box -->
+      <rect x="20" y="20" width="300" height="70" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="170" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">WS: 2040年問題の共有</text>
+      <text x="170" y="72" text-anchor="middle" font-size="11" fill="#2b6cb0">「なぜAIを使うのか」の共通認識ができる</text>
+      <!-- Arrow down -->
+      <line x1="170" y1="90" x2="170" y2="120" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow2)"/>
+      <!-- 研修 Box -->
+      <rect x="20" y="125" width="300" height="160" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="170" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">AI反転授業研修（3回）</text>
+      <text x="170" y="178" text-anchor="middle" font-size="11" fill="#1a365d">第1回: AI壁打ちアプリを</text>
+      <text x="170" y="195" text-anchor="middle" font-size="11" fill="#1a365d">　　　自分で作れるようになる</text>
+      <text x="170" y="218" text-anchor="middle" font-size="11" fill="#1a365d">第2回: 意見をAIで統合し</text>
+      <text x="170" y="235" text-anchor="middle" font-size="11" fill="#1a365d">　　　コンセンサスを取れる</text>
+      <text x="170" y="258" text-anchor="middle" font-size="11" fill="#1a365d">第3回: AI反転授業を</text>
+      <text x="170" y="275" text-anchor="middle" font-size="11" fill="#1a365d">　　　自分の教科で設計できる</text>
+      <!-- Arrow right from 研修 to 土台 -->
+      <line x1="320" y1="160" x2="430" y2="80" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow2)"/>
+      <!-- Right column: 2つの土台 -->
+      <text x="600" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">完成する2つの土台</text>
+      <!-- 授業のAI活用 -->
+      <rect x="440" y="35" width="300" height="75" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="590" y="60" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">授業のAI活用</text>
+      <text x="590" y="80" text-anchor="middle" font-size="11" fill="#1a365d">個別最適（壁打ち）＋ 協働（AI統合）</text>
+      <text x="590" y="96" text-anchor="middle" font-size="10" fill="#2b6cb0">「個別最適」と「協働的な学び」の両方にAIを活用</text>
+      <!-- 職員会議のAI活用 -->
+      <rect x="440" y="120" width="300" height="75" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="590" y="145" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">職員会議のAI活用</text>
+      <text x="590" y="165" text-anchor="middle" font-size="11" fill="#1a365d">コンセンサス型意思決定</text>
+      <text x="590" y="181" text-anchor="middle" font-size="10" fill="#e65100">50人中50人が参画する意思決定</text>
+      <!-- Arrow down to 定着 -->
+      <line x1="590" y1="195" x2="590" y2="240" stroke="#1a365d" stroke-width="2" marker-end="url(#arrow2)"/>
+      <!-- 定着・発展 -->
+      <text x="590" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">定着・発展</text>
+      <rect x="440" y="270" width="300" height="85" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="590" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">事例検討会（月1回）</text>
+      <text x="590" y="318" text-anchor="middle" font-size="11" fill="#1a365d">実践 → 共有 → 改善のサイクル</text>
+      <text x="590" y="340" text-anchor="middle" font-size="11" fill="#1a365d">GitHubに知恵が蓄積</text>
+    </svg>
+  </div>
 
   <table>
     <tr><th>成果</th><th>内容</th></tr>

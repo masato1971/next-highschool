@@ -67,29 +67,52 @@
     教科学習が効率化されることで生まれた時間とエネルギーが、探究学習の質を高める。</p>
   </div>
 
-  <div class="diagram"><pre>┌──────────────────────────────────────────────────────┐
-│            AI時代の「両利きの学校」                      │
-│                                                       │
-│  ┌──────────────────┐    ┌──────────────────────┐     │
-│  │ 教科学習（深化）    │    │ 探究学習（探索）       │     │
-│  │                   │    │                       │     │
-│  │ AIチューター       │    │ 教師×生徒の集合知      │     │
-│  │ ×個別最適化       │←→ │ ×社会接続             │     │
-│  │                   │    │                       │     │
-│  │ 効率化で生まれた   │ →  │ 探究の質を高める       │     │
-│  │ 時間とエネルギー   │    │ 時間とエネルギーに     │     │
-│  └──────────────────┘    └──────────────────────┘     │
-│              │                       │                │
-│              └───────────┬───────────┘                │
-│                          │                            │
-│          ┌───────────────▼───────────────┐            │
-│          │  Claude Code ＋ Obsidian       │            │
-│          │  （共通の技術基盤）              │            │
-│          │  ・教科：AIチューター環境        │            │
-│          │  ・探究：集合知形成環境          │            │
-│          │  ・ポートフォリオ：3年間の蓄積   │            │
-│          └───────────────────────────────┘            │
-└──────────────────────────────────────────────────────┘</pre></div>
+  <div style="text-align:center; margin:24px 0;">
+    <svg viewBox="0 0 700 420" width="100%" style="max-width:700px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs>
+        <marker id="arrowP3a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#1a365d"/>
+        </marker>
+      </defs>
+      <!-- Outer frame -->
+      <rect x="10" y="10" width="680" height="400" rx="14" fill="#f8fafc" stroke="#1a365d" stroke-width="2.5"/>
+      <text x="350" y="42" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a365d">AI時代の「両利きの学校」</text>
+      <!-- Left box: 教科学習 -->
+      <rect x="40" y="65" width="280" height="170" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
+      <text x="180" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b6cb0">教科学習（深化）</text>
+      <line x1="80" y1="102" x2="280" y2="102" stroke="#2b6cb0" stroke-width="0.5"/>
+      <text x="180" y="126" text-anchor="middle" font-size="12" fill="#1a365d">AIチューター × 個別最適化</text>
+      <text x="180" y="160" text-anchor="middle" font-size="11" fill="#1a365d">効率化で生まれた</text>
+      <text x="180" y="178" text-anchor="middle" font-size="11" fill="#1a365d">時間とエネルギー</text>
+      <text x="180" y="220" text-anchor="middle" font-size="11" fill="#2b6cb0" font-weight="bold">→ 探究の質を高める力に</text>
+      <!-- Right box: 探究学習 -->
+      <rect x="380" y="65" width="280" height="170" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+      <text x="520" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">探究学習（探索）</text>
+      <line x1="420" y1="102" x2="620" y2="102" stroke="#2e7d32" stroke-width="0.5"/>
+      <text x="520" y="126" text-anchor="middle" font-size="12" fill="#1a365d">教師 × 生徒の集合知</text>
+      <text x="520" y="152" text-anchor="middle" font-size="12" fill="#1a365d">× 社会接続</text>
+      <text x="520" y="186" text-anchor="middle" font-size="11" fill="#1a365d">探究の質を高める</text>
+      <text x="520" y="204" text-anchor="middle" font-size="11" fill="#1a365d">時間とエネルギー</text>
+      <!-- Bidirectional arrow between boxes -->
+      <line x1="324" y1="140" x2="376" y2="140" stroke="#e65100" stroke-width="2.5"/>
+      <polygon points="324,136 316,140 324,144" fill="#e65100"/>
+      <polygon points="376,136 384,140 376,144" fill="#e65100"/>
+      <!-- Arrow from left to right (効率化→探究) -->
+      <line x1="310" y1="200" x2="376" y2="185" stroke="#2b6cb0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowP3a)"/>
+      <!-- Merge arrows down -->
+      <line x1="180" y1="235" x2="180" y2="268" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="520" y1="235" x2="520" y2="268" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="180" y1="268" x2="520" y2="268" stroke="#1a365d" stroke-width="1.5"/>
+      <line x1="350" y1="268" x2="350" y2="290" stroke="#1a365d" stroke-width="2" marker-end="url(#arrowP3a)"/>
+      <!-- Bottom box: 共通基盤 -->
+      <rect x="120" y="296" width="460" height="100" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+      <text x="350" y="322" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Claude Code ＋ Obsidian（共通の技術基盤）</text>
+      <line x1="160" y1="332" x2="540" y2="332" stroke="#e65100" stroke-width="0.5"/>
+      <text x="230" y="354" text-anchor="middle" font-size="11" fill="#1a365d">教科：AIチューター環境</text>
+      <text x="350" y="374" text-anchor="middle" font-size="11" fill="#1a365d">探究：集合知形成環境</text>
+      <text x="470" y="354" text-anchor="middle" font-size="11" fill="#1a365d">ポートフォリオ：3年間の蓄積</text>
+    </svg>
+  </div>
 
   <h3>なぜ「両利き」が必要か — 2040年問題との接続</h3>
 
@@ -357,30 +380,29 @@ Step 2: フィズヨビの「型」を他教科に展開
   <!-- ============================================================ -->
   <h2>7. まとめ：P3の本質</h2>
 
-  <div class="diagram"><pre>P3が提供するのは「カリキュラム」ではない。
-P3が提供するのは「カリキュラムを自分たちで作り続ける力」。
-
-教科学習:
-  フィズヨビという「型」を提供 → 教師が自分の教科に応用
-  → AIチューターコースを自分で作れる教師が育つ
-
-探究学習:
-  チェンジメーカー育成プログラムという「たたき台」を提供
-  → 学校が地域特性に合わせてカスタマイズ
-  → 教師と生徒の集合知でプログラムが進化し続ける
-
-教科と探究の接続:
-  ❼「学ぶ」が接続点。探究の中で「今、この知識が必要だ」が生まれる
-  → AIチューターがJust in Timeで教科学習を提供
-  → 「教えられる知識」が「自分が必要とする知識」に変わる
-
-共通基盤:
-  Claude Code＋Obsidian
-  → 教師のナレッジが蓄積され、学校の資産に
-  → 生徒の探究が蓄積され、ポートフォリオに
-  → 学校自体がAXされ、自分たちで新しい学校を作り続ける
-
-これがAI時代の「両利きの学校」。</pre></div>
+  <div style="max-width:720px; margin:24px auto; padding:28px 32px; background:linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%); border:2px solid #1a365d; border-radius:12px;">
+    <p style="text-align:center; font-size:1.15em; font-weight:bold; color:#1a365d; margin:0 0 8px 0;">P3が提供するのは「カリキュラム」ではない。</p>
+    <p style="text-align:center; font-size:1.15em; font-weight:bold; color:#e65100; margin:0 0 24px 0;">P3が提供するのは「カリキュラムを自分たちで作り続ける力」。</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+      <div style="background:#e3f2fd; border-left:4px solid #2b6cb0; border-radius:6px; padding:14px;">
+        <strong style="color:#2b6cb0;">教科学習</strong><br>
+        <span style="font-size:0.95em;">フィズヨビという「型」を提供 → 教師が自分の教科に応用 → <strong>AIチューターコースを自分で作れる教師</strong>が育つ</span>
+      </div>
+      <div style="background:#e8f5e9; border-left:4px solid #2e7d32; border-radius:6px; padding:14px;">
+        <strong style="color:#2e7d32;">探究学習</strong><br>
+        <span style="font-size:0.95em;">チェンジメーカー育成プログラムという「たたき台」を提供 → 学校が地域特性に合わせてカスタマイズ → <strong>教師と生徒の集合知</strong>でプログラムが進化し続ける</span>
+      </div>
+      <div style="background:#fff3e0; border-left:4px solid #e65100; border-radius:6px; padding:14px;">
+        <strong style="color:#e65100;">教科と探究の接続</strong><br>
+        <span style="font-size:0.95em;">&hearts;7「学ぶ」が接続点。探究の中で「今、この知識が必要だ」が生まれる → AIチューターがJust in Timeで教科学習を提供 → <strong>「教えられる知識」が「自分が必要とする知識」</strong>に変わる</span>
+      </div>
+      <div style="background:#fce4ec; border-left:4px solid #c62828; border-radius:6px; padding:14px;">
+        <strong style="color:#c62828;">共通基盤</strong><br>
+        <span style="font-size:0.95em;">Claude Code＋Obsidian → 教師のナレッジが蓄積され学校の資産に → 生徒の探究がポートフォリオに → <strong>学校自体がAX</strong>され、自分たちで新しい学校を作り続ける</span>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:1.1em; font-weight:bold; color:#1a365d; margin:12px 0 0 0;">これがAI時代の「両利きの学校」。</p>
+  </div>
 
   <!-- ============================================================ -->
   <h2>関連ノート</h2>
