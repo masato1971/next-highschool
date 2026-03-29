@@ -11,30 +11,38 @@
       border: 1px solid var(--color-notebook, #E5E0D8);
       border-left: 4px solid var(--color-deep-indigo, #1E3A5F);
       border-radius: 0 12px 12px 0;
-      padding: 1.5rem 2rem;
-      margin-bottom: 1.25rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      width: 100%;
+    }
+    .member-card .member-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
     }
     .member-card h3 {
       font-family: var(--font-heading, serif);
       color: var(--color-deep-indigo, #1E3A5F);
-      margin-bottom: 0.2rem;
-      margin-top: 0;
-      font-size: 1.2rem;
+      margin: 0;
+      font-size: 1.15rem;
       border: none;
       padding: 0;
+      white-space: nowrap;
     }
     .member-card .role {
       color: var(--color-explore-orange, #D4853A);
       font-weight: 700;
-      font-size: 0.88rem;
-      margin-bottom: 0.6rem;
-      line-height: 1.5;
+      font-size: 0.82rem;
+      line-height: 1.4;
     }
     .member-card .bio {
       color: var(--color-blackboard, #2D3436);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       line-height: 1.7;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       max-width: none;
     }
     .network-tag {
@@ -182,8 +190,7 @@
   <h2>コアチーム</h2>
 
   <div class="member-card">
-    <h3>田原真人（たはら まさと）</h3>
-    <div class="role">全体統括 / AI共創ファシリテーション / P1教員研修・P2学校組織開発</div>
+    <div class="member-header"><h3>田原真人（たはら まさと）</h3> <div class="role">全体統括 / AI共創ファシリテーション / P1教員研修・P2学校組織開発</div></div>
     <div class="bio">
       早稲田大学大学院（物理学・粘菌の自己組織化）→ 予備校物理講師12年 → 2005年フィズヨビ創設 → 2012年「反転授業の研究」4,000人オンラインコミュニティ運営 → マレーシア10年のオンライン教育実践 → 現在8事業同時運営。「個が集まって全体が生まれる」という一貫した問いが、粘菌研究からAI共創まで30年を貫く。企業4社のAIトランスフォーメーション（AX）を支援しながら、同じ方法論を教育に翻訳している。
     </div>
@@ -207,8 +214,7 @@
   </div>
 
   <div class="member-card">
-    <h3>北田朋也（きただ ともや）</h3>
-    <div class="role">探究学習コーディネーター / AI共創ファシリテーター / KAEL代表</div>
+    <div class="member-header"><h3>北田朋也（きただ ともや）</h3> <div class="role">探究学習コーディネーター / AI共創ファシリテーター / KAEL代表</div></div>
     <div class="bio">
       公立小学校教員16年間の現場経験 → 2025年KAEL（Kyoto AI×Edu Lab）独立開業。NVC（非暴力コミュニケーション）×学習する組織×システム思考の実践者。かえつ有明高校でAI共創ファシリテーションを実証済み。田原と「2人1組」でファシリテーション→即日ナレッジ化の仕組みを実装。「今も現場にいる人間」としての信頼性。
     </div>
@@ -226,8 +232,7 @@
   </div>
 
   <div class="member-card">
-    <h3>野辺みなも（のべ みなも）</h3>
-    <div class="role">遠隔教育コーディネーター / MUSVIの窓アンバサダー / みなもラボ代表</div>
+    <div class="member-header"><h3>野辺みなも（のべ みなも）</h3> <div class="role">遠隔教育コーディネーター / MUSVIの窓アンバサダー / みなもラボ代表</div></div>
     <div class="bio">
       隠岐の島町教育委員会・隠岐高校魅力化コーディネーター7年間常駐 → 2024年みなもラボとして遠隔伴走支援へ転換。ジオパークをOSとした探究学習設計と、MUSVIの窓による「関係性モード」の設計は日本で他に類を見ない。地理的固有性を持つ場を「問いの発生装置」として設計する方法論を開発。
     </div>
@@ -242,8 +247,7 @@
   </div>
 
   <div class="member-card">
-    <h3>梅田雄基（うめだ ゆうき）</h3>
-    <div class="role">キャリア教育・総合型選抜 / 自分をつくる進学塾BIDEN代表</div>
+    <div class="member-header"><h3>梅田雄基（うめだ ゆうき）</h3> <div class="role">キャリア教育・総合型選抜 / 自分をつくる進学塾BIDEN代表</div></div>
     <div class="bio">
       早稲田アカデミー大学受験部教務主任 → 東大&医学部専門塾Quest講師 → BIDEN創設。「他者が決めた正解」ではなく「自分なりの正解を創ること」を教育の核に据える。自己理解→自己生成→社会接続の3段階で生徒の「自分軸」を構築。基本コース生の合格率100%を継続。探究活動の成果を総合型選抜の武器に変える独自メソッド。
     </div>
@@ -259,8 +263,7 @@
   </div>
 
   <div class="member-card">
-    <h3>竹本記子（たけもと のりこ）</h3>
-    <div class="role">NPO法人 日本ファシリテーション協会（FAJ）会長 / CoThink認定トレーナー</div>
+    <div class="member-header"><h3>竹本記子（たけもと のりこ）</h3> <div class="role">NPO法人 日本ファシリテーション協会（FAJ）会長 / CoThink認定トレーナー</div></div>
     <div class="bio">
       NPO法人 日本ファシリテーション協会（FAJ）会長。会員2,000名規模の日本最大のファシリテーション推進団体を率いる。キャリアカウンセラーでもあり、キャリアカウンセリングとファシリテーションを融合した独自の実践を展開。ダイバーシティ・フューチャーセッションの仕掛人として、多様な価値観を持つ人々が対話を通じて未来を共創する場の設計を推進。デジタルファシリテーション研究所のCoThinkメソッド認定トレーナーとして、企業AX研修のデリバリーおよびP1教員研修・P2学校組織開発を支援。
     </div>
@@ -274,8 +277,7 @@
   </div>
 
   <div class="member-card">
-    <h3>伊原敦子（いはら あつこ）</h3>
-    <div class="role">事務局・運営管理 / TAKiBiBA創業者</div>
+    <div class="member-header"><h3>伊原敦子（いはら あつこ）</h3> <div class="role">事務局・運営管理 / TAKiBiBA創業者</div></div>
     <div class="bio">
       銀行勤務 → 幼児向けオルタナティブ教育講師 → かすみがうら市第三セクター企業企画業務 → 2025年TAKiBiBAコミュニティカフェ創業。「想いと想いがつながるハブ」を実践で運営する。2026年4月よりフォルケホイスコーレの思想をベースにした「みんなでつくる、みんなの学校KUBERU」をスタート予定。プロジェクト全体の進行管理・調整を担う。
     </div>
@@ -293,8 +295,7 @@
   <p>コアチームの活動を支える、それぞれの領域の専門組織。プロジェクトの必要に応じて参画する。</p>
 
   <div class="member-card">
-    <h3>株式会社イコール — 橘川幸夫・久恒啓一</h3>
-    <div class="role">参加型メディア / ZINE・シェア書店ネットワーク / 知的生産の方法論</div>
+    <div class="member-header"><h3>株式会社イコール — 橘川幸夫・久恒啓一</h3> <div class="role">参加型メディア / ZINE・シェア書店ネットワーク / 知的生産の方法論</div></div>
     <div class="bio">
       橘川幸夫（参加型メディア論、著書60冊）と久恒啓一（図解コミュニケーション、著書150冊）が田原と共同で運営。雑誌『イコール』（2023年創刊、11号発行）の編集・出版、イコールZINEコミュニティの運営、TAKiBiBAシェア書店ネットワーク（全5拠点）を展開。生徒の探究成果をZINEとして社会に届け、反響を受ける基盤を提供する。
     </div>
@@ -307,8 +308,7 @@
   </div>
 
   <div class="member-card">
-    <h3>MUSVI株式会社 — 阪井祐介</h3>
-    <div class="role">テレプレゼンス「窓」/ 遠隔協働プラットフォーム</div>
+    <div class="member-header"><h3>MUSVI株式会社 — 阪井祐介</h3> <div class="role">テレプレゼンス「窓」/ 遠隔協働プラットフォーム</div></div>
     <div class="bio">
       等身大の映像と高品質な音声で「そこにいる」感覚を実現するテレプレゼンスデバイス「窓」を開発・提供。教室と外部専門家、離島と本土、学校と企業を常時接続する。野辺みなも（コアチーム）がMUSVIの窓公式アンバサダーを務め、教育現場での活用プロトコルを開発。地理的制約を超えた学びの実現を技術面から支える。
     </div>
@@ -320,8 +320,7 @@
   </div>
 
   <div class="member-card">
-    <h3>有限会社スクラッチ — 山本創</h3>
-    <div class="role">AIエンジニアリング / MCP開発 / システム連携</div>
+    <div class="member-header"><h3>有限会社スクラッチ — 山本創</h3> <div class="role">AIエンジニアリング / MCP開発 / システム連携</div></div>
     <div class="bio">
       AIを活用したシステム開発・連携のエンジニアリングパートナー。Claude Code＋Obsidian環境の構築支援、MCP（Model Context Protocol）による業務ソフト連携、AIアプリケーション開発を担当。教育現場へのAIプラットフォーム導入において、技術的な実装と安定運用を支える。
     </div>
@@ -333,8 +332,7 @@
   </div>
 
   <div class="member-card">
-    <h3>Co Design Company — ティム</h3>
-    <div class="role">AIエンジニアリング / DX・AX技術支援</div>
+    <div class="member-header"><h3>Co Design Company — ティム</h3> <div class="role">AIエンジニアリング / DX・AX技術支援</div></div>
     <div class="bio">
       DX・AXの技術実装パートナー。MCP開発、API連携、データベース接続の実験・実装を担当。Obsidian Sync・Google Drive共有による組織間ナレッジ連携の実証実験を先行実施。企業AX案件（ユニオンフォレスト、マスコール等）での技術支援経験を、教育現場の技術基盤構築に活かす。
     </div>
