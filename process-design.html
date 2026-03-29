@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロセスデザイン全体設計 — NEXTハイスクール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="site-title"><a href="index.html">NEXTハイスクール構想</a></div>
+    <nav>
+      <a href="p0.html">世界観</a>
+      <a href="process-design.html">プロセス設計</a>
+      <a href="platform.html">プラットフォーム</a>
+      <a href="p2.html">学校組織開発</a>
+      <a href="p5.html">探究カリキュラム</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <h1 class="page-title">NEXTハイスクール プロセスデザイン全体設計</h1>
+
+  <!-- 1. 全体構造 -->
+  <h2>1. 全体構造——5つのプロセス領域とプラットフォーム</h2>
+
+  <div class="diagram"><pre>
+flowchart TB
+    subgraph platform["プラットフォーム: Claude Code＋Obsidian"]
+        direction LR
+        S1["Stage 1\n教員コアチーム\n5-10名"]
+        S2["Stage 2\n教員全体\n全教員"]
+        S3["Stage 3\n生徒\n学校使用"]
+        S1 --> S2 --> S3
+    end
+
+    subgraph foundation["基盤づくり（P1・P2）"]
+        direction LR
+        P1["P1: 教員向け研修\n教員のマインドセットと\nスキルを変える"]
+        P2["P2: 学校組織開発\n意思決定の仕組みと\n学校文化を変える"]
+    end
+
+    subgraph design["設計（P3）"]
+        P3["P3: 生徒向けカリキュラム開発\n探究・教科・キャリアを\n統合するカリキュラムを設計"]
+    end
+
+    subgraph practice["実践伴走（P4・P5）"]
+        direction LR
+        P4["P4: 授業実践伴走\n日常の授業をAI共創型に\n転換する伴走支援"]
+        P5["P5: 探究学習伴走\nチェンジメーカー育成\nカリキュラムの実装"]
+    end
+
+    platform -.->|すべてのプロセスの技術基盤| foundation
+    platform -.->|すべてのプロセスの技術基盤| design
+    platform -.->|すべてのプロセスの技術基盤| practice
+
+    foundation --> design --> practice
+    P4 &lt;-->|相互に強化| P5
+
+    practice -->|実践知が研修・組織にフィードバック| foundation
+  </pre></div>
+
+  <p><strong>Claude Code＋Obsidianは、5つのプロセスすべてを貫くプラットフォームである。</strong> 教員がこの環境で思考を積み上げ、授業を設計し、組織の意思決定を記録する。やがて生徒も同じ環境で探究を蓄積する。<strong>教員も生徒も同じOS</strong>——馬場さんの「3つのレベルで同じ構造変化が必要」の技術的実装。</p>
+
+  <div class="callout important">
+    <div class="callout-title">プラットフォームの詳細</div>
+    <p>Claude Code＋Obsidianの環境解説は <a href="platform.html">プラットフォーム解説ページ</a> を参照。</p>
+  </div>
+
+  <!-- 2. プラットフォーム展開 -->
+  <h2>2. プラットフォーム展開——Claude Code＋Obsidianの段階的導入</h2>
+
+  <h3>2.1 なぜClaude Code＋Obsidianか</h3>
+
+  <table>
+    <tr><th>従来のAI活用</th><th>Claude Code＋Obsidian</th></tr>
+    <tr><td>ChatGPTに質問→回答→消える</td><td>思考がVaultに蓄積され、積み上がる</td></tr>
+    <tr><td>1回きりの対話</td><td>過去の思考とつながる（<code>[[内部リンク]]</code>）</td></tr>
+    <tr><td>個人の中で閉じる</td><td>Gitで版管理→思考の軌跡が可視化</td></tr>
+    <tr><td>誰が使っても同じ</td><td>CLAUDE.mdで「この人の文脈」をAIが理解</td></tr>
+  </table>
+
+  <p><strong>核心</strong>: AIとの対話が「使い捨て」ではなく「蓄積」になる。これが「思考を積み上げていくAI活用」の意味。</p>
+
+  <h3>2.2 3段階の展開</h3>
+
+  <div class="diagram"><pre>
+flowchart LR
+    subgraph stage1["Stage 1: 教員コアチーム"]
+        direction TB
+        A1["対象: 5-10名\n（情報担当＋意欲ある教員）"]
+        A2["やること:\n・自分のVaultで授業設計\n・研修記録の蓄積\n・事例研究会の記録"]
+        A3["狙い:\n「これは使える」という\n実感と具体的な成功事例"]
+    end
+
+    subgraph stage2["Stage 2: 教員全体"]
+        direction TB
+        B1["対象: 全教員"]
+        B2["やること:\n・授業設計・振り返りをVaultに記録\n・職員会議の記録と統合\n・教科間の接続を内部リンクで可視化"]
+        B3["狙い:\n学校全体の知識基盤の形成\n教員間の暗黙知の共有"]
+    end
+
+    subgraph stage3["Stage 3: 生徒（学校使用）"]
+        direction TB
+        C1["対象: 全生徒"]
+        C2["やること:\n・個人Vaultで探究を蓄積\n・AI壁打ちで思考を深める\n・アウトプット制作\n・3年間の学びの軌跡"]
+        C3["狙い:\n思考の自己組織化\nポートフォリオの自動形成"]
+    end
+
+    stage1 -->|成功事例が広がる| stage2 -->|教員が使えるから生徒を導ける| stage3
+  </pre></div>
+
+  <h3>2.3 展開とプロセスの対応</h3>
+
+  <table>
+    <tr><th>Stage</th><th>対応するプロセス</th><th>何が起きるか</th></tr>
+    <tr><td><strong>Stage 1: 教員コアチーム</strong></td><td>P1（研修）の中で導入</td><td>コアチームが研修で体験→自分のVaultを作る→授業設計に使い始める→「これは便利だ」という声が出る</td></tr>
+    <tr><td><strong>Stage 2: 教員全体</strong></td><td>P2（組織開発）・P3（カリキュラム開発）で活用</td><td>職員会議の記録がVaultに蓄積→カリキュラム設計をVault上で共創→教員全体の知識基盤が形成される</td></tr>
+    <tr><td><strong>Stage 3: 生徒</strong></td><td>P4（授業実践）・P5（探究学習）で本格稼働</td><td>生徒が個人Vaultを持つ→探究の全プロセスが蓄積→教科学習もJITでVaultに記録→3年間の学びの軌跡がポートフォリオに</td></tr>
+  </table>
+
+  <h3>2.4 Stage間の移行条件</h3>
+
+  <p>Stage 1からStage 2への移行は「時期が来たから」ではなく「準備ができたから」で判断する。</p>
+
+  <table>
+    <tr><th>移行</th><th>条件</th></tr>
+    <tr><td>Stage 1 → Stage 2</td><td>コアチームの教員が「自分の授業設計にVaultを使っている」状態。少なくとも3名が日常的に使用し、事例研究会で実践を共有している</td></tr>
+    <tr><td>Stage 2 → Stage 3</td><td>教員の過半数がVault＋Claude Codeを使った授業設計を経験している。教員が生徒にVaultの使い方を教えられる状態</td></tr>
+  </table>
+
+  <h3>2.5 各Stageの環境構成</h3>
+
+  <table>
+    <tr><th>項目</th><th>Stage 1</th><th>Stage 2</th><th>Stage 3</th></tr>
+    <tr><td><strong>Vault</strong></td><td>教員個人Vault（各自のPC）</td><td>教員個人Vault＋学校共有Vault</td><td>教員Vault＋生徒個人Vault</td></tr>
+    <tr><td><strong>CLAUDE.md</strong></td><td>学校情報＋教科情報</td><td>＋カリキュラム情報＋組織の方針</td><td>＋生徒の探究テーマ＋学習文脈</td></tr>
+    <tr><td><strong>Git</strong></td><td>教員の授業設計の版管理</td><td>＋学校全体の知識基盤の版管理</td><td>＋生徒の3年間の思考の軌跡</td></tr>
+    <tr><td><strong>主な用途</strong></td><td>授業設計、研修記録</td><td>＋職員会議記録、カリキュラム設計</td><td>＋探究ノート、JIT学習、アウトプット制作</td></tr>
+    <tr><td><strong>セットアップ支援</strong></td><td>北田が個別にセットアップ</td><td>コアチームが新規教員をサポート</td><td>教員が生徒のセットアップをガイド</td></tr>
+  </table>
+
+  <div class="callout tip">
+    <div class="callout-title">技術的な詳細</div>
+    <p>Claude Code＋Obsidianの具体的な構成・使い方・導入手順は <a href="platform.html">プラットフォーム解説ページ</a> を参照。</p>
+  </div>
+
+  <!-- 3. プロセス間の関係 -->
+  <h2>3. プロセス間の関係——なぜこの順序か</h2>
+
+  <h3>3.1 馬場さんの問題意識から導かれる順序</h3>
+
+  <blockquote>
+    <p>「50人の先生がいても取り組むのは2-3人。30時間中30時間全部変わってほしい」</p>
+  </blockquote>
+
+  <p>この問題は<strong>3つのレベルで同時に変化が必要</strong>であることを示している:</p>
+
+  <table>
+    <tr><th>レベル</th><th>従来</th><th>目指す姿</th><th>対応プロセス</th></tr>
+    <tr><td><strong>教員個人</strong></td><td>ティーチング型</td><td>ファシリテート型</td><td>P1: 教員向け研修</td></tr>
+    <tr><td><strong>学校組織</strong></td><td>トップダウン型</td><td>コンセンサス型</td><td>P2: 学校組織開発</td></tr>
+    <tr><td><strong>生徒の学び</strong></td><td>正解を教わる</td><td>自ら問いを立て探究する</td><td>P3→P4→P5</td></tr>
+  </table>
+
+  <h3>3.2 変化の論理構造</h3>
+
+  <div class="diagram"><pre>
+P1（教員のOS変更）＋ P2（組織のOS変更）
+    ↓ 教員と組織が変わらないとカリキュラムが空回りする
+P3（カリキュラム設計）
+    ↓ 設計だけでは教室は変わらない
+P4（授業実践伴走）＋ P5（探究学習伴走）
+    ↓ 実践知がフィードバック
+P1・P2のバージョンアップ → P3の改訂 → …（螺旋的に深化）
+  </pre></div>
+
+  <p>ただし、これは<strong>完全に順番通りではなく、並行して走る</strong>。導入期にはP1・P2が先行し、展開期にはP3〜P5が主軸になる。プラットフォーム展開（Stage 1→2→3）がこの移行のリズムを作る。</p>
+
+  <!-- 4. 時間軸 -->
+  <h2>4. 時間軸上の展開</h2>
+
+  <div class="diagram"><pre>
+gantt
+    title NEXTハイスクール プロセス展開（3年間）
+    dateFormat YYYY-MM
+    axisFormat %Y-%m
+
+    section プラットフォーム展開
+    Stage 1 教員コアチーム      :s1, 2026-09, 2027-03
+    Stage 2 教員全体             :s2, 2027-04, 2028-03
+    Stage 3 生徒（学校使用）     :s3, 2028-04, 2029-03
+
+    section P1 教員向け研修
+    導入研修（3回×2h）          :p1a, 2026-09, 2026-12
+    事例研究会（月1回）          :p1b, 2027-01, 2029-03
+    教員が自走して研修を回す      :p1c, 2028-04, 2029-03
+
+    section P2 学校組織開発
+    コンセンサス型体験研修        :p2a, 2026-09, 2026-10
+    職員会議パイロット（月1回）    :p2b, 2026-11, 2027-06
+    学校運営の本格運用            :p2c, 2027-07, 2029-03
+
+    section P3 カリキュラム開発
+    カリキュラム設計              :p3a, 2026-10, 2027-03
+    1年目カリキュラム試行         :p3b, 2027-04, 2028-03
+    改訂・2年目展開              :p3c, 2028-04, 2029-03
+
+    section P4 授業実践伴走
+    モデル授業の設計・実施        :p4a, 2027-01, 2027-06
+    教員ペアでの授業伴走          :p4b, 2027-07, 2028-03
+    教員が相互に授業伴走          :p4c, 2028-04, 2029-03
+
+    section P5 探究学習伴走
+    探究テーマ選定支援            :p5a, 2027-04, 2027-09
+    探究サイクル伴走              :p5b, 2027-10, 2028-09
+    ZINE制作・社会実装            :p5c, 2028-10, 2029-03
+  </pre></div>
+
+  <table>
+    <tr><th>時期</th><th>プラットフォーム</th><th>主軸プロセス</th><th>到達目標</th></tr>
+    <tr><td><strong>1年目前半</strong></td><td>Stage 1: コアチーム</td><td>P1・P2</td><td>教員コアチームがVaultで授業設計を始め、AI共創を体験。コンセンサス型を職員会議で試す</td></tr>
+    <tr><td><strong>1年目後半</strong></td><td>Stage 1→2 移行</td><td>P1・P2・P3</td><td>コアチームの事例が広がり、全教員にVaultが展開される。カリキュラム設計が始まる</td></tr>
+    <tr><td><strong>2年目</strong></td><td>Stage 2: 教員全体</td><td>P3・P4</td><td>教員全体がVaultを使い、AI共創型授業を実践。カリキュラムを試行しながら改訂</td></tr>
+    <tr><td><strong>3年目</strong></td><td>Stage 3: 生徒</td><td>P4・P5</td><td>生徒が個人Vaultを持ち、探究サイクルを回す。教員は自走し、学校が学びの生態系に</td></tr>
+  </table>
+
+  <!-- 5. 各プロセスの設計概要 -->
+  <h2>5. 各プロセスの設計</h2>
+
+  <!-- P1 -->
+  <h3>P1: 教員向け研修</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">核心</div>
+    <p>教員自身が「AI共創で自分の授業が変わる」体験をする。同時にClaude Code＋Obsidianとの最初の出会いの場。</p>
+  </div>
+
+  <h4>目的</h4>
+  <p>教員がAIを「効率化ツール」ではなく「ファシリテーションのパートナー」として使えるようになる。大分の数学教師のように「正解を言わない。ゴールだけ決めて手段は自由」の授業ができる教員を増やす。</p>
+
+  <h4>構成</h4>
+  <table>
+    <tr><th>回</th><th>テーマ</th><th>内容</th><th>プラットフォーム</th><th>狙い</th></tr>
+    <tr><td>第1回</td><td>AI壁打ちを体験する</td><td>自分の授業テーマでAIと壁打ち。「AIに問いを立てさせる」のではなく「AIに自分の問いを深掘りさせる」体験</td><td>Claude Codeを初めて触る</td><td>「これは使える」という実感</td></tr>
+    <tr><td>第2回</td><td>多様な意見をAIで統合する</td><td>Googleフォーム→AI統合→KJ法→コンセンサス型評価。3/28長崎研修と同じ体験</td><td>対話記録をVaultに保存する体験</td><td>「全員の声が活きる」実感</td></tr>
+    <tr><td>第3回</td><td>AI共創型授業を設計する</td><td>自分の教科×AI壁打ち×意見統合で授業案を作る。ペアで相互にレビュー</td><td><strong>自分のVaultを作り、授業案を蓄積</strong></td><td>「来週から使える」授業案＋Vault習慣の開始</td></tr>
+    <tr><td>継続</td><td>事例研究会（月1回）</td><td>先生方が実践事例を持ち寄り共有。AI統合で気づきを構造化</td><td>Vaultに事例を蓄積→内部リンクで接続</td><td>実践コミュニティの形成</td></tr>
+  </table>
+
+  <p><strong>P1はStage 1の入口</strong>: 第3回で「自分のVault」を持った教員が、そのままStage 1のコアチームになる。研修と環境導入が一体化している。</p>
+
+  <h4>担当</h4>
+  <table>
+    <tr><th>担当</th><th>役割</th></tr>
+    <tr><td><strong>田原真人</strong></td><td>研修全体の設計・メインファシリテーション</td></tr>
+    <tr><td><strong>北田朋也</strong></td><td>AI共創の実演・教員への伴走・Vaultセットアップ支援</td></tr>
+  </table>
+
+  <h4>成功の指標</h4>
+  <ul>
+    <li>研修参加率: 対象教員の80%以上</li>
+    <li>実践率: 研修後3ヶ月以内にAI共創型授業を実施した教員の割合60%以上</li>
+    <li>Vault使用率: コアチーム教員が週1回以上Vaultに記録を蓄積している</li>
+    <li>事例研究会の自走: 2年目から教員が自分たちで運営</li>
+  </ul>
+
+  <!-- P2 -->
+  <h3>P2: 学校組織開発</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">核心</div>
+    <p>職員会議と学校運営をコンセンサス型に変え、教員全員が「自分の学校」として経営に参画する</p>
+  </div>
+
+  <h4>目的</h4>
+  <p>馬場さんの問題意識「2-3人ではなく50人全員が変わる」を実現するには、個々の教員のスキルアップ（P1）だけでは不十分。<strong>意思決定の仕組み</strong>を変える必要がある。コンセンサス型意思決定を導入し、全員の声が反映される組織に変える。</p>
+
+  <h4>構成</h4>
+  <table>
+    <tr><th>フェーズ</th><th>内容</th><th>プラットフォーム</th><th>期間</th></tr>
+    <tr><td><strong>体験</strong></td><td>コンセンサス型意思決定の体験研修（3/28研修と同じ90分）</td><td>QRコード＋フォーム（Vault不要）</td><td>1回</td></tr>
+    <tr><td><strong>パイロット</strong></td><td>職員会議の1テーマでコンセンサス型を試行</td><td>結果をVaultに記録（Stage 1コアチーム）</td><td>月1回×3ヶ月</td></tr>
+    <tr><td><strong>本格運用</strong></td><td>学校運営の主要テーマに適用。カリキュラム改訂・行事計画等</td><td><strong>全教員がVaultで議論経過を共有（Stage 2）</strong></td><td>月1回×継続</td></tr>
+    <tr><td><strong>教育委員会への展開</strong></td><td>県の教育方針決定にもコンセンサス型を適用</td><td>—</td><td>年2回</td></tr>
+  </table>
+
+  <p><strong>P2はStage 2への橋渡し</strong>: パイロット期はコアチームがVaultに記録。本格運用に入ると全教員がVaultを使う必要が出てくるため、自然にStage 2への移行が始まる。</p>
+
+  <h4>担当</h4>
+  <table>
+    <tr><th>担当</th><th>役割</th></tr>
+    <tr><td><strong>田原真人</strong></td><td>コンセンサス型プロセスの設計・ファシリテーション</td></tr>
+    <tr><td><strong>伊原敦子</strong></td><td>運営サポート・フォーム準備・記録管理</td></tr>
+  </table>
+
+  <h4>企業AX実践との接続</h4>
+  <p>教育と企業は<strong>同型の変革</strong>を必要としている:</p>
+  <table>
+    <tr><th>企業AX（CoThink）</th><th>学校組織開発（P2）</th></tr>
+    <tr><td>社員の主体性を引き出す</td><td>教員の主体性を引き出す</td></tr>
+    <tr><td>経営者がファシリテーターになる</td><td>校長がファシリテーターになる</td></tr>
+    <tr><td>コンサルが答えを持ち込まない</td><td>教育委員会が伴走支援型に</td></tr>
+    <tr><td>全社員の全業務を変えたい</td><td>30時間中30時間を変えたい</td></tr>
+  </table>
+
+  <h4>成功の指標</h4>
+  <ul>
+    <li>職員会議でのコンセンサス型実施回数</li>
+    <li>参加教員の「自分の意見が反映された」実感度</li>
+    <li>意思決定にかかる時間の変化（短縮ではなく、質の向上）</li>
+  </ul>
+
+  <!-- P3 -->
+  <h3>P3: 生徒向けカリキュラム開発</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">核心</div>
+    <p>P1・P2で変わった教員が、生徒の学びをどうデザインするかを一緒に考える。Stage 3の環境設計もここで行う。</p>
+  </div>
+
+  <h4>目的</h4>
+  <p>探究学習・教科学習・キャリア教育を統合するカリキュラムを設計する。P1で教員がAI共創を体験し、P2で組織が変わり始めた段階で、<strong>教員自身がカリキュラムを共創する</strong>。外部から持ち込むのではなく、教員の主体性から生まれるカリキュラム。</p>
+
+  <h4>カリキュラムの3層構造</h4>
+
+  <div class="diagram"><pre>
+┌─────────────────────────────────────────┐
+│  第3層: 探究学習（P5で伴走）             │
+│  チェンジメーカー育成カリキュラム          │
+│  出会う→掘る→調べる→確かめる            │
+│  →届ける→響く のサイクル                │
+├─────────────────────────────────────────┤
+│  第2層: 教科学習（P4で伴走）             │
+│  AI共創型の授業——「正解を言わない」授業    │
+│  生徒がAI壁打ち・対話・自学を選べる       │
+│  探究テーマと教科を接続する               │
+├─────────────────────────────────────────┤
+│  第1層: プラットフォーム                  │
+│  ・個人Vault＋Claude Code環境（Stage 3）  │
+│  ・JIT学習                               │
+│  ・キャリア探究（梅田メソッド）            │
+└─────────────────────────────────────────┘
+  </pre></div>
+
+  <p><strong>カリキュラムの第1層＝プラットフォームのStage 3</strong>。カリキュラム設計の中にStage 3の環境設計が含まれる。</p>
+
+  <h4>設計プロセス（コンセンサス型で進める）</h4>
+  <table>
+    <tr><th>Step</th><th>内容</th><th>参加者</th></tr>
+    <tr><td>1. 理想像の共有</td><td>「この学校の生徒にどうなってほしいか」を全教員がフォームに入力→AI統合→KJ法</td><td>全教員</td></tr>
+    <tr><td>2. AI PROOFコンピテンシーとの対応</td><td>7つのコンピテンシーと教員の理想像を重ねる</td><td>教員＋田原</td></tr>
+    <tr><td>3. 教科×探究のマッピング</td><td>各教科がどのコンピテンシーをどう育成するかをマトリクス化</td><td>教科担当＋田原＋北田</td></tr>
+    <tr><td>4. 時間割の再設計</td><td>探究学習の時間配置、教科横断の接続点を設計</td><td>教務主任＋田原</td></tr>
+    <tr><td>5. 生徒Vault環境の設計</td><td>生徒の個人Vault構造・CLAUDE.md・運用ルールを設計（Stage 3の具体設計）</td><td>北田＋情報担当教員</td></tr>
+    <tr><td>6. コンセンサス評価</td><td>設計案を全教員で1/2/3評価→修正→再評価</td><td>全教員</td></tr>
+  </table>
+
+  <h4>担当</h4>
+  <table>
+    <tr><th>担当</th><th>役割</th></tr>
+    <tr><td><strong>田原真人</strong></td><td>カリキュラム全体のプロセスデザイン</td></tr>
+    <tr><td><strong>北田朋也</strong></td><td>探究×AI共創の具体設計・生徒Vault環境設計</td></tr>
+    <tr><td><strong>梅田雄基</strong></td><td>キャリア教育パートの設計</td></tr>
+    <tr><td><strong>各学校の教員</strong></td><td>自校の文脈に合わせた具体化（主体は教員）</td></tr>
+  </table>
+
+  <!-- P4 -->
+  <h3>P4: 授業実践伴走</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">核心</div>
+    <p>カリキュラムが設計されても、教室で実践されなければ意味がない。日常の授業を変える伴走。教員のVault活用が日常化する段階。</p>
+  </div>
+
+  <h4>目的</h4>
+  <p>P1で体験し、P3で設計したAI共創型授業を、<strong>日常の教科授業</strong>の中で実践できるように伴走する。2-3人ではなく、多くの教員が「自分の授業」として取り組めるようにする。</p>
+
+  <h4>伴走の構造</h4>
+  <div class="diagram"><pre>
+flowchart LR
+    モデル授業（田原・北田が教員と共同で授業を実施）
+      → ペア伴走（経験した教員が未経験の教員とペアで授業設計）
+        → 相互伴走（教員同士が授業を見合いフィードバック）
+          → 自走（教員が自分でAI共創型授業を設計・実施）
+  </pre></div>
+
+  <h4>段階</h4>
+  <table>
+    <tr><th>段階</th><th>内容</th><th>プラットフォーム</th><th>伴走の主体</th></tr>
+    <tr><td><strong>1. モデル授業</strong></td><td>田原・北田が教員と一緒に教室に入り、AI共創型授業を実施。教員は「見る」のではなく「一緒にやる」</td><td>教員がVaultに授業設計・振り返りを記録</td><td>田原・北田</td></tr>
+    <tr><td><strong>2. ペア伴走</strong></td><td>モデル授業を経験した教員が、まだ未経験の同僚とペアを組む</td><td><strong>ペアでVaultを見せ合いながら授業設計</strong>→Stage 2の日常化</td><td>経験済み教員＋外部伴走</td></tr>
+    <tr><td><strong>3. 相互伴走</strong></td><td>教員同士が互いの授業を見合い、事例研究会でフィードバック</td><td>Vault＋AIで授業記録を構造化。内部リンクで教科間の接続が見える</td><td>教員同士</td></tr>
+    <tr><td><strong>4. 自走</strong></td><td>教員が自分のペースでAI共創型授業を日常化</td><td>Vaultに蓄積された授業設計が学校の知識基盤に</td><td>教員</td></tr>
+  </table>
+
+  <h4>AI共創型授業の3パターン</h4>
+  <p>大分の数学教師の事例（馬場さんの紹介）を一般化:</p>
+  <table>
+    <tr><th>パターン</th><th>内容</th><th>教員の役割</th></tr>
+    <tr><td><strong>A. AI壁打ち型</strong></td><td>生徒が個別にAIと壁打ちしながら学ぶ。教員はゴールを設定し、必要に応じて介入</td><td>ゴール設定者＋観察者</td></tr>
+    <tr><td><strong>B. 意見統合型</strong></td><td>全員がフォームに意見を入力→AIが統合→KJ法→議論。教科の問いに対して多様な視点を集める</td><td>ファシリテーター</td></tr>
+    <tr><td><strong>C. 探究接続型</strong></td><td>教科の内容を生徒の探究テーマに接続する。「今やっている化学が、あなたの水質調査にどうつながるか」</td><td>接続のコーディネーター</td></tr>
+  </table>
+
+  <h4>担当</h4>
+  <table>
+    <tr><th>担当</th><th>役割</th></tr>
+    <tr><td><strong>北田朋也</strong></td><td>モデル授業の共同実施・教員への伴走</td></tr>
+    <tr><td><strong>田原真人</strong></td><td>授業設計の助言・事例研究会のファシリテーション</td></tr>
+  </table>
+
+  <h4>成功の指標</h4>
+  <ul>
+    <li>AI共創型授業を実施した教員数（「30時間中何時間変わったか」で計測）</li>
+    <li>生徒の「授業で自分で考える時間が増えた」実感</li>
+    <li>教員の「自分の授業が変わった」実感</li>
+  </ul>
+
+  <!-- P5 -->
+  <h3>P5: 探究学習伴走</h3>
+
+  <div class="callout tip">
+    <div class="callout-title">核心</div>
+    <p>チェンジメーカー育成カリキュラムを実際の学校で実装し、伴走する。Stage 3が本格稼働する段階。</p>
+  </div>
+
+  <h4>目的</h4>
+  <p>生徒が探究サイクル（出会う→掘る→調べる→確かめる→届ける→響く）を回しながら、7つのAI PROOFコンピテンシーを獲得していく。この探究を伴走する。</p>
+
+  <h4>生徒のVault環境（Stage 3）</h4>
+  <p>P5はStage 3が稼働する場。生徒は自分のVaultで探究の全プロセスを蓄積する。</p>
+  <pre>
+C:\Students\田中花子\Vault\
+├── CLAUDE.md           ← 探究の文脈・方針
+├── 00-探究ノート/       ← 日々の気づき・取材メモ
+├── 01-先行事例/         ← 調べた事例の整理
+├── 02-仮説と検証/       ← 仮説→検証→修正の記録
+├── 03-アウトプット/     ← ZINE原稿、Webサイト、アプリ、論文
+├── 04-JIT学習/          ← コース学習の記録
+├── 回折ジャーナル/      ← 想定と現実のズレ
+└── .git/               ← 版管理（3年間の思考の軌跡）
+  </pre>
+
+  <h4>伴走の構造</h4>
+  <table>
+    <tr><th>時期</th><th>探究サイクル</th><th>伴走の内容</th><th>主な担当</th></tr>
+    <tr><td>1年前半</td><td>出会う・掘る</td><td>フィールドワーク設計支援。AI壁打ちの使い方。窓を使った取材のコーディネート</td><td>北田・野辺</td></tr>
+    <tr><td>1年後半</td><td>調べる・確かめる</td><td>先行事例調査の伴走。仮説構築と検証方法の設計。他校との交流</td><td>北田・野辺</td></tr>
+    <tr><td>2年前半</td><td>届ける</td><td>ZINE制作・論文執筆・Webサイト構築の支援</td><td>イコール・北田</td></tr>
+    <tr><td>2年後半</td><td>響く→次のサイクルへ</td><td>社会的反響のフィードバック。次のサイクルへの接続</td><td>北田・梅田</td></tr>
+    <tr><td>3年</td><td>自分を知る</td><td>Vault起点のキャリア探究。総合型選抜支援</td><td>梅田</td></tr>
+    <tr><td>全期間</td><td>学ぶ</td><td>JIT学習。田原先生エージェントによるコース生成</td><td>AI＋教員</td></tr>
+  </table>
+
+  <h4>横断的支援</h4>
+  <table>
+    <tr><th>支援者</th><th>役割</th><th>関与するフェーズ</th></tr>
+    <tr><td><strong>北田朋也（KAEL）</strong></td><td>AI共創で探究の質を高め、学びをリアルタイムで資産化</td><td>全フェーズ</td></tr>
+    <tr><td><strong>野辺みなも</strong></td><td>窓を使った遠隔取材・相互学習のコーディネート</td><td>掘る・確かめる・響く</td></tr>
+    <tr><td><strong>梅田雄基（BIDEN）</strong></td><td>Vaultから「本当にやりたいこと」を掘り下げるキャリア探究</td><td>出会う・響く・自分を知る</td></tr>
+    <tr><td><strong>田原先生エージェント</strong></td><td>探究テーマに最適化されたコース学習のAI生成</td><td>学ぶ</td></tr>
+    <tr><td><strong>株式会社イコール</strong></td><td>ZINE制作メソッド・編集・流通</td><td>届ける</td></tr>
+  </table>
+
+  <h4>教員の自走化</h4>
+  <table>
+    <tr><th>段階</th><th>外部チームの関与</th><th>教員の状態</th></tr>
+    <tr><td><strong>1年目</strong></td><td>北田・野辺・梅田が直接生徒に関わりながら教員に見せる</td><td>「こうやるのか」を理解</td></tr>
+    <tr><td><strong>2年目</strong></td><td>教員が主導し、外部チームは困った時に相談</td><td>「自分でできる」を実感</td></tr>
+    <tr><td><strong>3年目</strong></td><td>外部チームは他校の新規導入に移行。教員が完全自走</td><td>「自分たちの学校の文化」に</td></tr>
+  </table>
+
+  <!-- 6. プロセス横断の原理 -->
+  <h2>6. プロセス横断の原理</h2>
+
+  <h3>6.1 プラットフォームが全プロセスを貫通する</h3>
+  <table>
+    <tr><th>プロセス</th><th>プラットフォームの役割</th></tr>
+    <tr><td>P1 教員研修</td><td>研修の体験と気づきがVaultに蓄積される。研修が「1回きりのイベント」ではなく「積み上げ」になる</td></tr>
+    <tr><td>P2 学校組織開発</td><td>コンセンサス型の議論経過がVaultに記録される。意思決定の文脈が残り、後から参照できる</td></tr>
+    <tr><td>P3 カリキュラム開発</td><td>カリキュラム設計の過程がVaultに蓄積。「なぜこの設計にしたか」の経緯が追える</td></tr>
+    <tr><td>P4 授業実践伴走</td><td>授業設計と振り返りがVaultに記録。教員間で内部リンクを通じてノウハウが接続する</td></tr>
+    <tr><td>P5 探究学習伴走</td><td>生徒の探究の全プロセスがVaultに蓄積。3年間の思考の軌跡がポートフォリオになる</td></tr>
+  </table>
+
+  <p><strong>核心: 「思考が消えない」ことがすべてのプロセスの価値を最大化する。</strong> ChatGPTとの1回きりの対話では、思考は使い捨てになる。Vaultに蓄積することで、すべての思考・対話・意思決定が「積み上がる」。</p>
+
+  <h3>6.2 コンセンサス型意思決定</h3>
+  <table>
+    <tr><th>プロセス</th><th>コンセンサス型の適用場面</th></tr>
+    <tr><td>P1 教員研修</td><td>研修内容・進め方を教員の声で決める</td></tr>
+    <tr><td>P2 学校組織開発</td><td>職員会議・学校運営の意思決定</td></tr>
+    <tr><td>P3 カリキュラム開発</td><td>カリキュラム設計を全教員で合意形成</td></tr>
+    <tr><td>P4 授業実践伴走</td><td>授業改善の方向性を事例研究会で合意</td></tr>
+    <tr><td>P5 探究学習伴走</td><td>生徒の探究チームの意思決定にも適用</td></tr>
+  </table>
+
+  <h3>6.3 自走化のパターン</h3>
+  <p>すべてのプロセスで同じ「外部→内部」の移行パターンを使う:</p>
+  <div class="diagram"><pre>
+外部チームが実演（見せる）
+  → 教員と一緒にやる（伴走）
+    → 教員が主導し外部が見守る（自走支援）
+      → 教員が完全自走（外部は撤退）
+  </pre></div>
+
+  <h3>6.4 馬場さんの3層構造</h3>
+  <table>
+    <tr><th>層</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th></tr>
+    <tr><td><strong>教育委員会</strong></td><td>研修の方針を支持</td><td>組織開発を推奨</td><td>カリキュラムを承認</td><td>伴走体制を支援</td><td>探究の場を保障</td></tr>
+    <tr><td><strong>教員</strong></td><td>AI共創を体験</td><td>コンセンサス型で参画</td><td>カリキュラムを共創</td><td>授業を変える</td><td>探究を伴走</td></tr>
+    <tr><td><strong>生徒</strong></td><td>（間接的に恩恵）</td><td>（学校が変わる）</td><td>（カリキュラムが変わる）</td><td>授業が変わる</td><td>探究を回す</td></tr>
+  </table>
+
+  <!-- 7. 担当一覧 -->
+  <h2>7. 5プロセスと既存5モジュールの対応</h2>
+
+  <table>
+    <tr><th>プロセス</th><th>既存モジュール</th><th>違い</th></tr>
+    <tr><td>P1: 教員向け研修</td><td>M1: AI共創型教員研修</td><td>P1は「研修の場」だけでなく「研修後の実践コミュニティ形成」まで含む。Stage 1への入口</td></tr>
+    <tr><td>P2: 学校組織開発</td><td>M2: AI共創型学校経営</td><td>P2は意思決定の仕組み変革に加え、「学校文化」の変容まで射程に入れる。Stage 2への橋渡し</td></tr>
+    <tr><td>P3: 生徒向けカリキュラム開発</td><td>（新規）</td><td>教員がコンセンサス型でカリキュラムを共創するプロセス。Stage 3の環境設計を含む</td></tr>
+    <tr><td>P4: 授業実践伴走</td><td>M1の延長</td><td>P4は研修後の「教室での実践」を伴走する。Stage 2の日常化</td></tr>
+    <tr><td>P5: 探究学習伴走</td><td>M3＋M4＋M5</td><td>P5はM3（探究）・M4（窓）・M5（ZINE）を探究サイクルの中に統合。Stage 3の本格稼働</td></tr>
+  </table>
+
+  <h2>8. 担当一覧</h2>
+
+  <table>
+    <tr><th>担当</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>プラットフォーム</th></tr>
+    <tr><td><strong>田原真人</strong></td><td>研修設計</td><td>コンセンサス設計</td><td>全体プロセスデザイン</td><td>助言・事例研究会</td><td>全体統括</td><td>全体設計</td></tr>
+    <tr><td><strong>北田朋也</strong></td><td>AI共創実演</td><td>—</td><td>探究×AI設計</td><td>モデル授業・伴走</td><td>探究の質を高める</td><td><strong>環境構築・展開の主担当</strong></td></tr>
+    <tr><td><strong>野辺みなも</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>窓のコーディネート</td><td>—</td></tr>
+    <tr><td><strong>梅田雄基</strong></td><td>—</td><td>—</td><td>キャリア教育設計</td><td>—</td><td>キャリア探究伴走</td><td>—</td></tr>
+    <tr><td><strong>伊原敦子</strong></td><td>事務局</td><td>事務局</td><td>事務局</td><td>事務局</td><td>事務局</td><td>—</td></tr>
+    <tr><td><strong>株式会社イコール</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>ZINE制作支援</td><td>—</td></tr>
+  </table>
+
+  <!-- ページナビゲーション -->
+  <nav class="page-nav">
+    <a href="p0.html" class="prev">← 世界観とコンピテンシー</a>
+    <a href="platform.html" class="next">プラットフォーム解説 →</a>
+  </nav>
+
+</main>
+
+<footer>
+  <p>NEXTハイスクール プラネタリー・ラーニング構想 &mdash; デジタルファシリテーション研究所</p>
+</footer>
+
+</body>
+</html>
