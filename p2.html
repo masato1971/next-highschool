@@ -38,105 +38,160 @@
 
 <main>
 
-  <h1 class="page-title">P2: 学校組織開発ガイド</h1>
-  <p class="subtitle">AI共創型全員経営——教員の声が学校を動かす</p>
+  <div class="page-title">
+    <h1>P2: 学校組織開発ガイド</h1>
+    <div class="page-subtitle">AI共創型全員経営——教員の声が学校を動かす</div>
+  </div>
 
-  <hr>
+
+
+  <!-- ── P1からの接続 ── -->
+  <h2>P1で起きたこと → だからP2が必要</h2>
+
+  <p><a href="p1.html">P1（教員研修）</a>の第2回で、教員はGoogleフォーム→AI統合→KJ法→コンセンサス型評価を体験した。WSでは、全員の意見がAIで構造化され「こんなふうにまとまるのか」という驚きがあった。</p>
+
+  <p>そのとき、自然に出てくる問いがある:</p>
+  <blockquote><p>「これ、職員会議でもやれないか？」</p></blockquote>
+
+  <p><strong>P2は、その問いに応える。</strong> P1で教員が体験したコンセンサス型意思決定を、学校運営に本格導入するプロセスだ。</p>
+
+  <div class="callout tip">
+    <div class="callout-title">世界観との接続</div>
+    <p><a href="p0.html">世界観ページ</a>で定義した「<strong>多様な声が集まるほど意思決定の質が高まる——AI時代の参加型民主主義教育</strong>」。P2は、その原理を学校運営レベルで実装するプロセスである。教員が体験したことを、生徒も体験する。3つのレベル（教育委員会・教員・生徒）で同じOSが作動する。</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">P2で教員が体験するコンピテンシー</div>
+    <p>P2の4つのフェーズは、<a href="competency.html">AI PROOFコンピテンシー</a>の実践の場でもある:</p>
+    <table>
+      <tr><th>フェーズ</th><th>体験するコンピテンシー</th></tr>
+      <tr><td><strong>フェーズ1</strong>: コアチーム立ち上げ</td><td><strong>1. 仕組み化と再投資</strong> — Vaultで業務を仕組み化し、空いた時間で創造的な仕事に取り組む</td></tr>
+      <tr><td><strong>フェーズ2</strong>: 教員の声を集める</td><td><strong>4. 知の形式知化と接続</strong> — 教員の暗黙知をAIで構造化し、知恵としてつなげる</td></tr>
+      <tr><td><strong>フェーズ3</strong>: コンセンサス型意思決定</td><td><strong>6. 合意形成と共創</strong> — 多様な声を統合し、全員が参画する合意を形成する</td></tr>
+      <tr><td><strong>フェーズ4</strong>: 集合知の形成</td><td><strong>3. パターン発見</strong> — 蓄積された事例から共通パターンを見出す</td></tr>
+    </table>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">実証済みの方法</div>
+    <p>P2のコンセンサス型意思決定は、<strong>長崎県教育委員会</strong>（7名、2026年3月）で実証済み。「本当の意味での民主主義が実現していく夢を抱かせる話だった」（馬場さん）。また、企業4社でのAI組織変革（AX）で検証済みの方法論を学校に翻訳している。詳細は<a href="about.html">About Us</a>を参照。</p>
+  </div>
 
   <nav class="toc">
     <h2>目次</h2>
     <ol>
       <li><a href="#sec1">なぜ学校組織開発にAIか</a></li>
+      <li><a href="#sec1b">企業AXとの同型性——なぜこの方法が動くのか</a></li>
       <li><a href="#sec2">全体の流れ——4つのフェーズ</a></li>
       <li><a href="#sec3">フェーズ1: 教員コアチームの立ち上げ</a></li>
       <li><a href="#sec4">フェーズ2: AIアプリで教員の声を集める</a></li>
       <li><a href="#sec5">フェーズ3: コンセンサス型意思決定の実装</a></li>
       <li><a href="#sec6">フェーズ4: 教員全体への展開と集合知の形成</a></li>
       <li><a href="#sec7">学校運営のAI活用——具体的な業務領域</a></li>
-      <li><a href="#sec8">企業AXとの同型性——サツドラの事例から</a></li>
       <li><a href="#sec9">3層アーキテクチャの学校版</a></li>
       <li><a href="#sec10">担当・体制</a></li>
       <li><a href="#sec11">成功の指標</a></li>
     </ol>
   </nav>
 
-  <hr>
-
   <!-- Section 1 -->
   <h2 id="sec1">1. なぜ学校組織開発にAIか</h2>
 
   <h3>1.1 馬場さんの問題意識</h3>
-  <blockquote>
-    <p>「50人の先生がいても取り組むのは2-3人。1日30時間のうち3-4時間しか変わらない。それでは生徒にとって学びが変わったとは言えない。20時間、できれば30時間全部変わってほしい」</p>
-  </blockquote>
-  <p>この問題は、個々の教員の研修（P1）だけでは解決しない。<strong>学校の意思決定の仕組み</strong>と<strong>教員間の知識の流れ</strong>を変える必要がある。</p>
+  <div class="voice-block">
+    「50人の先生がいても取り組むのは2-3人。1日30時間のうち3-4時間しか変わらない。それでは生徒にとって学びが変わったとは言えない。20時間、できれば30時間全部変わってほしい」
+    <div class="voice-attribution">——馬場さん（長崎県教育委員会 高校教育課）</div>
+  </div>
+  <p>この問題は、個々の教員の研修（<a href="p1.html">P1</a>）だけでは解決しない。<strong>学校の意思決定の仕組み</strong>と<strong>教員間の知識の流れ</strong>を変える必要がある。</p>
 
   <h3>1.2 従来の学校組織の構造</h3>
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 740 230" width="100%" style="max-width:740px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-      <defs><marker id="bp1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <defs><marker id="bp1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker></defs>
       <!-- 従来 -->
-      <text x="170" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">従来の学校組織</text>
-      <rect x="80" y="28" width="180" height="34" rx="6" fill="#1a365d"/><text x="170" y="50" text-anchor="middle" font-size="11" fill="#fff">教育委員会</text>
-      <line x1="170" y1="62" x2="170" y2="78" stroke="#1a365d" stroke-width="1.5" marker-end="url(#bp1)"/>
-      <text x="215" y="74" font-size="8" fill="#999">通達・方針</text>
-      <rect x="100" y="82" width="140" height="34" rx="6" fill="#fce4ec" stroke="#c62828"/><text x="170" y="104" text-anchor="middle" font-size="11" fill="#c62828">校長・教頭</text>
-      <line x1="170" y1="116" x2="170" y2="132" stroke="#1a365d" stroke-width="1.5" marker-end="url(#bp1)"/>
-      <text x="215" y="128" font-size="8" fill="#999">指示・伝達</text>
-      <rect x="60" y="136" width="220" height="34" rx="6" fill="#e3f2fd" stroke="#1a365d"/><text x="170" y="158" text-anchor="middle" font-size="11" fill="#1a365d">各教員（バラバラ）</text>
-      <text x="170" y="190" text-anchor="middle" font-size="9" fill="#999">声の大きい人の意見が通る</text>
-      <text x="170" y="205" text-anchor="middle" font-size="9" fill="#999">知識共有は偶発的</text>
+      <text x="170" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#D4853A">従来の学校組織</text>
+      <rect x="80" y="28" width="180" height="34" rx="6" fill="#1E3A5F"/><text x="170" y="50" text-anchor="middle" font-size="11" fill="#fff">教育委員会</text>
+      <line x1="170" y1="62" x2="170" y2="78" stroke="#1E3A5F" stroke-width="1.5" marker-end="url(#bp1)"/>
+      <text x="215" y="74" font-size="8" fill="#8D8A85">通達・方針</text>
+      <rect x="100" y="82" width="140" height="34" rx="6" fill="#FDF1E6" stroke="#D4853A"/><text x="170" y="104" text-anchor="middle" font-size="11" fill="#D4853A">校長・教頭</text>
+      <line x1="170" y1="116" x2="170" y2="132" stroke="#1E3A5F" stroke-width="1.5" marker-end="url(#bp1)"/>
+      <text x="215" y="128" font-size="8" fill="#8D8A85">指示・伝達</text>
+      <rect x="60" y="136" width="220" height="34" rx="6" fill="#EAF3F1" stroke="#1E3A5F"/><text x="170" y="158" text-anchor="middle" font-size="11" fill="#1E3A5F">各教員（バラバラ）</text>
+      <text x="170" y="190" text-anchor="middle" font-size="9" fill="#8D8A85">声の大きい人の意見が通る</text>
+      <text x="170" y="205" text-anchor="middle" font-size="9" fill="#8D8A85">知識共有は偶発的</text>
 
       <!-- 矢印 -->
-      <text x="380" y="100" text-anchor="middle" font-size="28" fill="#e65100">→</text>
+      <text x="380" y="100" text-anchor="middle" font-size="28" fill="#D4853A">→</text>
 
       <!-- AI共創型 -->
-      <text x="570" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">AI共創型全員経営</text>
-      <rect x="450" y="28" width="240" height="30" rx="6" fill="#e8f5e9" stroke="#2e7d32"/><text x="570" y="48" text-anchor="middle" font-size="10" fill="#2e7d32">全教員がAIアプリに意見を入力</text>
-      <line x1="570" y1="58" x2="570" y2="70" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#bp1)"/>
-      <rect x="450" y="74" width="240" height="30" rx="6" fill="#fff3e0" stroke="#e65100"/><text x="570" y="94" text-anchor="middle" font-size="10" fill="#e65100">AIが統合 → 集合知レポート</text>
-      <line x1="570" y1="104" x2="570" y2="116" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#bp1)"/>
-      <rect x="450" y="120" width="240" height="30" rx="6" fill="#e3f2fd" stroke="#1a365d"/><text x="570" y="140" text-anchor="middle" font-size="10" fill="#1a365d">コンセンサス型で意思決定</text>
-      <line x1="570" y1="150" x2="570" y2="162" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#bp1)"/>
-      <rect x="450" y="166" width="240" height="30" rx="6" fill="#1a365d"/><text x="570" y="186" text-anchor="middle" font-size="10" fill="#fff">全員が「反映された」と実感</text>
-      <path d="M690,181 Q720,181 720,94 Q720,74 700,74" fill="none" stroke="#2e7d32" stroke-width="1" stroke-dasharray="4,3"/>
-      <text x="728" y="130" font-size="8" fill="#2e7d32" transform="rotate(90,728,130)">蓄積→賢くなる</text>
+      <text x="570" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#3A7D6E">AI共創型全員経営</text>
+      <rect x="450" y="28" width="240" height="30" rx="6" fill="#EAF3F1" stroke="#3A7D6E"/><text x="570" y="48" text-anchor="middle" font-size="10" fill="#3A7D6E">全教員がAIアプリに意見を入力</text>
+      <line x1="570" y1="58" x2="570" y2="70" stroke="#3A7D6E" stroke-width="1.5" marker-end="url(#bp1)"/>
+      <rect x="450" y="74" width="240" height="30" rx="6" fill="#FDF1E6" stroke="#D4853A"/><text x="570" y="94" text-anchor="middle" font-size="10" fill="#D4853A">AIが統合 → 集合知レポート</text>
+      <line x1="570" y1="104" x2="570" y2="116" stroke="#3A7D6E" stroke-width="1.5" marker-end="url(#bp1)"/>
+      <rect x="450" y="120" width="240" height="30" rx="6" fill="#EAF3F1" stroke="#1E3A5F"/><text x="570" y="140" text-anchor="middle" font-size="10" fill="#1E3A5F">コンセンサス型で意思決定</text>
+      <line x1="570" y1="150" x2="570" y2="162" stroke="#3A7D6E" stroke-width="1.5" marker-end="url(#bp1)"/>
+      <rect x="450" y="166" width="240" height="30" rx="6" fill="#1E3A5F"/><text x="570" y="186" text-anchor="middle" font-size="10" fill="#fff">全員が「反映された」と実感</text>
+      <path d="M690,181 Q720,181 720,94 Q720,74 700,74" fill="none" stroke="#3A7D6E" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="728" y="130" font-size="8" fill="#3A7D6E" transform="rotate(90,728,130)">蓄積→賢くなる</text>
     </svg>
   </div>
 
   <p><strong>核心: 「多くの声が集まるほど、意思決定の質が上がる」ことをAIが実現する。</strong></p>
   <p>従来、多くの意見を集めても、統合する手段がなかった。AIが統合を担うことで、<strong>多様性が邪魔ではなく資産になる</strong>。これが「AI共創型全員経営」の意味。</p>
 
-  <hr>
+  <!-- Section 1b: 企業AXとの同型性（旧セクション8から移動） -->
+  <h2 id="sec1b">2. なぜこの方法が動くのか——企業AXとの同型性</h2>
 
-  <!-- Section 2 -->
-  <h2 id="sec2">2. 全体の流れ——4つのフェーズ</h2>
+  <p>この方法は理念ではない。<strong>企業4社のAI組織変革（AX）で検証済みの方法論</strong>を学校に翻訳したものだ。組織が変わらない構造は、企業も学校も同じだからだ。</p>
+
+  <table>
+    <tr><th>サツドラ（企業）</th><th>学校（P2）</th></tr>
+    <tr><td>バイヤー20名の暗黙知が個人に閉じている</td><td>教員50名の教育実践知が個人に閉じている</td></tr>
+    <tr><td>AI壁打ちアプリでバイヤーの悩みを引き出す</td><td>AIアプリで教員の声を収集する</td></tr>
+    <tr><td>AIで統合→「悩みも集合知」の体験</td><td>AIで統合→「教員の声が学校を変える」体験</td></tr>
+    <tr><td>個人のObsidianで自分の世界を構築</td><td>個人の保管庫（Vault）で授業設計・振り返りを蓄積</td></tr>
+    <tr><td>エッセンスを共有空間に「受粉」</td><td>事例研究会でエッセンスを共有＝「受粉」</td></tr>
+    <tr><td>クリエイティビティの解放が目的</td><td>教育の創造性の解放が目的</td></tr>
+  </table>
+
+  <h3>サツドラから学ぶ「やってはいけないこと」</h3>
+  <table>
+    <tr><th>サツドラでの教訓</th><th>学校への翻訳</th></tr>
+    <tr><td>「安易な効率化は絶対嫌」（中村CHRO）</td><td>「AIで仕事を減らします」ではなく「AIで教員の声を活かします」が正しいメッセージ</td></tr>
+    <tr><td>バイヤーは自分の授業に口を出されたくない</td><td>教員も同じ。<strong>個人の宇宙を尊重する</strong></td></tr>
+    <tr><td>一律の成功パターンは適用できない</td><td>教科ごとに状況が異なる。一律の方法論を押し付けない</td></tr>
+    <tr><td>「本当にサポートしてくれると感じたら簡単に開く」</td><td><strong>信頼関係が先。ツールは後。</strong></td></tr>
+  </table>
+
+  <!-- Section 2（旧セクション2、番号を3に繰り上げ） -->
+  <h2 id="sec2">3. 全体の流れ——4つのフェーズ</h2>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 520 380" width="100%" style="max-width:520px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-      <defs><marker id="bf1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <defs><marker id="bf1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker></defs>
       <!-- Phase 1 -->
-      <rect x="60" y="10" width="400" height="56" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-      <text x="260" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">フェーズ1: コアチームの立ち上げ</text>
-      <text x="260" y="50" text-anchor="middle" font-size="10" fill="#4a5568">5-10名にClaude Code＋Obsidian環境を導入</text>
-      <line x1="260" y1="66" x2="260" y2="86" stroke="#1a365d" stroke-width="2" marker-end="url(#bf1)"/>
+      <rect x="60" y="10" width="400" height="56" rx="10" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="260" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4853A">フェーズ1: コアチームの立ち上げ</text>
+      <text x="260" y="50" text-anchor="middle" font-size="10" fill="#4A6580">5-10名にClaude Code＋Obsidian環境を導入</text>
+      <line x1="260" y1="66" x2="260" y2="86" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bf1)"/>
       <!-- Phase 2 -->
-      <rect x="60" y="90" width="400" height="56" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-      <text x="260" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">フェーズ2: 教員の声を集める</text>
-      <text x="260" y="130" text-anchor="middle" font-size="10" fill="#4a5568">AIアプリで収集 → AI統合レポート → 対話</text>
-      <line x1="260" y1="146" x2="260" y2="166" stroke="#1a365d" stroke-width="2" marker-end="url(#bf1)"/>
+      <rect x="60" y="90" width="400" height="56" rx="10" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="260" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#3A7D6E">フェーズ2: 教員の声を集める</text>
+      <text x="260" y="130" text-anchor="middle" font-size="10" fill="#4A6580">AIアプリで収集 → AI統合レポート → 対話</text>
+      <line x1="260" y1="146" x2="260" y2="166" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bf1)"/>
       <!-- Phase 3 -->
-      <rect x="60" y="170" width="400" height="56" rx="10" fill="#e3f2fd" stroke="#1a365d" stroke-width="2"/>
-      <text x="260" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">フェーズ3: コンセンサス型意思決定</text>
-      <text x="260" y="210" text-anchor="middle" font-size="10" fill="#4a5568">「多くの声＝質の向上」を実感 → AI活用が高度化</text>
-      <line x1="260" y1="226" x2="260" y2="246" stroke="#1a365d" stroke-width="2" marker-end="url(#bf1)"/>
+      <rect x="60" y="170" width="400" height="56" rx="10" fill="#EAF3F1" stroke="#1E3A5F" stroke-width="2"/>
+      <text x="260" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">フェーズ3: コンセンサス型意思決定</text>
+      <text x="260" y="210" text-anchor="middle" font-size="10" fill="#4A6580">「多くの声＝質の向上」を実感 → AI活用が高度化</text>
+      <line x1="260" y1="226" x2="260" y2="246" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bf1)"/>
       <!-- Phase 4 -->
-      <rect x="60" y="250" width="400" height="56" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-      <text x="260" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">フェーズ4: 全教員への展開と集合知</text>
-      <text x="260" y="290" text-anchor="middle" font-size="10" fill="#4a5568">個人のAI活用高度化 ＋ 相互共有 ＝ 集合知形成</text>
+      <rect x="60" y="250" width="400" height="56" rx="10" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="260" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4853A">フェーズ4: 全教員への展開と集合知</text>
+      <text x="260" y="290" text-anchor="middle" font-size="10" fill="#4A6580">個人のAI活用高度化 ＋ 相互共有 ＝ 集合知形成</text>
       <!-- フィードバック -->
-      <path d="M460,278 Q500,278 500,118 Q500,90 480,90" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#bf1)"/>
-      <text x="510" y="190" font-size="9" fill="#999" transform="rotate(90,510,190)">集合知が質を高める</text>
+      <path d="M460,278 Q500,278 500,118 Q500,90 480,90" fill="none" stroke="#8D8A85" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#bf1)"/>
+      <text x="510" y="190" font-size="9" fill="#8D8A85" transform="rotate(90,510,190)">集合知が質を高める</text>
       <!-- Stage badges -->
       <rect x="62" y="36" width="60" height="16" rx="8" fill="#ffe0b2"/><text x="92" y="48" text-anchor="middle" font-size="8" fill="#bf360c">Stage 1</text>
       <rect x="62" y="116" width="60" height="16" rx="8" fill="#ffe0b2"/><text x="92" y="128" text-anchor="middle" font-size="8" fill="#bf360c">Stage 1</text>
@@ -153,7 +208,7 @@
     <tr><td>4. 全教員への展開</td><td>6-12ヶ月</td><td>Stage 2 確立</td><td>全教員がVaultを持ち、個人のAI活用と集合知が両立</td></tr>
   </table>
 
-  <hr>
+
 
   <!-- Section 3 -->
   <h2 id="sec3">3. フェーズ1: 教員コアチームの立ち上げ</h2>
@@ -171,7 +226,7 @@
   <h3>3.2 環境セットアップ</h3>
   <p>P1（教員研修）の第3回で、コアチームが自分のVaultを作る。</p>
   <div style="margin:24px auto; max-width:520px;">
-    <pre style="background:#f7fafc; border:2px solid #e2e8f0; border-radius:10px; padding:20px 24px; font-family:'Consolas','Monaco','Courier New',monospace; font-size:13px; line-height:1.8; color:#1a365d; overflow-x:auto;"><code>各教員のPC
+    <pre style="background:#F0EDE8; border:2px solid #E5E0D8; border-radius:10px; padding:20px 24px; font-family:'Consolas','Monaco','Courier New',monospace; font-size:13px; line-height:1.8; color:#1E3A5F; overflow-x:auto;"><code>各教員のPC
 ├── Obsidian（インストール）
 ├── Claude Code（インストール）
 ├── 個人Vault/
@@ -199,7 +254,7 @@
 
   <p><strong>核心: コアチームは「モルモット」ではなく「設計者」。</strong> 全教員への展開を一緒に考えるメンバーとして位置づける。</p>
 
-  <hr>
+
 
   <!-- Section 4 -->
   <h2 id="sec4">4. フェーズ2: AIアプリで教員の声を集める</h2>
@@ -228,29 +283,29 @@
   <h4>収集の方法</h4>
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 460 520" width="100%" style="max-width:460px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-      <defs><marker id="vc1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <defs><marker id="vc1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker></defs>
       <!-- 全教員 -->
-      <rect x="80" y="10" width="300" height="44" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
-      <text x="230" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">全教員（50名）</text>
+      <rect x="80" y="10" width="300" height="44" rx="10" fill="#EAF3F1" stroke="#4A6580" stroke-width="2"/>
+      <text x="230" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">全教員（50名）</text>
       <!-- 矢印1 -->
-      <line x1="230" y1="54" x2="230" y2="140" stroke="#1a365d" stroke-width="2" marker-end="url(#vc1)"/>
+      <line x1="230" y1="54" x2="230" y2="140" stroke="#1E3A5F" stroke-width="2" marker-end="url(#vc1)"/>
       <!-- 説明テキスト -->
-      <text x="250" y="76" font-size="10" fill="#4a5568">QRコード → AIアプリ or Googleフォーム</text>
-      <text x="250" y="92" font-size="10" fill="#4a5568">スマホでもPCでも回答可能</text>
-      <text x="250" y="108" font-size="10" fill="#4a5568">自由記述（5-10分で回答可能）</text>
+      <text x="250" y="76" font-size="10" fill="#4A6580">QRコード → AIアプリ or Googleフォーム</text>
+      <text x="250" y="92" font-size="10" fill="#4A6580">スマホでもPCでも回答可能</text>
+      <text x="250" y="108" font-size="10" fill="#4A6580">自由記述（5-10分で回答可能）</text>
       <!-- コアチーム -->
-      <rect x="50" y="144" width="360" height="44" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-      <text x="230" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">コアチーム（Claude Code＋Obsidian）</text>
+      <rect x="50" y="144" width="360" height="44" rx="10" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="230" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4853A">コアチーム（Claude Code＋Obsidian）</text>
       <!-- 矢印2 -->
-      <line x1="230" y1="188" x2="230" y2="310" stroke="#1a365d" stroke-width="2" marker-end="url(#vc1)"/>
+      <line x1="230" y1="188" x2="230" y2="310" stroke="#1E3A5F" stroke-width="2" marker-end="url(#vc1)"/>
       <!-- 説明テキスト2 -->
-      <text x="250" y="216" font-size="10" fill="#4a5568">回答を一括取得</text>
-      <text x="250" y="236" font-size="10" fill="#4a5568">Claude Codeで統合・構造化</text>
-      <text x="250" y="256" font-size="10" fill="#4a5568">KJ法で意見をクラスター化</text>
-      <text x="250" y="276" font-size="10" fill="#4a5568">レポートをVaultに蓄積</text>
+      <text x="250" y="216" font-size="10" fill="#4A6580">回答を一括取得</text>
+      <text x="250" y="236" font-size="10" fill="#4A6580">Claude Codeで統合・構造化</text>
+      <text x="250" y="256" font-size="10" fill="#4A6580">KJ法で意見をクラスター化</text>
+      <text x="250" y="276" font-size="10" fill="#4A6580">レポートをVaultに蓄積</text>
       <!-- 統合レポート -->
-      <rect x="60" y="314" width="340" height="44" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-      <text x="230" y="342" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">統合レポート → 全教員に共有</text>
+      <rect x="60" y="314" width="340" height="44" rx="10" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="230" y="342" text-anchor="middle" font-size="14" font-weight="bold" fill="#3A7D6E">統合レポート → 全教員に共有</text>
     </svg>
   </div>
 
@@ -276,43 +331,43 @@
   <p>コアチームがClaude Codeで統合レポートを作成する。</p>
 
   <h4>レポートの構造</h4>
-  <div style="margin:24px auto; max-width:640px; background:linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); border-left:5px solid #2b6cb0; border-radius:0 10px 10px 0; padding:24px 28px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-    <div style="font-size:15px; font-weight:bold; color:#1a365d; margin-bottom:4px;">教員の声 統合レポート vol.1「学校の課題」</div>
+  <div style="margin:24px auto; max-width:640px; background:linear-gradient(135deg, #F0EDE8 0%, #edf2f7 100%); border-left:5px solid #4A6580; border-radius:0 10px 10px 0; padding:24px 28px; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+    <div style="font-size:15px; font-weight:bold; color:#1E3A5F; margin-bottom:4px;">教員の声 統合レポート vol.1「学校の課題」</div>
     <div style="font-size:12px; color:#718096; margin-bottom:16px;">日付: 2026年○月○日 ｜ 回答者: 50名中42名（回答率84%）</div>
     <hr style="border:none; border-top:1px solid #cbd5e0; margin:0 0 16px 0;">
-    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:10px;">1. KJ法による意見クラスター</div>
-    <div style="margin-bottom:12px; padding:10px 14px; background:#fff3e0; border-radius:6px;">
-      <div style="font-size:12px; font-weight:bold; color:#e65100;">クラスター1: 時間と余裕の不足（18名が言及）</div>
-      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+    <div style="font-size:13px; font-weight:bold; color:#4A6580; margin-bottom:10px;">1. KJ法による意見クラスター</div>
+    <div style="margin-bottom:12px; padding:10px 14px; background:#FDF1E6; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#D4853A;">クラスター1: 時間と余裕の不足（18名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4A6580; line-height:1.7;">
         <li>授業準備の時間が足りない</li><li>事務作業に追われている</li><li>生徒と向き合う時間がない</li><li>「やりたいことはあるが、時間がない」</li>
       </ul>
     </div>
-    <div style="margin-bottom:12px; padding:10px 14px; background:#e3f2fd; border-radius:6px;">
-      <div style="font-size:12px; font-weight:bold; color:#1a365d;">クラスター2: 教科間の分断（12名が言及）</div>
-      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+    <div style="margin-bottom:12px; padding:10px 14px; background:#EAF3F1; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#1E3A5F;">クラスター2: 教科間の分断（12名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4A6580; line-height:1.7;">
         <li>他教科の先生と話す機会がない</li><li>探究学習と教科学習がつながらない</li><li>自分の教科の中に閉じている</li>
       </ul>
     </div>
-    <div style="margin-bottom:12px; padding:10px 14px; background:#e8f5e9; border-radius:6px;">
-      <div style="font-size:12px; font-weight:bold; color:#2e7d32;">クラスター3: 評価の悩み（9名が言及）</div>
-      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+    <div style="margin-bottom:12px; padding:10px 14px; background:#EAF3F1; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#3A7D6E;">クラスター3: 評価の悩み（9名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4A6580; line-height:1.7;">
         <li>探究学習の評価基準が分からない</li><li>点数化できない力をどう評価するか</li><li>生徒の「成長」を可視化したい</li>
       </ul>
     </div>
-    <div style="margin-bottom:14px; padding:10px 14px; background:#fce4ec; border-radius:6px;">
-      <div style="font-size:12px; font-weight:bold; color:#c62828;">クラスター4: AIへの期待と不安（8名が言及）</div>
-      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4a5568; line-height:1.7;">
+    <div style="margin-bottom:14px; padding:10px 14px; background:#FDF1E6; border-radius:6px;">
+      <div style="font-size:12px; font-weight:bold; color:#D4853A;">クラスター4: AIへの期待と不安（8名が言及）</div>
+      <ul style="margin:6px 0 0 16px; padding:0; font-size:12px; color:#4A6580; line-height:1.7;">
         <li>AIを使いこなせる自信がない</li><li>でも可能性は感じている</li><li>生徒の方がAIに詳しくなるのが怖い</li>
       </ul>
     </div>
     <hr style="border:none; border-top:1px solid #cbd5e0; margin:0 0 14px 0;">
-    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:6px;">2. 全体を貫くテーマ</div>
-    <div style="padding:10px 14px; background:#fff; border-radius:6px; font-size:13px; color:#1a365d; line-height:1.7; border:1px solid #e2e8f0;">
+    <div style="font-size:13px; font-weight:bold; color:#4A6580; margin-bottom:6px;">2. 全体を貫くテーマ</div>
+    <div style="padding:10px 14px; background:#fff; border-radius:6px; font-size:13px; color:#1E3A5F; line-height:1.7; border:1px solid #E5E0D8;">
       「やりたいことはある。でも時間がない、つながりがない、やり方が分からない」<br>
-      <span style="color:#e65100; font-weight:bold;">→ 意欲の問題ではなく、構造の問題</span>
+      <span style="color:#D4853A; font-weight:bold;">→ 意欲の問題ではなく、構造の問題</span>
     </div>
     <hr style="border:none; border-top:1px solid #cbd5e0; margin:14px 0;">
-    <div style="font-size:13px; font-weight:bold; color:#2b6cb0; margin-bottom:4px;">3. 次のアクション候補</div>
+    <div style="font-size:13px; font-weight:bold; color:#4A6580; margin-bottom:4px;">3. 次のアクション候補</div>
     <div style="font-size:12px; color:#718096; font-style:italic;">（この部分は職員会議でのコンセンサス評価にかける）</div>
   </div>
 
@@ -337,56 +392,54 @@
     </ul>
   </div>
 
-  <hr>
+
 
   <!-- Section 5 -->
   <h2 id="sec5">5. フェーズ3: コンセンサス型意思決定の実装</h2>
 
   <h3>5.1 フェーズ2からの接続</h3>
   <p>フェーズ2で「教員の声を集めて統合する」体験をした後、次の問いが自然に生まれる:</p>
-  <blockquote>
-    <p>「では、この課題にどう取り組むか？」</p>
-  </blockquote>
+  <p><strong>「では、この課題にどう取り組むか？」</strong></p>
   <p>この問いに対して<strong>コンセンサス型意思決定</strong>を導入する。</p>
 
   <h3>5.2 コンセンサス型のプロセス</h3>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 560 410" width="100%" style="max-width:560px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-      <defs><marker id="bc1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <defs><marker id="bc1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker></defs>
       <!-- Step 1 -->
-      <rect x="100" y="10" width="320" height="40" rx="8" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
-      <text x="260" y="35" text-anchor="middle" font-size="11" fill="#1a365d">叩き台の提示（統合レポートから）</text>
-      <line x1="260" y1="50" x2="260" y2="68" stroke="#1a365d" stroke-width="2" marker-end="url(#bc1)"/>
+      <rect x="100" y="10" width="320" height="40" rx="8" fill="#EAF3F1" stroke="#1E3A5F" stroke-width="1.5"/>
+      <text x="260" y="35" text-anchor="middle" font-size="11" fill="#1E3A5F">叩き台の提示（統合レポートから）</text>
+      <line x1="260" y1="50" x2="260" y2="68" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bc1)"/>
       <!-- Step 2 -->
-      <rect x="80" y="72" width="360" height="56" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-      <text x="260" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">全教員が評価</text>
-      <text x="160" y="114" text-anchor="middle" font-size="10" fill="#4a5568">1＝賛成</text>
-      <text x="260" y="114" text-anchor="middle" font-size="10" fill="#4a5568">2＝懸念あり</text>
-      <text x="370" y="114" text-anchor="middle" font-size="10" fill="#4a5568">3＝ブロック</text>
-      <line x1="260" y1="128" x2="260" y2="148" stroke="#1a365d" stroke-width="2" marker-end="url(#bc1)"/>
+      <rect x="80" y="72" width="360" height="56" rx="8" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="1.5"/>
+      <text x="260" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#3A7D6E">全教員が評価</text>
+      <text x="160" y="114" text-anchor="middle" font-size="10" fill="#4A6580">1＝賛成</text>
+      <text x="260" y="114" text-anchor="middle" font-size="10" fill="#4A6580">2＝懸念あり</text>
+      <text x="370" y="114" text-anchor="middle" font-size="10" fill="#4A6580">3＝ブロック</text>
+      <line x1="260" y1="128" x2="260" y2="148" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bc1)"/>
       <!-- Step 3 -->
-      <rect x="100" y="152" width="320" height="40" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-      <text x="260" y="177" text-anchor="middle" font-size="11" fill="#e65100">AIが評価を統合・構造化</text>
-      <line x1="260" y1="192" x2="260" y2="212" stroke="#1a365d" stroke-width="2" marker-end="url(#bc1)"/>
+      <rect x="100" y="152" width="320" height="40" rx="8" fill="#FDF1E6" stroke="#D4853A" stroke-width="1.5"/>
+      <text x="260" y="177" text-anchor="middle" font-size="11" fill="#D4853A">AIが評価を統合・構造化</text>
+      <line x1="260" y1="192" x2="260" y2="212" stroke="#1E3A5F" stroke-width="2" marker-end="url(#bc1)"/>
       <!-- Decision -->
-      <polygon points="260,216 370,252 260,288 150,252" fill="#fff9c4" stroke="#f57f17" stroke-width="1.5"/>
-      <text x="260" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#f57f17">ブロック</text>
-      <text x="260" y="264" text-anchor="middle" font-size="10" fill="#f57f17">あり？</text>
+      <polygon points="260,216 370,252 260,288 150,252" fill="#fff9c4" stroke="#D4853A" stroke-width="1.5"/>
+      <text x="260" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#D4853A">ブロック</text>
+      <text x="260" y="264" text-anchor="middle" font-size="10" fill="#D4853A">あり？</text>
       <!-- Yes -->
-      <line x1="370" y1="252" x2="430" y2="252" stroke="#c62828" stroke-width="2" marker-end="url(#bc1)"/>
-      <text x="398" y="244" font-size="9" fill="#c62828">ある</text>
-      <rect x="434" y="228" width="120" height="48" rx="6" fill="#fce4ec" stroke="#c62828"/>
-      <text x="494" y="248" text-anchor="middle" font-size="9" fill="#c62828">ブロックの声を</text>
-      <text x="494" y="264" text-anchor="middle" font-size="9" fill="#c62828">取り込んでv2生成</text>
+      <line x1="370" y1="252" x2="430" y2="252" stroke="#D4853A" stroke-width="2" marker-end="url(#bc1)"/>
+      <text x="398" y="244" font-size="9" fill="#D4853A">ある</text>
+      <rect x="434" y="228" width="120" height="48" rx="6" fill="#FDF1E6" stroke="#D4853A"/>
+      <text x="494" y="248" text-anchor="middle" font-size="9" fill="#D4853A">ブロックの声を</text>
+      <text x="494" y="264" text-anchor="middle" font-size="9" fill="#D4853A">取り込んでv2生成</text>
       <!-- Loop back -->
-      <path d="M494,228 Q494,180 494,92 Q494,72 460,72" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#bc1)"/>
-      <text x="502" y="165" font-size="8" fill="#c62828">再評価</text>
+      <path d="M494,228 Q494,180 494,92 Q494,72 460,72" fill="none" stroke="#D4853A" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#bc1)"/>
+      <text x="502" y="165" font-size="8" fill="#D4853A">再評価</text>
       <!-- No -->
-      <line x1="260" y1="288" x2="260" y2="320" stroke="#2e7d32" stroke-width="2" marker-end="url(#bc1)"/>
-      <text x="280" y="308" font-size="9" fill="#2e7d32">ない</text>
+      <line x1="260" y1="288" x2="260" y2="320" stroke="#3A7D6E" stroke-width="2" marker-end="url(#bc1)"/>
+      <text x="280" y="308" font-size="9" fill="#3A7D6E">ない</text>
       <!-- Consensus -->
-      <rect x="100" y="324" width="320" height="48" rx="8" fill="#2e7d32"/>
+      <rect x="100" y="324" width="320" height="48" rx="8" fill="#3A7D6E"/>
       <text x="260" y="346" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">コンセンサス成立</text>
       <text x="260" y="364" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.8)">全員が「この方向でいい」と合意</text>
     </svg>
@@ -438,7 +491,7 @@
 
   <p><strong>この段階で起きること</strong>: コアチームの教員が「Claude Code＋Obsidianがあると、自分の仕事がこう変わる」という<strong>具体的な成功事例</strong>を持っている。これが次のフェーズ4で全教員に環境を展開する際の最強の説得材料になる。</p>
 
-  <hr>
+
 
   <!-- Section 6 -->
   <h2 id="sec6">6. フェーズ4: 教員全体への展開と集合知の形成</h2>
@@ -466,31 +519,31 @@
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 500 520" width="100%" style="max-width:500px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-      <defs><marker id="ex1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker></defs>
+      <defs><marker id="ex1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker></defs>
       <!-- Step 1 -->
-      <rect x="30" y="10" width="440" height="60" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-      <text x="250" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">コアチームの実践共有</text>
-      <text x="250" y="52" text-anchor="middle" font-size="10" fill="#4a5568">事例研究会で「Vaultでこんなことができた」を具体的に見せる</text>
-      <line x1="250" y1="70" x2="250" y2="94" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <rect x="30" y="10" width="440" height="60" rx="10" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="250" y="32" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4853A">コアチームの実践共有</text>
+      <text x="250" y="52" text-anchor="middle" font-size="10" fill="#4A6580">事例研究会で「Vaultでこんなことができた」を具体的に見せる</text>
+      <line x1="250" y1="70" x2="250" y2="94" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ex1)"/>
       <!-- Step 2 -->
-      <rect x="30" y="98" width="440" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-      <text x="250" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">希望者へのペアセットアップ</text>
-      <text x="250" y="140" text-anchor="middle" font-size="10" fill="#4a5568">コアチームの教員が1対1でセットアップ支援「一緒にやりましょう」</text>
-      <line x1="250" y1="158" x2="250" y2="182" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <rect x="30" y="98" width="440" height="60" rx="10" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="250" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#3A7D6E">希望者へのペアセットアップ</text>
+      <text x="250" y="140" text-anchor="middle" font-size="10" fill="#4A6580">コアチームの教員が1対1でセットアップ支援「一緒にやりましょう」</text>
+      <line x1="250" y1="158" x2="250" y2="182" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ex1)"/>
       <!-- Step 3 -->
-      <rect x="30" y="186" width="440" height="60" rx="10" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
-      <text x="250" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a365d">個人のAI活用の高度化</text>
-      <text x="250" y="228" text-anchor="middle" font-size="10" fill="#4a5568">各教員が自分の教科・業務でVaultを使い始める「自分の仕事」に使う</text>
-      <line x1="250" y1="246" x2="250" y2="270" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <rect x="30" y="186" width="440" height="60" rx="10" fill="#EAF3F1" stroke="#4A6580" stroke-width="2"/>
+      <text x="250" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">個人のAI活用の高度化</text>
+      <text x="250" y="228" text-anchor="middle" font-size="10" fill="#4A6580">各教員が自分の教科・業務でVaultを使い始める「自分の仕事」に使う</text>
+      <line x1="250" y1="246" x2="250" y2="270" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ex1)"/>
       <!-- Step 4 -->
-      <rect x="30" y="274" width="440" height="60" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-      <text x="250" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">相互共有の開始</text>
-      <text x="250" y="316" text-anchor="middle" font-size="10" fill="#4a5568">事例研究会で各教員の実践を共有 → 互いの知恵が流れ始める</text>
-      <line x1="250" y1="334" x2="250" y2="358" stroke="#1a365d" stroke-width="2" marker-end="url(#ex1)"/>
+      <rect x="30" y="274" width="440" height="60" rx="10" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="250" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4853A">相互共有の開始</text>
+      <text x="250" y="316" text-anchor="middle" font-size="10" fill="#4A6580">事例研究会で各教員の実践を共有 → 互いの知恵が流れ始める</text>
+      <line x1="250" y1="334" x2="250" y2="358" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ex1)"/>
       <!-- Step 5 -->
-      <rect x="30" y="362" width="440" height="60" rx="10" fill="#1a365d" stroke="#1a365d" stroke-width="2"/>
+      <rect x="30" y="362" width="440" height="60" rx="10" fill="#1E3A5F" stroke="#1E3A5F" stroke-width="2"/>
       <text x="250" y="384" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">集合知の形成</text>
-      <text x="250" y="404" text-anchor="middle" font-size="10" fill="#e2e8f0">個人のVaultの知恵が学校全体の知識基盤になっていく</text>
+      <text x="250" y="404" text-anchor="middle" font-size="10" fill="#E5E0D8">個人のVaultの知恵が学校全体の知識基盤になっていく</text>
     </svg>
   </div>
 
@@ -507,34 +560,34 @@
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 480 460" width="100%" style="max-width:480px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
       <defs>
-        <marker id="cy1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2e7d32"/></marker>
-        <marker id="cy2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2b6cb0"/></marker>
+        <marker id="cy1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#3A7D6E"/></marker>
+        <marker id="cy2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4A6580"/></marker>
       </defs>
       <!-- 個人のVault（上） -->
-      <rect x="60" y="10" width="360" height="70" rx="12" fill="#e3f2fd" stroke="#2b6cb0" stroke-width="2"/>
-      <text x="240" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">個人のVault（自分の宇宙）</text>
-      <text x="240" y="52" text-anchor="middle" font-size="10" fill="#4a5568">授業設計、教科の知恵、生徒の観察…</text>
+      <rect x="60" y="10" width="360" height="70" rx="12" fill="#EAF3F1" stroke="#4A6580" stroke-width="2"/>
+      <text x="240" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">個人のVault（自分の宇宙）</text>
+      <text x="240" y="52" text-anchor="middle" font-size="10" fill="#4A6580">授業設計、教科の知恵、生徒の観察…</text>
       <text x="240" y="68" text-anchor="middle" font-size="9" fill="#718096">自分だけの空間。他人に見せる必要はない</text>
       <!-- 下矢印 -->
-      <line x1="240" y1="80" x2="240" y2="148" stroke="#2e7d32" stroke-width="2" marker-end="url(#cy1)"/>
-      <text x="258" y="100" font-size="10" font-weight="bold" fill="#2e7d32">エッセンスを抽出して共有</text>
-      <text x="258" y="116" font-size="9" fill="#4a5568">事例研究会で「こういうことが分かった」を発表</text>
-      <text x="258" y="132" font-size="9" fill="#4a5568">AIが発表を統合→共有レポートに</text>
+      <line x1="240" y1="80" x2="240" y2="148" stroke="#3A7D6E" stroke-width="2" marker-end="url(#cy1)"/>
+      <text x="258" y="100" font-size="10" font-weight="bold" fill="#3A7D6E">エッセンスを抽出して共有</text>
+      <text x="258" y="116" font-size="9" fill="#4A6580">事例研究会で「こういうことが分かった」を発表</text>
+      <text x="258" y="132" font-size="9" fill="#4A6580">AIが発表を統合→共有レポートに</text>
       <!-- 共有の知恵 -->
-      <rect x="60" y="152" width="360" height="70" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-      <text x="240" y="176" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">共有の知恵（集合知）</text>
-      <text x="240" y="194" text-anchor="middle" font-size="10" fill="#4a5568">教科を超えた気づき</text>
+      <rect x="60" y="152" width="360" height="70" rx="12" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="240" y="176" text-anchor="middle" font-size="13" font-weight="bold" fill="#3A7D6E">共有の知恵（集合知）</text>
+      <text x="240" y="194" text-anchor="middle" font-size="10" fill="#4A6580">教科を超えた気づき</text>
       <text x="240" y="210" text-anchor="middle" font-size="9" fill="#718096">「物理でもそうなんだ」「うちの教科でも試してみよう」</text>
       <!-- 下矢印 -->
-      <line x1="240" y1="222" x2="240" y2="290" stroke="#2b6cb0" stroke-width="2" marker-end="url(#cy2)"/>
-      <text x="258" y="250" font-size="10" font-weight="bold" fill="#2b6cb0">他教科の知恵が自分のVaultに入ってくる</text>
+      <line x1="240" y1="222" x2="240" y2="290" stroke="#4A6580" stroke-width="2" marker-end="url(#cy2)"/>
+      <text x="258" y="250" font-size="10" font-weight="bold" fill="#4A6580">他教科の知恵が自分のVaultに入ってくる</text>
       <!-- 個人のVault（下） -->
-      <rect x="60" y="294" width="360" height="56" rx="12" fill="#1a365d" stroke="#1a365d" stroke-width="2"/>
+      <rect x="60" y="294" width="360" height="56" rx="12" fill="#1E3A5F" stroke="#1E3A5F" stroke-width="2"/>
       <text x="240" y="318" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">個人のVaultが豊かになる</text>
-      <text x="240" y="338" text-anchor="middle" font-size="10" fill="#e2e8f0">さらに良い実践 → また共有…</text>
+      <text x="240" y="338" text-anchor="middle" font-size="10" fill="#E5E0D8">さらに良い実践 → また共有…</text>
       <!-- 循環矢印 -->
-      <path d="M420,322 Q460,322 460,110 Q460,30 430,30" fill="none" stroke="#e65100" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#cy1)"/>
-      <text x="470" y="180" font-size="10" fill="#e65100" font-weight="bold" transform="rotate(90,470,180)">循環</text>
+      <path d="M420,322 Q460,322 460,110 Q460,30 430,30" fill="none" stroke="#D4853A" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#cy1)"/>
+      <text x="470" y="180" font-size="10" fill="#D4853A" font-weight="bold" transform="rotate(90,470,180)">循環</text>
     </svg>
   </div>
 
@@ -550,7 +603,7 @@
     <tr><td><strong>文化の形成</strong></td><td>「実践を共有し、学び合う」ことが学校の文化になる</td><td>事例研究会が教員主導で自走する</td></tr>
   </table>
 
-  <hr>
+
 
   <!-- Section 7 -->
   <h2 id="sec7">7. 学校運営のAI活用——具体的な業務領域</h2>
@@ -564,7 +617,7 @@
     <tr><td><strong>広報（HP・SNS）</strong></td><td>取り組みの記事化、写真キャプション、SNS投稿の生成</td><td>広報担当＋Claude Code</td></tr>
     <tr><td><strong>学校便り</strong></td><td>月次の学校便りをVaultの活動記録から生成</td><td>担当教員＋Claude Code</td></tr>
     <tr><td><strong>教育委員会報告</strong></td><td>活動経過をVaultから抽出→報告書を構造化</td><td>管理職＋Claude Code</td></tr>
-    <tr><td><strong>保護者向け説明資料</strong></td><td>NEXTハイスクール構想の保護者説明をAIで分かりやすく整理</td><td>管理職＋Claude Code</td></tr>
+    <tr><td><strong>保護者向け説明資料</strong></td><td>プラネタリー・ラーニング構想の保護者説明をAIで分かりやすく整理</td><td>管理職＋Claude Code</td></tr>
   </table>
 
   <h3>7.2 フェーズ4（全教員が参加）</h3>
@@ -577,38 +630,9 @@
     <tr><td><strong>次年度計画</strong></td><td>今年度の実践知→次年度の計画をコンセンサス型で策定</td><td>全教員</td></tr>
   </table>
 
-  <hr>
 
-  <!-- Section 8 -->
-  <h2 id="sec8">8. 企業AXとの同型性——サツドラの事例から</h2>
 
-  <h3>8.1 構造の対応</h3>
-  <table>
-    <tr><th>サツドラ（企業）</th><th>学校（P2）</th></tr>
-    <tr><td>バイヤー20名の暗黙知が個人に閉じている</td><td>教員50名の教育実践知が個人に閉じている</td></tr>
-    <tr><td>AI壁打ちアプリでバイヤーの悩みを引き出す</td><td>AIアプリで教員の声を収集する</td></tr>
-    <tr><td>AIで統合→「悩みも集合知」の体験</td><td>AIで統合→「教員の声が学校を変える」体験</td></tr>
-    <tr><td>個人のObsidianで自分の世界を構築</td><td>個人のVaultで授業設計・振り返りを蓄積</td></tr>
-    <tr><td>エッセンスを共有空間にポイポイ＝受粉</td><td>事例研究会でエッセンスを共有＝受粉</td></tr>
-    <tr><td>棚の事例研究会で成功事例を共有</td><td>授業の事例研究会で成功事例を共有</td></tr>
-    <tr><td>MCPでPOS/EZOCA等の業務データに直結</td><td>（将来）生徒の学習データ・出席データ等に接続</td></tr>
-    <tr><td>バイヤーの「職人気質」を活かす</td><td>教員の「授業の専門性」を活かす</td></tr>
-    <tr><td>クリエイティビティの解放が目的</td><td>教育の創造性の解放が目的</td></tr>
-  </table>
-
-  <h3>8.2 サツドラから学ぶ「やってはいけないこと」</h3>
-  <table>
-    <tr><th>サツドラでの教訓</th><th>学校への翻訳</th></tr>
-    <tr><td>「データが不足」ではなく「データ過多」が問題だった</td><td>教員にも「分析しろ」「改善しろ」というプレッシャーは十分ある。足りないのはデータではなく「構造」</td></tr>
-    <tr><td>「安易な効率化は絶対嫌」（中村CHRO）</td><td>「AIで仕事を減らします」ではなく「AIで教員の声を活かします」が正しいメッセージ</td></tr>
-    <tr><td>「あなたに言われる筋合いない」というバイヤーの独立性</td><td>教員も自分の授業に口を出されたくない。個人の宇宙を尊重する</td></tr>
-    <tr><td>一律の成功パターンは適用できない</td><td>教科ごとに状況が異なる。一律の方法論を押し付けない</td></tr>
-    <tr><td>「心を開かないが、本当にサポートしてくれると感じたらめちゃくちゃ簡単に開く」</td><td><strong>信頼関係が先。ツールは後。</strong></td></tr>
-  </table>
-
-  <hr>
-
-  <!-- Section 9 -->
+  <!-- Section 9（企業AX同型性はセクション2に移動済み） -->
   <h2 id="sec9">9. 3層アーキテクチャの学校版</h2>
 
   <p>CoThink 3層アーキテクチャを学校に翻訳する。</p>
@@ -616,40 +640,40 @@
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 660 360" width="100%" style="max-width:660px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
       <defs>
-        <marker id="b3a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a365d"/></marker>
+        <marker id="b3a" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1E3A5F"/></marker>
       </defs>
       <!-- 第3層 -->
-      <rect x="30" y="10" width="600" height="90" rx="10" fill="#e65100"/>
+      <rect x="30" y="10" width="600" height="90" rx="10" fill="#D4853A"/>
       <text x="330" y="32" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">第3層: Claude Code（AI）</text>
       <text x="330" y="54" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.9)">教員が日本語で聞く → AIが第1層のデータと第2層の知恵を統合して答える</text>
       <text x="330" y="72" text-anchor="middle" font-size="10" fill="rgba(255,255,255,0.9)">→ 答えの中の「知恵」を第2層に書き戻す</text>
       <!-- 接続線 -->
-      <line x1="180" y1="100" x2="180" y2="140" stroke="#1a365d" stroke-width="2" marker-end="url(#b3a)"/>
-      <text x="190" y="124" font-size="9" fill="#999">データ取得</text>
-      <line x1="480" y1="100" x2="480" y2="140" stroke="#2e7d32" stroke-width="2" marker-end="url(#b3a)"/>
-      <text x="490" y="124" font-size="9" fill="#999">知恵の参照・追記</text>
+      <line x1="180" y1="100" x2="180" y2="140" stroke="#1E3A5F" stroke-width="2" marker-end="url(#b3a)"/>
+      <text x="190" y="124" font-size="9" fill="#8D8A85">データ取得</text>
+      <line x1="480" y1="100" x2="480" y2="140" stroke="#3A7D6E" stroke-width="2" marker-end="url(#b3a)"/>
+      <text x="490" y="124" font-size="9" fill="#8D8A85">知恵の参照・追記</text>
       <!-- 第1層 -->
-      <rect x="30" y="148" width="270" height="190" rx="10" fill="#e3f2fd" stroke="#1a365d" stroke-width="1.5"/>
-      <text x="165" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a365d">第1層: 学校データ</text>
-      <text x="165" y="192" text-anchor="middle" font-size="10" fill="#4a5568">（事実）</text>
-      <text x="55" y="218" font-size="10" fill="#4a5568">・出席データ</text>
-      <text x="55" y="238" font-size="10" fill="#4a5568">・成績データ</text>
-      <text x="55" y="258" font-size="10" fill="#4a5568">・生徒アンケート</text>
-      <text x="55" y="278" font-size="10" fill="#4a5568">・学校評価データ</text>
-      <text x="55" y="298" font-size="10" fill="#4a5568">・行事の実施記録</text>
+      <rect x="30" y="148" width="270" height="190" rx="10" fill="#EAF3F1" stroke="#1E3A5F" stroke-width="1.5"/>
+      <text x="165" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">第1層: 学校データ</text>
+      <text x="165" y="192" text-anchor="middle" font-size="10" fill="#4A6580">（事実）</text>
+      <text x="55" y="218" font-size="10" fill="#4A6580">・出席データ</text>
+      <text x="55" y="238" font-size="10" fill="#4A6580">・成績データ</text>
+      <text x="55" y="258" font-size="10" fill="#4A6580">・生徒アンケート</text>
+      <text x="55" y="278" font-size="10" fill="#4A6580">・学校評価データ</text>
+      <text x="55" y="298" font-size="10" fill="#4A6580">・行事の実施記録</text>
       <rect x="45" y="310" width="240" height="20" rx="4" fill="#fff9c4"/>
-      <text x="165" y="324" text-anchor="middle" font-size="9" fill="#f57f17">フェーズ3-4ではまだ接続しなくてよい</text>
+      <text x="165" y="324" text-anchor="middle" font-size="9" fill="#D4853A">フェーズ3-4ではまだ接続しなくてよい</text>
       <!-- 第2層 -->
-      <rect x="330" y="148" width="300" height="190" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-      <text x="480" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">第2層: 教員の知恵（Vault）</text>
-      <text x="480" y="192" text-anchor="middle" font-size="10" fill="#4a5568">（知恵）</text>
-      <text x="355" y="218" font-size="10" fill="#4a5568">・授業設計の記録</text>
-      <text x="365" y="236" font-size="9" fill="#999">「この単元はこう教えたら理解度が上がった」</text>
-      <text x="355" y="258" font-size="10" fill="#4a5568">・生徒の観察記録</text>
-      <text x="365" y="276" font-size="9" fill="#999">「Aさんはこのテーマで目が輝いていた」</text>
-      <text x="355" y="298" font-size="10" fill="#4a5568">・職員会議のコンセンサス記録</text>
+      <rect x="330" y="148" width="300" height="190" rx="10" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="480" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#3A7D6E">第2層: 教員の知恵（Vault）</text>
+      <text x="480" y="192" text-anchor="middle" font-size="10" fill="#4A6580">（知恵）</text>
+      <text x="355" y="218" font-size="10" fill="#4A6580">・授業設計の記録</text>
+      <text x="365" y="236" font-size="9" fill="#8D8A85">「この単元はこう教えたら理解度が上がった」</text>
+      <text x="355" y="258" font-size="10" fill="#4A6580">・生徒の観察記録</text>
+      <text x="365" y="276" font-size="9" fill="#8D8A85">「Aさんはこのテーマで目が輝いていた」</text>
+      <text x="355" y="298" font-size="10" fill="#4A6580">・職員会議のコンセンサス記録</text>
       <rect x="345" y="310" width="270" height="20" rx="4" fill="#c8e6c9"/>
-      <text x="480" y="324" text-anchor="middle" font-size="9" font-weight="bold" fill="#2e7d32">教員50名の実践知がここに蓄積</text>
+      <text x="480" y="324" text-anchor="middle" font-size="9" font-weight="bold" fill="#3A7D6E">教員50名の実践知がここに蓄積</text>
     </svg>
   </div>
 
@@ -666,16 +690,19 @@
     <p>サツドラではMCPでPOSデータ等に接続するが、学校ではまず第2層（教員の知恵の蓄積）を優先する。成績データ等の接続は、第2層が充実してから検討すればよい。<strong>データよりも知恵が先。</strong></p>
   </div>
 
-  <hr>
+
 
   <!-- Section 10 -->
   <h2 id="sec10">10. 担当・体制</h2>
 
+  <p>P2の各フェーズは、<a href="about.html#three-roles">3つのロール</a>（プロセス設計・ダイアログファシリテーター・AIナレッジファシリテーター）＋事務局＋学校側メンバーで協働して実施する。</p>
+
   <table>
     <tr><th>担当</th><th>フェーズ1</th><th>フェーズ2</th><th>フェーズ3</th><th>フェーズ4</th></tr>
-    <tr><td><strong>田原真人</strong></td><td>コアチーム選定の助言</td><td>質問設計・レポート構造設計</td><td>コンセンサス型のファシリテーション</td><td>事例研究会のファシリテーション</td></tr>
-    <tr><td><strong>北田朋也</strong></td><td>環境セットアップ支援</td><td>AI統合の技術支援</td><td>AI統合・エージェント設定</td><td>教員間のペアセットアップ支援</td></tr>
-    <tr><td><strong>伊原敦子</strong></td><td>—</td><td>フォーム準備・回収</td><td>フォーム運営・記録管理</td><td>運営サポート</td></tr>
+    <tr><td><strong>プロセス設計</strong></td><td>コアチーム選定の助言</td><td>質問設計・レポート構造設計</td><td>コンセンサス型プロセスの設計</td><td>事例研究会の設計</td></tr>
+    <tr><td><strong>ダイアログFA</strong></td><td>—</td><td>レポート共有時の対話ファシリテーション</td><td>コンセンサス評価のファシリテーション</td><td>事例研究会のファシリテーション</td></tr>
+    <tr><td><strong>AIナレッジFA</strong></td><td>環境セットアップ支援</td><td>AI統合レポート作成</td><td>AI統合・AIエージェント設定</td><td>教員間のペアセットアップ支援</td></tr>
+    <tr><td><strong>事務局</strong></td><td>—</td><td>フォーム準備・回収</td><td>フォーム運営・記録管理</td><td>運営サポート</td></tr>
     <tr><td><strong>コアチーム教員</strong></td><td>環境を学ぶ</td><td>質問設計に参加</td><td>AI統合レポート作成の主体</td><td><strong>全教員への展開の主体</strong></td></tr>
     <tr><td><strong>管理職</strong></td><td>コアチームに参加</td><td>レポートの活用を推進</td><td>コンセンサス型を職員会議に採用</td><td>学校全体の文化形成を支持</td></tr>
   </table>
@@ -690,7 +717,7 @@
     </ul>
   </div>
 
-  <hr>
+
 
   <!-- Section 11 -->
   <h2 id="sec11">11. 成功の指標</h2>
@@ -708,14 +735,15 @@
   </table>
 
   <h3>最終的な到達像</h3>
-  <blockquote>
+  <div class="callout tip">
+    <div class="callout-title">到達像</div>
     <p>教員一人ひとりが自分のVaultでAI活用を高度化しながら、事例研究会で実践を共有し合い、コンセンサス型の意思決定で学校を運営する。<strong>多くの声が集まるほど学校がよくなる</strong>ことを全員が実感している状態。</p>
-  </blockquote>
+  </div>
 
   <!-- Page Navigation -->
   <nav class="page-nav">
-    <a href="platform.html" class="prev">← プラットフォーム</a>
-    <a href="p5.html" class="next">探究カリキュラム →</a>
+    <a href="p1.html">&larr; P1: 教員研修</a>
+    <a href="p3.html">P3: カリキュラム共創 &rarr;</a>
   </nav>
 
 </main>
