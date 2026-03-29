@@ -85,8 +85,7 @@
   <text x="105" y="385" text-anchor="middle" font-size="10" fill="#4a5568">全国の探究学習実践者</text>
   <text x="105" y="402" text-anchor="middle" font-size="10" fill="#4a5568">高校魅力化CD 313名</text>
   <text x="105" y="419" text-anchor="middle" font-size="10" fill="#4a5568">かえつ有明・鴨沂・小国高</text>
-  <text x="105" y="436" text-anchor="middle" font-size="10" fill="#4a5568">プリマペンギーノ 40地域</text>
-  <text x="105" y="453" text-anchor="middle" font-size="10" fill="#4a5568">ふるさとイノベーション</text>
+  <text x="105" y="436" text-anchor="middle" font-size="10" fill="#4a5568">ふるさとイノベーション</text>
 
   <!-- ===== Right: Enterprise ===== -->
   <rect x="700" y="100" width="180" height="90" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
