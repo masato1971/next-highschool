@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Code＋Obsidian 環境解説 — プラネタリー・ラーニング構想</title>
+  <title>プラットフォーム — プラネタリー・ラーニング構想</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,17 +41,115 @@
 
   <div class="page-title">
     <h1>プラットフォーム</h1>
-    <div class="page-subtitle">Claude Code＋Obsidian — 思考を積み上げるAI活用環境</div>
+    <div class="page-subtitle">「両利きの学校」を支える2つの基盤</div>
   </div>
 
-  <div class="callout">
-    <div class="callout-title">本ノートの目的</div>
-    <p>プラネタリー・ラーニング構想で導入するAI活用プラットフォーム「Claude Code＋Obsidian」について、教育委員会・学校管理職・教員に向けて解説する。「なぜこの組み合わせなのか」「何ができるのか」「どう段階的に導入するのか」を示す。</p>
-    <p>プロセス全体の中での位置づけは <a href="process-design.html">プロセスデザイン全体設計</a> を参照。</p>
+  <!-- ============================================================ -->
+  <!-- 1. 2つのプラットフォームの俯瞰 -->
+  <!-- ============================================================ -->
+  <h2>1. 「両利きの学校」には2つのプラットフォームが必要</h2>
+
+  <p><a href="p0.html">世界観ページ</a>で示した「両利きの学校」——教科学習（深化）と探究学習（探索）を同時に実現する学校——には、それぞれに対応したプラットフォームが必要になる。</p>
+
+  <div style="text-align:center; margin:32px 0;">
+    <svg viewBox="0 0 700 320" width="100%" style="max-width:700px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <!-- 深化プラットフォーム -->
+      <rect x="20" y="20" width="300" height="160" rx="12" fill="#EAF3F1" stroke="#3A7D6E" stroke-width="2"/>
+      <text x="170" y="48" text-anchor="middle" font-size="14" font-weight="bold" fill="#3A7D6E">深化のプラットフォーム</text>
+      <text x="170" y="72" text-anchor="middle" font-size="12" fill="#1E3A5F">AI個別最適化学習プラットフォーム</text>
+      <line x1="60" y1="84" x2="280" y2="84" stroke="#3A7D6E" stroke-width="0.5"/>
+      <text x="170" y="106" text-anchor="middle" font-size="11" fill="#4A6580">動画＋テキスト＋AIチューター</text>
+      <text x="170" y="126" text-anchor="middle" font-size="11" fill="#4A6580">全科目の個別最適化学習</text>
+      <text x="170" y="152" text-anchor="middle" font-size="10" fill="#3A7D6E" font-weight="bold">教師がワークショップでコース＋</text>
+      <text x="170" y="168" text-anchor="middle" font-size="10" fill="#3A7D6E" font-weight="bold">先生エージェントを自作</text>
+
+      <!-- 探索プラットフォーム -->
+      <rect x="380" y="20" width="300" height="160" rx="12" fill="#FDF1E6" stroke="#D4853A" stroke-width="2"/>
+      <text x="530" y="48" text-anchor="middle" font-size="14" font-weight="bold" fill="#D4853A">探索のプラットフォーム</text>
+      <text x="530" y="72" text-anchor="middle" font-size="12" fill="#1E3A5F">Claude Code＋Obsidian</text>
+      <line x1="420" y1="84" x2="640" y2="84" stroke="#D4853A" stroke-width="0.5"/>
+      <text x="530" y="106" text-anchor="middle" font-size="11" fill="#4A6580">思考を積み上げるAI活用環境</text>
+      <text x="530" y="126" text-anchor="middle" font-size="11" fill="#4A6580">探究ノート・取材・仮説検証・ZINE制作</text>
+      <text x="530" y="152" text-anchor="middle" font-size="10" fill="#D4853A" font-weight="bold">個人Vault＋Git版管理</text>
+      <text x="530" y="168" text-anchor="middle" font-size="10" fill="#D4853A" font-weight="bold">3年間の思考の軌跡がポートフォリオに</text>
+
+      <!-- 接続 -->
+      <rect x="180" y="210" width="340" height="50" rx="10" fill="#8FB85A"/>
+      <text x="350" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">接続: 探究の中で「今この知識が必要」</text>
+      <text x="350" y="250" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.85)">→ 深化プラットフォームからJIT学習を呼び出す</text>
+
+      <!-- 接続線 -->
+      <line x1="170" y1="180" x2="270" y2="210" stroke="#8FB85A" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="530" y1="180" x2="430" y2="210" stroke="#8FB85A" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- 共通基盤ラベル -->
+      <text x="350" y="290" text-anchor="middle" font-size="11" fill="#4A6580">教員も生徒も同じOS。教科学習も探究学習も1つの環境に統合</text>
+      <text x="350" y="310" text-anchor="middle" font-size="11" fill="#7B68AE" font-weight="bold">個人Vault（Obsidian）が2つのプラットフォームをつなぐ</text>
+    </svg>
   </div>
 
-  <!-- Section 0: Why this combination -->
-  <h2>なぜ Claude Code＋Obsidian なのか</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th style="background:var(--color-deepen-green)">深化: AI個別最適化学習</th>
+      <th style="background:var(--color-explore-orange)">探索: Claude Code＋Obsidian</th>
+    </tr>
+    <tr><td><strong>何のため</strong></td><td>教科学習を効率化し、探究に使う時間とエネルギーを生む</td><td>探究の全プロセスを蓄積し、思考を積み上げる</td></tr>
+    <tr><td><strong>生徒の体験</strong></td><td>「自分の学校の先生のAI」と対話しながら全科目を学ぶ</td><td>個人Vaultで探究ノート・取材・仮説検証・アウトプット制作</td></tr>
+    <tr><td><strong>教師の体験</strong></td><td>ワークショップでテキスト＋先生エージェントを自作。コース設計者に</td><td>授業設計・研修記録・職員会議の記録をVaultに蓄積</td></tr>
+    <tr><td><strong>蓄積されるもの</strong></td><td>学習ログ、躓き点データ、教師の教え方の暗黙知</td><td>探究の軌跡、思考の変遷、Git履歴＝ポートフォリオ</td></tr>
+    <tr><td><strong>提供形態</strong></td><td>クラウドサービス（API接続）。使用料及び賃借料で計上</td><td>ローカルソフトウェア（PC上で動作）。無料＋AI利用料</td></tr>
+    <tr><td><strong>接続点</strong></td><td colspan="2" style="text-align:center;">探究の中で「今この知識が必要」→ AIチューターがJust in Timeで教科学習を提供</td></tr>
+  </table>
+
+  <!-- ============================================================ -->
+  <!-- 2. AI個別最適化学習プラットフォーム -->
+  <!-- ============================================================ -->
+  <h2>2. 深化のプラットフォーム: AI個別最適化学習</h2>
+
+  <p>デジタルファシリテーション研究所が提供するクラウドサービス。フィズヨビで20年間培った教授法のノウハウを基盤に、全科目の個別最適化学習を実現する。</p>
+
+  <h3>構成要素</h3>
+
+  <table>
+    <tr><th>要素</th><th>内容</th></tr>
+    <tr><td><strong>動画</strong></td><td>講義動画。物理はフィズヨビの既存コンテンツ</td></tr>
+    <tr><td><strong>テキスト</strong></td><td>物理: フィズヨビの既存コンテンツ。<strong>物理以外: 教師がワークショップで自作</strong></td></tr>
+    <tr><td><strong>AIチューター</strong></td><td>生徒の理解度に応じて問い返し、深掘りする回折格子型AI。「答えを返す」のではなく「問い返す」</td></tr>
+    <tr><td><strong>API接続</strong></td><td>生徒の個人Vault（Obsidian）と接続し、学習ログがVaultに蓄積</td></tr>
+  </table>
+
+  <h3>田原先生エージェントはたたき台——学校の先生エージェントが育つ</h3>
+
+  <p>物理以外の科目は、<strong>教師向けワークショップ</strong>で教師自身がテキストとAIチュータープロンプトを作成する。</p>
+
+  <table>
+    <tr><th>Step</th><th>やること</th><th>何が生まれるか</th></tr>
+    <tr><td><strong>1. 体験</strong></td><td>フィズヨビの物理コースを教師が受講</td><td>「AIチューターとはこういうものか」</td></tr>
+    <tr><td><strong>2. 型を学ぶ</strong></td><td>田原先生エージェントの設計思想を学ぶ</td><td>AIチューター設計の「型」の習得</td></tr>
+    <tr><td><strong>3. 自分で作る</strong></td><td>Claude Codeで自分の教科のテキスト＋プロンプトを作成</td><td>自分の教え方が反映されたコンテンツ</td></tr>
+    <tr><td><strong>4. 先生エージェント誕生</strong></td><td>教師の教え方・口癖・得意な説明がプロンプトに抽出</td><td><strong>「○○高校の山田先生エージェント」</strong></td></tr>
+    <tr><td><strong>5. プラットフォームに登録</strong></td><td>作成したコースをプラットフォームに組み込み</td><td>生徒が「自分の学校の先生のAI」で学べる</td></tr>
+  </table>
+
+  <div class="callout important">
+    <div class="callout-title">なぜ「自分たちの先生エージェント」が重要か</div>
+    <p>外部から持ち込まれたAIチューターは「よそのもの」。教師自身が自分の教え方を反映して作ったAIチューターは<strong>「自分たちのもの」</strong>。コンピテンシーが「たたき台→現場で検証・更新」であるように、AIチューターも<strong>「田原先生エージェント（たたき台）→その学校の先生エージェント」</strong>に育つ。「納品ではなく伴走」がここにも貫かれている。</p>
+  </div>
+
+  <h3>教員にとっての価値</h3>
+  <ul>
+    <li>教科学習がAIで効率化される → 生まれた時間を探究学習の伴走に使える</li>
+    <li>自分の教え方がAIエージェントに残る → 異動しても学校の知恵として蓄積される</li>
+    <li>生徒の躓き点データが可視化される → 授業改善のエビデンスになる</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <!-- 3. Claude Code＋Obsidian -->
+  <!-- ============================================================ -->
+  <h2>3. 探索のプラットフォーム: Claude Code＋Obsidian</h2>
+
+  <h3>なぜ Claude Code＋Obsidian なのか</h3>
 
   <p>私たちがこの組み合わせを選んだのは、流行りのツールだからではありません。<strong>世界中のエンジニアや教育者が、独立に同じ結論に到達した</strong>からです。</p>
 
@@ -133,9 +231,9 @@
   </div>
 
   <!-- Section 1 -->
-  <h2>1. なぜ「思考を積み上げる」環境が必要か</h2>
+  <h3>3.1 なぜ「思考を積み上げる」環境が必要か</h3>
 
-  <h3>1.1 従来のAI活用の問題</h3>
+  <h4>従来のAI活用の問題</h4>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 700 320" width="100%" style="max-width:700px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -191,7 +289,7 @@
     </svg>
   </div>
 
-  <h3>1.2 Claude Code＋Obsidianの世界</h3>
+  <h4>Claude Code＋Obsidianの世界</h4>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 720 330" width="100%" style="max-width:720px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -232,9 +330,9 @@
   <p><strong>核心: AIとの対話が「使い捨て」から「蓄積」に変わる。</strong> これが教員の授業設計にも、生徒の探究学習にも、学校の組織運営にも共通する価値。</p>
 
   <!-- Section 2 -->
-  <h2>2. 3つの構成要素</h2>
+  <h3>3.2 3つの構成要素</h3>
 
-  <h3>2.1 Obsidian &mdash; 思考の倉庫</h3>
+  <h4>Obsidian &mdash; 思考の倉庫</h3>
 
   <div style="max-width:480px; margin:24px auto; background:#EAF3F1; border:2px solid #3A7D6E; border-radius:10px; padding:20px 28px; font-family:sans-serif;">
     <div style="font-weight:bold; color:#1E3A5F; font-size:1.1em; margin-bottom:12px;">Obsidian Vault（自分の思考の倉庫）</div>
@@ -261,7 +359,7 @@
 
   <p><strong>教員にとっての価値</strong>: 授業のアイデア、研修の気づき、生徒の様子 &mdash; これまでバラバラだった教員の思考が、1つの場所に蓄積され、つながる。</p>
 
-  <h3>2.2 Claude Code &mdash; 思考のパートナー</h3>
+  <h4>Claude Code &mdash; 思考のパートナー</h3>
 
   <div style="max-width:520px; margin:24px auto; background:#1E3A5F; border-radius:10px; padding:20px 28px; font-family:monospace; color:#E5E0D8;">
     <div style="font-weight:bold; font-size:1.1em; color:#90cdf4; margin-bottom:6px; font-family:sans-serif;">Claude Code</div>
@@ -292,7 +390,7 @@
 
   <p><strong>教員にとっての価値</strong>: 「自分の授業設計の文脈を分かっているAI」と壁打ちできる。毎回ゼロから説明しなくていい。</p>
 
-  <h3>2.3 Git &mdash; 思考の履歴</h3>
+  <h4>Git &mdash; 思考の履歴</h3>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 600 300" width="100%" style="max-width:600px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -334,9 +432,9 @@
   <p><strong>生徒にとっての価値</strong>: 3年間の探究の軌跡がそのままポートフォリオになる。</p>
 
   <!-- Section 3 -->
-  <h2>3. 具体的な使用場面</h2>
+  <h3>3.3 具体的な使用場面</h3>
 
-  <h3>3.1 教員が使う場面</h3>
+  <h4>教員が使う場面</h4>
 
   <h4>場面A: 授業設計</h4>
 
@@ -386,7 +484,7 @@ Claude: 議題「来年度の探究学習の時間配置」
 
 → 意思決定の経緯が記録される → 「なぜこう決めたか」が後から追える</code></pre>
 
-  <h3>3.2 生徒が使う場面</h3>
+  <h4>生徒が使う場面</h4>
 
   <h4>場面D: 探究の深掘り</h4>
 
@@ -442,11 +540,11 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 → 3年間の思考の軌跡が見えるから、深いキャリア探究ができる</code></pre>
 
   <!-- Section 4 -->
-  <h2>4. CLAUDE.md &mdash; AIに文脈を伝える設定ファイル</h2>
+  <h3>3.4 CLAUDE.md &mdash; AIに文脈を伝える設定ファイル</h3>
 
   <p>Vault直下に置く<code>CLAUDE.md</code>は、Claude Codeが「この環境で何を知っておくべきか」を理解するための設定ファイル。</p>
 
-  <h3>4.1 教員のCLAUDE.md（例）</h3>
+  <h4>教員のCLAUDE.md（例）</h3>
 
   <pre><code># 東風高校 物理科 山田先生のVault
 
@@ -469,7 +567,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 - 探究支援/ — 生徒の探究に関する記録
 - 研修記録/ — 事例研究会の記録</code></pre>
 
-  <h3>4.2 生徒のCLAUDE.md（例）</h3>
+  <h4>生徒のCLAUDE.md（例）</h3>
 
   <pre><code># 田中花子の探究Vault
 
@@ -496,9 +594,9 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 - 海洋科学の基礎: 進行中</code></pre>
 
   <!-- Section 5 -->
-  <h2>5. 技術的な構成</h2>
+  <h3>3.5 技術的な構成</h3>
 
-  <h3>5.1 必要なソフトウェア</h3>
+  <h4>必要なソフトウェア</h3>
 
   <table>
     <tr><th>ソフトウェア</th><th>用途</th><th>費用</th></tr>
@@ -508,7 +606,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
     <tr><td><strong>VS Code</strong>（任意）</td><td>テキスト編集の補助</td><td>無料</td></tr>
   </table>
 
-  <h3>5.2 動作環境</h3>
+  <h4>動作環境</h4>
 
   <table>
     <tr><th>項目</th><th>要件</th></tr>
@@ -518,7 +616,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
     <tr><td><strong>PC</strong></td><td>学校の既存PCで動作可能。高スペック不要</td></tr>
   </table>
 
-  <h3>5.3 起動方法</h3>
+  <h4>起動方法</h4>
 
   <p>教員の場合:</p>
   <pre><code>1. ターミナル（PowerShell）を開く
@@ -534,7 +632,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
 → CLAUDE.mdが探究コンテキストを読み込んだ状態で対話開始</code></pre>
 
   <!-- Section 6 -->
-  <h2>6. セキュリティとプライバシー</h2>
+  <h3>3.6 セキュリティとプライバシー</h3>
 
   <table>
     <tr><th>懸念</th><th>対応</th></tr>
@@ -546,14 +644,14 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
   </table>
 
   <!-- Section 7 -->
-  <h2>7. 段階的展開のロードマップ</h2>
+  <h2>4. 段階的展開のロードマップ</h2>
 
   <div class="callout important">
     <div class="callout-title">全体の展開設計</div>
     <p><a href="process-design.html">プロセスデザイン全体設計</a> セクション2「プラットフォーム展開」を参照。</p>
   </div>
 
-  <h3>7.1 Stage 1: 教員コアチーム（5-10名）</h3>
+  <h3>4.1 Stage 1: 教員コアチーム（5-10名）</h3>
 
   <table>
     <tr><th>項目</th><th>内容</th></tr>
@@ -564,7 +662,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
     <tr><td><strong>次へ進む条件</strong></td><td>コアチームの3名以上が日常的にVaultを使用し、事例研究会で実践を共有している</td></tr>
   </table>
 
-  <h3>7.2 Stage 2: 教員全体</h3>
+  <h3>4.2 Stage 2: 教員全体</h3>
 
   <table>
     <tr><th>項目</th><th>内容</th></tr>
@@ -575,7 +673,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
     <tr><td><strong>次へ進む条件</strong></td><td>教員の過半数がVaultを使った授業設計を経験し、生徒にVaultの使い方を教えられる状態</td></tr>
   </table>
 
-  <h3>7.3 Stage 3: 生徒（学校使用）</h3>
+  <h3>4.3 Stage 3: 生徒（学校使用）</h3>
 
   <table>
     <tr><th>項目</th><th>内容</th></tr>
@@ -586,7 +684,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
     <tr><td><strong>成果物</strong></td><td>3年間の思考の軌跡＝ポートフォリオ。総合型選抜の最強のエビデンス</td></tr>
   </table>
 
-  <h3>7.4 各Stageで起きること</h3>
+  <h3>4.4 各Stageで起きること</h3>
 
   <div style="text-align:center; margin:24px 0;">
     <svg viewBox="0 0 680 620" width="100%" style="max-width:680px;" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
@@ -629,7 +727,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
   </div>
 
   <!-- Section 8 -->
-  <h2>8. 他のAIツールとの比較</h2>
+  <h2>5. 他のAIツールとの比較</h2>
 
   <table>
     <tr><th>項目</th><th>ChatGPT / Gemini等</th><th>Claude Code＋Obsidian</th></tr>
@@ -645,7 +743,7 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
   </table>
 
   <!-- Section 9 -->
-  <h2>9. よくある質問</h2>
+  <h2>6. よくある質問</h2>
 
   <h3>Q1: 教員のITスキルが低くても使えるか？</h3>
   <p>使える。最初のセットアップは北田が支援する。日常の使用は「ターミナルで<code>claude</code>と打つ → 日本語で話しかける」だけ。マークダウンの書き方は最低限で十分（太字とリンクだけ覚えればいい）。Stage 1でコアチームが「翻訳者」の役割を果たし、Stage 2では教員同士で教え合う。</p>
@@ -657,12 +755,19 @@ Claude: 田中花子さんのVault（Git履歴含む）を分析:
   <p>ChatGPTでは「思考の積み上げ」ができない。毎回の対話が独立し、ノート間のリンクも、版管理も、CLAUDE.mdによる文脈共有もない。「1回だけの質問」ならChatGPTでも十分だが、「3年間かけて探究を積み上げる」にはClaude Code＋Obsidianの構造が必要。</p>
 
   <h3>Q4: 費用はどのくらいかかるか？</h3>
+  <p><strong>探索プラットフォーム（Claude Code＋Obsidian）:</strong></p>
   <ul>
     <li>Obsidian: 無料</li>
     <li>Git: 無料</li>
     <li>Claude Code: Anthropicの利用料（詳細は契約形態による）</li>
   </ul>
-  <p>学校単位での契約については、導入計画の中で具体的に見積もる。</p>
+  <p><strong>深化プラットフォーム（AI個別最適化学習）:</strong></p>
+  <ul>
+    <li>利用料: 5,000円/名・月（200名の場合、月間100万円）</li>
+    <li>費目: 使用料及び賃借料（2年間の包括利用契約）</li>
+    <li>2年間合計: 2,400万円（200名の場合）</li>
+  </ul>
+  <p>学校の規模に応じて具体的に見積もる。</p>
 
   <h3>Q5: 生徒のプライバシーは守れるか？</h3>
   <p>Vaultはローカル保存。生徒のVaultは個人フォルダに分離。Claude CodeのAPI通信は暗号化されており、Anthropicはデータを学習に使用しない。取材メモ中の個人情報は匿名化ルールを設定する。</p>
